@@ -97,7 +97,7 @@
     top: 0;
 }
 .bulbOff {
-  background-image: url('/course-files/course-05-interpersonal-communication/images/png/interCommsBulbOff.png');
+  background-image: url('/course-files/course-05-interpersonal-communication-2.0/images/png/interCommsBulbOff.png');
   background-repeat: no-repeat;
   height:100px;
   width:100px;
@@ -106,7 +106,7 @@
   margin-top:10px;
 }
 .bulbOn {
-  background-image: url('/course-files/course-05-interpersonal-communication/images/png/interCommsBulb2.png');
+  background-image: url('/course-files/course-05-interpersonal-communication-2.0/images/png/interCommsBulb2.png');
   background-repeat: no-repeat;
   height:145px;
   width:115px;
