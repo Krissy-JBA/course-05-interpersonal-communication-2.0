@@ -1,0 +1,207 @@
+/* Add any Course specific CSS here */
+.module-btn {
+    padding: 15px;
+    width:80%;
+}
+
+.module-btn p {
+    text-align:center;
+}
+
+.module-btn i.arrowLock.fa.fa-lock {
+    right: 15%;
+}
+.tapme-wrapper {
+    width: 100px;
+    position: absolute;
+    right: -100px;
+}
+
+.tapme-wrapper p {
+    float: right;
+}
+.plb {
+    position: absolute;
+}
+.oneActive, .twoActive {
+    background: url("/images/course-assets/buttons/rectangle-button-visited.svg");
+    background-repeat: no-repeat;
+  }
+  .helpHinder-btn {
+    max-width: 300px;
+  width: 100%;
+  padding: 10px;
+  font-size:16px;
+  }
+  .popupNew {
+  width: 100%;
+    height: 100%;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 99999;
+}
+.popupNew .popup-inner {
+  margin:0 auto;
+  padding-top:2em;
+}
+.jba-btn-locked, .rectangle-locked {
+  pointer-events: none;
+  cursor: default;
+}
+
+.purple-bk-popup2 {
+    width: 100%;
+    height: 100%;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    background: #6C1F5D;
+    z-index: 99999;
+}
+.purple-bk-popup2 .popup-inner {
+  margin:0 auto;
+}
+.purple-bk-popup2 .popup-inner p {
+  color:black !important;
+}
+.popup-transition {
+ transition: all .3s ease;
+ opacity:1;
+ display:flex;
+}
+/* .popup-enter defines the starting state for entering */
+/* .popup-leave defines the ending state for leaving */
+.popup-enter, .popup-leave {
+ opacity: 0;
+}
+.module-btn .fa-check {
+  transition: .2s all;
+    position: absolute;
+    color: #38B449;
+    font-size: 40px;
+    right: 0;
+    top: 0;
+}
+.bulbOff {
+  background-image: url('/course-files/course-05-interpersonal-communication/images/png/interCommsBulbOff.png');
+  background-repeat: no-repeat;
+  height:100px;
+  width:100px;
+  background-size:contain;
+  margin-left:34px;
+  margin-top:10px;
+}
+.bulbOn {
+  background-image: url('/course-files/course-05-interpersonal-communication/images/png/interCommsBulb2.png');
+  background-repeat: no-repeat;
+  height:145px;
+  width:115px;
+  background-size:contain;
+}
+.bulbhideshow {
+  height:150px;
+  display:flex;
+  align-items:center;
+}
+.arrow-list-white li:before {
+    font-family: 'FontAwesome';
+    content: '\f061';
+    margin: 0 5px 0 -15px;
+    color: #ffffff;
+}
+.image-rows-wrap {
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+  margin-top:10%;
+}
+span.numbers img {
+    width: 50px;
+    margin-right:15px;
+}
+p.number-lists {
+    display: flex !important;
+    align-items: center;
+}
+.prev-button2 {
+    display: inline-block;
+    background: url(/images/course-assets/buttons/prev-button.svg);
+    width: 400px;
+    padding: 2em;
+    color: white;
+    background-repeat: no-repeat;
+    transition: .15s all;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    background-size: contain;
+}
+.form-cols p {
+    height: 60px;
+    padding: 0 !important;
+}
+@media screen and (max-width:500px) {
+  .module-btn i.arrowLock.fa.fa-lock {
+      right: 7%;
+  }
+  .module-btn {
+      width:100%;
+  }
+  .heading {
+    font-size:14px;
+  }
+  .squiggle-container .squiggle-content .module-btn p {
+    padding:0 !important;
+  }
+  .helpHinder-btn {
+    width:250px;
+  }
+  .numbers img {
+    width: 40px !important;
+    margin-top: -5px;
+  }
+  .form-cols p {
+      height: 60px;
+      padding: 0 !important;
+  }
+}
+@media screen and (max-width:1400px) {
+  .bulbOff {
+    height:75px;
+    width:60px;
+    margin-left:25px;
+    margin-top:20px;
+  }
+  .bulbOn {
+    height:100px;
+    width:100px;
+  }
+  .bulbhideshow {
+    height:100px;
+  }
+}
+@media screen and (min-width:600px) {
+  .heading {
+    font-size: 18px;
+ }
+}

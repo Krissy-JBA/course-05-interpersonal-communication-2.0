@@ -1,0 +1,59 @@
+<div class="container-fluid h100">
+    <div class="row header-row  ">
+        <div class="col-md-12 col-md-offset-0 col-sm-8 col-sm-offset-2 pop-in">
+            <div class="new-main-content">
+                <h2>Interpersonal Communication</h2>
+                <!-- Change Header -->
+            </div>
+        </div>
+    </div>
+    <div class="row content-row flexy-parent pop-in">
+      <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3  col-xs-12 two-column">
+        <div class="squiggle-container pop-in">
+            <div class="top-squiggle"><img src="/images/course-assets/squiggle/white-top.svg" alt=""></div>
+            <div class="squiggle-content white-squiggle">
+                  <div class="row">
+
+                      <div class="col-md-12 flex-center">
+                        <a href="#004" class="jba-btn jba-btn-submit module-btn">
+                          <i v-show="module2 == true"  class="fa fa-check" aria-hidden="true"></i>
+                          <p class="heading">The basics of communications</p>
+                          <p>What it is and where it goes wrong</p>
+                        </a>
+                        <a href="#021" class="jba-btn jba-btn-submit module-btn" v-bind:class="{'jba-btn-locked': !module2}">
+                          <i v-show="module2 == false" class="arrowLock fa fa-lock"  aria-hidden="true"></i>
+                          <i v-show="module3 == true"  class="fa fa-check" aria-hidden="true"></i>
+                          <p class="heading">How to be a good sender</p>
+                          <p>What do you want to say and how are you<br> going to say it?</p>
+                        </a>
+                        <a href="#046" class="jba-btn jba-btn-submit module-btn" v-bind:class="{'jba-btn-locked': !module3}">
+                          <i v-show="module3 == false" class="arrowLock fa fa-lock"  aria-hidden="true"></i>
+                          <i v-show="module4 == true"  class="fa fa-check" aria-hidden="true"></i>
+                          <p class="heading">How to be a good receiver</p>
+                          <p>Have a plan and be open to opportunities that you <br>encounter along the way.</p>
+                        </a>
+                        <a href="#059" class="jba-btn jba-btn-submit module-btn" v-bind:class="{'jba-btn-locked': !module4}">
+                          <i v-show="module4 == false" class="arrowLock fa fa-lock"  aria-hidden="true"></i>
+                          <i v-show="module5 == true"  class="fa fa-check" aria-hidden="true"></i>
+                          <p class="heading">Verbal and nonverbal communication</p>
+                          <p>Words and much, much more.</p>
+                        </a>
+                        <a class="jba-btn jba-btn-submit module-btn" v-bind:class="{'jba-btn-locked': !module5}">
+                          <i v-show="module5 == false" class="arrowLock fa fa-lock"  aria-hidden="true"></i>
+                          <i v-show="modulesComplete == true"  class="fa fa-check" aria-hidden="true"></i>
+                          <p class="heading">The communication context</p>
+                          <p>Adjusting your communication to fit different<br> cultures and backgrounds.</p>
+                        </a>
+                      </div>
+                  </div>
+              </div>
+              <div class="bot-squiggle"><img src="/images/course-assets/squiggle/white-bottom.svg" alt=""></div>
+            </div>
+
+        </div>
+
+      </div>
+    <!-- end  content -->
+    <!-- =========================== -->
+    <!-- footer start -->
+</div>

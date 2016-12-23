@@ -1,0 +1,120 @@
+<div class="popupNew" v-show="popup1 == true" transition="popup">
+    <div class="popup-inner">
+        <div class="squiggle-container">
+            <div class="top-squiggle"><img src="/images/course-assets/squiggle/green-top.svg" alt=""></div>
+            <!-- put all of your content into the squiggle content div -->
+            <div class="squiggle-content green-squiggle">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="squiggle-container flex-center">
+                          <p>Nice job!</p>
+                          <p>Correctamundo! Jargon and other specific terminology (and made up words like Correctamundo!) might make you feel smart, but they're no use if people don't know what you're going on about!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bot-squiggle"><img src="/images/course-assets/squiggle/green-bottom.svg" alt=""></div>
+        </div>
+        <div class="course-button close-button popup-close-test" @click="popup1 = false">
+            <i class="fa fa-times close-button-cross" aria-hidden="true"></i> </div>
+    </div>
+</div>
+<div class="popupNew" v-show="popup2 == true" transition="popup">
+    <div class="popup-inner">
+        <div class="squiggle-container">
+            <div class="top-squiggle"><img src="/images/course-assets/squiggle/red-top.svg" alt=""></div>
+            <!-- put all of your content into the squiggle content div -->
+            <div class="squiggle-content red-squiggle">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="squiggle-container flex-center">
+                          <p>Not quite!</p>
+                          <p>Jargon and other specific terminology might make you feel smart, but if people don't know what you're going on about, your fancy words will be about as useful as a chocolate teapot…i.e. no use at all!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bot-squiggle"><img src="/images/course-assets/squiggle/red-bottom.svg" alt=""></div>
+        </div>
+        <div class="course-button close-button popup-close-test" @click="popup2 = false">
+            <i class="fa fa-times close-button-cross" aria-hidden="true"></i> </div>
+    </div>
+</div>
+
+<div class="container-fluid h100">
+    <div class="row header-row  ">
+        <div class="col-md-12 col-md-offset-0 col-sm-8 col-sm-offset-2 pop-in">
+            <div class="new-main-content">
+                <h2>Helps or hinders?</h2>
+                <!-- Change Header -->
+            </div>
+        </div>
+    </div>
+    <div class="row content-row flexy-parent pop-in">
+      <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3  col-xs-12 two-column">
+
+          <!-- put all of your content into here div -->
+          <div class="squiggle-container pop-in">
+              <div class="top-squiggle"><img src="/images/course-assets/squiggle/white-top.svg" alt=""></div>
+              <!-- put all of your content into the squiggle content div -->
+              <div class="squiggle-content white-squiggle">
+                  <div class="row">
+                      <div class="col-md-12">
+                        <p class="text-center ">Using jargon...</p>
+                        <div class="row two-line">
+                          <div class="col-xs-12 col-md-6 text-center one-line-bot">
+                              <button type="button" class="jba-btn jba-btn-lg jba-btn-tab helpHinder-btn" @click="oneButton(answer)" v-bind:class="{'oneActive': answer == 'Jargon helps'}">Helps communication</button>
+                          </div>
+                          <div class="col-xs-12 col-md-6 text-center">
+                              <button type="button" class="jba-btn jba-btn-lg jba-btn-tab helpHinder-btn" @click="twoButton(answer)" v-bind:class="{'twoActive': answer == 'Jargon hinders'}">Hinders communication</button>
+                          </div>
+                        </div>
+                        <p class="blue-text text-center">Tap to make your selection</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="bot-squiggle"><img src="/images/course-assets/squiggle/white-bottom.svg" alt=""></div>
+          </div>
+      </div>
+      <div class="flexy-image flexy-image-mob-fix pop-in ">
+          <img src="/course-files/course-05-interpersonal-communication/images/png/interComms10@2x.png"  alt="interpersonal communication">
+      </div>
+  </div>
+    <!-- end  content -->
+    <!-- =========================== -->
+    <!-- footer start -->
+    <div class="row progressWrap">
+        <div class="col-xs-12 col-pad0">
+            <!-- S:Progress Bar -->
+            <div class="progress-row">
+                <div class="hand-arrow">
+                    <div class="percentageTxt hidden">
+                        <p>60%</p>
+                    </div>
+                    <img class="percentageArrow hidden" src="../img/progressBar/hand_arrow.png" alt="" />
+                </div>
+                <div class="container progressContainer">
+                    <div class="row">
+                      <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
+                          <a href="#014" class="course-button prev-button"></a>
+                      </div>
+                        <!-- leftArrow -->
+                        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 align">
+                            <div class="course-progress-bar-wrap">
+                                <div class="courseProgressBar">
+                                    <p class="fixed hidden">60%</p>
+                                    <div class="percentageProgress"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
+                            <a href="#016" class="course-button next-button"></a>
+                        </div>
+                        <!-- rightArrow -->
+                    </div>
+                </div>
+            </div>
+            <!-- E:Progress Bar -->
+        </div>
+    </div>
+</div>
