@@ -1,120 +1,162 @@
-<div class="popupNew" v-show="popup1 == true" transition="popup">
-    <div class="popup-inner">
-        <div class="squiggle-container">
-            <div class="top-squiggle"><img src="/images/course-assets/squiggle/green-top.svg" alt=""></div>
-            <!-- put all of your content into the squiggle content div -->
-            <div class="squiggle-content green-squiggle">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="squiggle-container flex-center">
-                          <p>Nice job!</p>
-                          <p>Yep, cultural differences can definitely harm good communication. Understanding other cultural perspectives goes a long way to fixing this (but we'll chat about that later!).</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="bot-squiggle"><img src="/images/course-assets/squiggle/green-bottom.svg" alt=""></div>
-        </div>
-        <div class="course-button close-button popup-close-test" @click="popup1 = false">
-            <i class="fa fa-times close-button-cross" aria-hidden="true"></i> </div>
-    </div>
-</div>
-<div class="popupNew" v-show="popup2 == true" transition="popup">
-    <div class="popup-inner">
-        <div class="squiggle-container">
-            <div class="top-squiggle"><img src="/images/course-assets/squiggle/red-top.svg" alt=""></div>
-            <!-- put all of your content into the squiggle content div -->
-            <div class="squiggle-content red-squiggle">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="squiggle-container flex-center">
-                          <p>Not quite!</p>
-                          <p>Yeah nah! Cultural differences can definitely harm good communication. Understanding other cultural perspectives goes a long way to fixing this (but we'll chat about that later!).</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="bot-squiggle"><img src="/images/course-assets/squiggle/red-bottom.svg" alt=""></div>
-        </div>
-        <div class="course-button close-button popup-close-test" @click="popup2 = false">
-            <i class="fa fa-times close-button-cross" aria-hidden="true"></i> </div>
-    </div>
-</div>
-
-<div class="container-fluid h100">
-    <div class="row header-row  ">
-        <div class="col-md-12 col-md-offset-0 col-sm-8 col-sm-offset-2 pop-in">
-            <div class="new-main-content">
-                <h2>Helps or hinders?</h2>
-                <!-- Change Header -->
-            </div>
-        </div>
-    </div>
-    <div class="row content-row flexy-parent pop-in">
-      <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3  col-xs-12 two-column">
-
-          <!-- put all of your content into here div -->
-          <div class="squiggle-container pop-in">
-              <div class="top-squiggle"><img src="/images/course-assets/squiggle/white-top.svg" alt=""></div>
-              <!-- put all of your content into the squiggle content div -->
-              <div class="squiggle-content white-squiggle">
-                  <div class="row">
-                      <div class="col-md-12">
-                        <p class="text-center ">Cultural differences...</p>
-                        <div class="row two-line">
-                          <div class="col-xs-12 col-md-6 text-center one-line-bot">
-                              <button type="button" class="jba-btn jba-btn-lg jba-btn-tab helpHinder-btn" @click="oneButton(answer)" v-bind:class="{'oneActive': answer == 'Cultural Differences help'}">Help communication</button>
-                          </div>
-                          <div class="col-xs-12 col-md-6 text-center">
-                              <button type="button" class="jba-btn jba-btn-lg jba-btn-tab helpHinder-btn" @click="twoButton(answer)" v-bind:class="{'twoActive': answer == 'Cultural Differences hinder'}">Hinder communication</button>
-                          </div>
-                        </div>
-                        <p class="blue-text text-center">Tap to make your selection</p>
-                      </div>
-                  </div>
-              </div>
-              <div class="bot-squiggle"><img src="/images/course-assets/squiggle/white-bottom.svg" alt=""></div>
-          </div>
-      </div>
-      <div class="flexy-image flexy-image-mob-fix pop-in ">
-          <img src="/course-files/course-05-interpersonal-communication-2.0/images/png/interComms9@2x.png"  alt="interpersonal communication">
-      </div>
-  </div>
-    <!-- end  content -->
-    <!-- =========================== -->
-    <!-- footer start -->
-    <div class="row progressWrap">
-        <div class="col-xs-12 col-pad0">
-            <!-- S:Progress Bar -->
-            <div class="progress-row">
-                <div class="hand-arrow">
-                    <div class="percentageTxt hidden">
-                        <p>60%</p>
-                    </div>
-                    <img class="percentageArrow hidden" src="../img/progressBar/hand_arrow.png" alt="" />
-                </div>
-                <div class="container progressContainer">
+<div class="popup-bk popup" id="notQuite" data-popup="popup-1">
+        <div class="popup-inner">
+            <div class="squiggle-container">
+                <div class="top-squiggle"><img src="/images/course-assets/squiggle/magenta-top.svg" alt=""></div>
+                <!-- put all of your content into the squiggle content div -->
+                <div class="squiggle-content magenta-squiggle">
                     <div class="row">
-                      <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
-                          <a href="#013" class="course-button prev-button"></a>
-                      </div>
-                        <!-- leftArrow -->
-                        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 align">
-                            <div class="course-progress-bar-wrap">
-                                <div class="courseProgressBar">
-                                    <p class="fixed hidden">60%</p>
-                                    <div class="percentageProgress"></div>
+                        <div class="col-md-12">
+                            <div class="squiggle-container flex-center">
+                                <p>Not quite, it’s actually the other way around. Close this pop-up and have another read through the descriptions.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bot-squiggle"><img src="/images/course-assets/squiggle/magenta-bottom.svg" alt=""></div>
+            </div>
+            <div class="course-button close-button popup-close-test" data-popup-close="popup-1">
+                <i class="fa fa-times close-button-cross" aria-hidden="true"></i>
+            </div>
+        </div>
+    </div>
+    <div class="popup-bk popup" data-popup="popup-2">
+        <div class="popup-inner">
+            <div class="squiggle-container">
+                <div class="top-squiggle"><img src="/images/course-assets/squiggle/green-top.svg" alt=""></div>
+                <!-- put all of your content into the squiggle content div -->
+                <div class="squiggle-content green-squiggle">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="squiggle-container flex-center">
+                                <p>Nice, it looks like you know your stuff (…or know how to make a pretty good guess)!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bot-squiggle"><img src="/images/course-assets/squiggle/green-bottom.svg" alt=""></div>
+            </div>
+            <div class="course-button close-button popup-close-test" data-popup-close="popup-2">
+                <i class="fa fa-times close-button-cross" aria-hidden="true"></i>
+            </div>
+        </div>
+    </div>
+           <div class="container-fluid h100 branding12">
+            <div class="row header-row  ">
+                <div class="col-md-12 col-xs-8 col-xs-offset-2 col-md-offset-0">
+                    <div class="new-main-content pop-in">
+                        <h2>Are branding and marketing the same?</h2>
+                        <!-- Change Header -->
+                    </div>
+                </div>
+            </div>
+            <div class="row content-row">
+                <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3  col-xs-12
+    ">
+                    <div class="squiggle-container pop-in">
+                        <div class="top-squiggle"><img src="/images/course-assets/squiggle/white-top.svg" alt=""></div>
+                        <div class="squiggle-content white-squiggle">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="squiggle-container flex-center brandingBoxWrap">
+                                        <!-- put all of your content into here div -->
+                                        <div class="row">
+                                            <div class="col-md-12 col-pad0">
+                                                <p>These two are related, but definitely not the same. </p>
+                                            </div>
+                                        </div>
+                                        <!-- <img src="img/branding-54.png" alt="branding" class="mobile-img" style="float: right; height: 250px; width: auto"> -->
+                                        <div class="row two-line">
+                                            <div class="col-xs-4 col-sm-4 col-md-4 pl0">
+                                                <div class="col-xs-12 col-xs-12
+     col-md-12 p0">
+                                                    <div id="brandingLeft" class="matching-button">
+                                                        <p class="brandingLeftPosition">Branding</p>
+                                                    </div>
+                                                    <div class="branding-line"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-8 col-sm-8 col-xs-8 col-lg-7 col-lg-offset-1 col-pad0 fRight">
+                                                <div class="col-md-11 col-xs-11 col-sm-11 col-lg-11 col-xs-offset-1 col-lg-offset-0 col-pad0">
+                                                    <div id="marketingRight" class="bla popupOnce matching-button">
+                                                        <p style="padding:1em">Activity that actively promotes and sells products or services.</p>
+                                                    </div>
+                                                    <div class="imgWrap hidden">
+                                                        <img src="/course-files/course-22-branding/img/check/check.svg" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row two-line">
+                                            <div class="col-xs-4 col-sm-4 col-md-4 pl0">
+                                                <div class="col-xs-12 col-xs-12
+     col-md-12 p0">
+                                                    <div id="marketingLeft" class="matching-button">
+                                                        <p class="marketingLeftPosition">Marketing</p>
+                                                    </div>
+                                                    <div class="marketing-line"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-8 col-sm-8 col-xs-8 col-lg-7 col-lg-offset-1 col-pad0 fRight">
+                                                <div class="col-md-11 col-xs-11 col-sm-11 col-lg-11 col-xs-offset-1 col-lg-offset-0 col-pad0">
+                                                    <div id="brandingRight" class="popupOnce matching-button">
+                                                        <P style="padding:1em">Activity that makes a company stand out from its competitors and creates a lasting impression in customers’ minds.</p>
+                                                    </div>
+                                                    <div class="imgWrap hidden" data-popup-open="popup-1">
+                                                        <img src="/course-files/course-22-branding/img/check/check.svg" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row one-line">
+                                        <div class="col-md-12 col-pad0">
+                                            <p class="blue-text text-center">See if you can match the right descriptions to the right terms below.</p>
+                                        </div>
+                                    </div>
+                                    <!-- End Content -->
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
-                            <a href="#015" class="course-button next-button"></a>
-                        </div>
-                        <!-- rightArrow -->
+                        <div class="bot-squiggle"><img src="/images/course-assets/squiggle/white-bottom.svg" alt=""></div>
                     </div>
                 </div>
             </div>
-            <!-- E:Progress Bar -->
+            <!-- footer start -->
+            <div class="row progressWrap">
+                <div class="col-xs-12 col-pad0">
+                    <!-- S:Progress Bar -->
+                    <div class="progress-row">
+                        <div class="hand-arrow">
+                            <div class="percentageTxt hidden">
+                                <p>60%</p>
+                            </div>
+                            <img class="percentageArrow hidden" src="/images/course-assets/progressBar/hand_arrow.png" alt="" />
+                        </div>
+                        <div class="container progressContainer">
+                            <div class="row">
+                                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
+                                    <div v-on:click="popoutGo" class="course-button prev-button"></div>
+                                </div>
+                                <!-- leftArrow -->
+                                <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 align">
+                                    <div class="course-progress-bar-wrap">
+                                        <div class="courseProgressBar">
+                                            <p class="fixed hidden">60%</p>
+                                            <div class="percentageProgress"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
+
+                                    <div v-on:click="nextPage" class="course-button next-button" v-bind:class="{'next-button-locked' : disableInput}"></div>
+
+                                </div>
+                                <!-- rightArrow -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- E:Progress Bar -->
+                </div>
+                <!-- end  content -->
+            </div>
         </div>
-    </div>
-</div>

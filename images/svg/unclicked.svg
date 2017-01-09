@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 298 93" preserveAspectRatio="none">
+<defs>
+<style>
+.cls-1{fill:#D51A68;stroke:#F79131;}
+
+  .cls-1 {
+  stroke-dasharray:2000;
+  stroke-dashoffset:0;
+  -webkit-animation: dash 1s ease-in reverse;
+  -o-animation: dash 1s ease-in reverse;
+  -moz-animation: dash 1s ease-in reverse;
+  animation: dash 1s ease-in reverse;
+  transform:scaleX(.53)scaleY(.85)translateX(10px)translateY(8px);
+
+}
+
+
+@-webkit-keyframes dash {
+  from {
+    stroke-dashoffset:2000;
+  }
+  to {
+    stroke-dashoffset:0;
+  }
+}
+</style>
+</defs>
+<title>BrandingClicked</title>
+<g id="Layer_2" data-name="Layer 2">
+<path class="cls-1" d="M25.34.15,158.43,4.28l77.73,1.77c16.75.44,15.25-.54,22.77.89s16,3.59,22.38,7.68,14.39,6.84,16.1,16.83-1.83,33.12-5.89,43.11S284,88.49,273.07,91.39,226,92,226,92L103.86,90.8c-31-.25-45.74,1.92-64-.3S12.72,81.35,6.11,72.2.74,44.78.22,35.58,2.31,17.86,6.5,12,16.05,1.18,25.34.15Z" stroke-width="15"/>
+</g>
+</svg>
