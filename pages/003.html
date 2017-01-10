@@ -38,7 +38,7 @@
                           <p class="heading">Verbal and nonverbal communication</p>
                           <p>Words and much, much more.</p>
                         </a>
-                        <a class="jba-btn jba-btn-submit module-btn" v-bind:class="{'jba-btn-locked': !module5}">
+                        <a href="#072" class="jba-btn jba-btn-submit module-btn" v-bind:class="{'jba-btn-locked': !module5}">
                           <i v-show="module5 == false" class="arrowLock fa fa-lock"  aria-hidden="true"></i>
                           <i v-show="modulesComplete == true"  class="fa fa-check" aria-hidden="true"></i>
                           <p class="heading">The communication context</p>
@@ -56,4 +56,38 @@
     <!-- end  content -->
     <!-- =========================== -->
     <!-- footer start -->
+    <div class="row progressWrap">
+        <div class="col-xs-12 col-pad0">
+            <!-- S:Progress Bar -->
+            <div class="progress-row">
+                <div class="hand-arrow">
+                    <div class="percentageTxt hidden">
+                        <p>60%</p>
+                    </div>
+                    <img class="percentageArrow hidden" src="../img/progressBar/hand_arrow.png" alt="" />
+                </div>
+                <div class="container progressContainer">
+                    <div class="row">
+                      <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
+                          <div @click="backButton" class="course-button prev-button2"></div>
+                      </div>
+                        <!-- leftArrow -->
+                        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 align">
+                            <div class="course-progress-bar-wrap">
+                                <div class="courseProgressBar">
+                                    <p class="fixed hidden">60%</p>
+                                    <div class="percentageProgress"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
+                            <a href="#096" class="course-button next-button" v-bind:class="{'next-button-locked': !modulesComplete}"></a>
+                        </div>
+                        <!-- rightArrow -->
+                    </div>
+                </div>
+            </div>
+            <!-- E:Progress Bar -->
+        </div>
+    </div>
 </div>

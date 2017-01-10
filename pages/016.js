@@ -24,7 +24,7 @@ pageComponentry = {
   },
   ready: function() {
     courseFeatureJBA.transitionIn();
-    if(this.exerciseData['helpsHinders3']){
+    if(this.exerciseData['helpsHinders4']){
       this.answer = this.exerciseData['helpsHinders4'];
       this.whatThink = true;
     }

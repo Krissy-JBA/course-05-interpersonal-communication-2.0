@@ -18,6 +18,10 @@ courseSchema = {
   {
     'name': 'Verbal and nonverbal communication',
     'first_page': '059'
+  },
+  {
+    'name': 'The communication context',
+    'first_page': '072'
   }
   ]
 }

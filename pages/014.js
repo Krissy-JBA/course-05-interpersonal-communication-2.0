@@ -17,7 +17,7 @@ pageComponentry = {
     },
     twoButton: function() {
       this.whatThink = true;
-      this.answer = 'Cultural Difference hinder';
+      this.answer = 'Cultural Differences hinder';
       this.$parent.saveData('helpsHinders2', this.answer);
       this.popup1 = true;
     }
@@ -28,6 +28,7 @@ pageComponentry = {
       this.answer = this.exerciseData['helpsHinders2'];
       this.whatThink = true;
     }
+
   }
 
 

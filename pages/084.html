@@ -1,0 +1,185 @@
+<div class="popupNew" v-show="popupC == true" transition="popup">
+    <div class="popup-inner">
+        <div class="squiggle-container">
+            <div class="top-squiggle"><img src="/images/course-assets/squiggle/orange-top.svg" alt=""></div>
+            <!-- put all of your content into the squiggle content div -->
+            <div class="squiggle-content orange-squiggle">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="squiggle-container flex-center">
+                          <p>Clarify the issue</p>
+                          <p>Clarify things by asking questions or offering comments related to the problem or issue – 'So what's the actual problem?', 'I think we need to talk about this sooner rather than later.', etc.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bot-squiggle"><img src="/images/course-assets/squiggle/orange-bottom.svg" alt=""></div>
+        </div>
+        <div class="course-button close-button popup-close-test" @click="popupC = false">
+            <i class="fa fa-times close-button-cross" aria-hidden="true"></i> </div>
+    </div>
+</div>
+<div class="popupNew" v-show="popupA == true" transition="popup">
+    <div class="popup-inner">
+        <div class="squiggle-container">
+            <div class="top-squiggle"><img src="/images/course-assets/squiggle/orange-top.svg" alt=""></div>
+            <!-- put all of your content into the squiggle content div -->
+            <div class="squiggle-content orange-squiggle">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="squiggle-container flex-center">
+                          <p>Address the problem</p>
+                          <p>Take care to focus on facts and examples when you're addressing the problem.</p>
+                          <p>When tensions arise and people are in conflict, they often take up opposing positions and the objective is to 'win'. To resolve conflict constructively, help those involved to focus on resolving issues rather than reinforcing or supporting their positions!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bot-squiggle"><img src="/images/course-assets/squiggle/orange-bottom.svg" alt=""></div>
+        </div>
+        <div class="course-button close-button popup-close-test" @click="popupA = false">
+            <i class="fa fa-times close-button-cross" aria-hidden="true"></i> </div>
+    </div>
+</div>
+<div class="popupNew" v-show="popupL == true" transition="popup">
+    <div class="popup-inner">
+        <div class="squiggle-container">
+            <div class="top-squiggle"><img src="/images/course-assets/squiggle/orange-top.svg" alt=""></div>
+            <!-- put all of your content into the squiggle content div -->
+            <div class="squiggle-content orange-squiggle">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="squiggle-container flex-center">
+                          <p>Listen to the other side</p>
+                          <p>Be respectful by taking responsibility for what's yours, challenging unreasonable behaviours, and addressing any emerging performance matters as necessary.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bot-squiggle"><img src="/images/course-assets/squiggle/orange-bottom.svg" alt=""></div>
+        </div>
+        <div class="course-button close-button popup-close-test" @click="popupL = false">
+            <i class="fa fa-times close-button-cross" aria-hidden="true"></i> </div>
+    </div>
+</div>
+<div class="popupNew" v-show="popupM == true" transition="popup">
+    <div class="popup-inner">
+        <div class="squiggle-container">
+            <div class="top-squiggle"><img src="/images/course-assets/squiggle/orange-top.svg" alt=""></div>
+            <!-- put all of your content into the squiggle content div -->
+            <div class="squiggle-content orange-squiggle">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="squiggle-container flex-center">
+                          <p>Manage your way to resolution</p>
+                          <p>Get them involved in coming up with solutions to resolve the conflict – this will help give them ownership and buy-in. What's needed is a genuine commitment to try to sort out the issue.</p>
+                          <p>Agree on possible solutions – get honest commitments, and document agreements. Be sure to follow up on progress and monitor processes and timelines to keep everyone on track.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bot-squiggle"><img src="/images/course-assets/squiggle/orange-bottom.svg" alt=""></div>
+        </div>
+        <div class="course-button close-button popup-close-test" @click="popupM = false">
+            <i class="fa fa-times close-button-cross" aria-hidden="true"></i> </div>
+    </div>
+</div>
+
+
+<div class="container-fluid h100">
+    <div class="row header-row  ">
+        <div class="col-md-12 col-md-offset-0 col-sm-8 col-sm-offset-2 pop-in">
+            <div class="new-main-content">
+                <h2>Keep CALM</h2>
+                <!-- Change Header -->
+            </div>
+        </div>
+    </div>
+    <div class="row content-row flexy-parent pop-in">
+      <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3  col-xs-12 two-column">
+          <!-- put all of your content into here div -->
+          <div class="squiggle-container pop-in">
+              <div class="top-squiggle"><img src="/images/course-assets/squiggle/white-top.svg" alt=""></div>
+              <!-- put all of your content into the squiggle content div -->
+              <div class="squiggle-content white-squiggle">
+                  <div class="row">
+                      <div class="col-md-12">
+                        <p>When trying to deal with conflict in assertively, be CALM (handy acronym alert!):</p>
+                        <div class="click-lists two-line">
+                          <p class="circle-btn" @click="cClick"><span class="center-btn">C</span></p>
+                          <span v-show="c == true">
+                            <p class="magenta-link">LARIFY</p>
+                            <p>the issue</p>
+                          </span>
+                        </div>
+                        <div class="click-lists">
+                          <p class="circle-btn" @click="aClick"><span class="center-btn">A</span></p>
+                          <span v-show="a == true">
+                            <p class="magenta-link">DDRESS</p>
+                            <p>the problem</p>
+                          </span>
+                        </div>
+                        <div class="click-lists">
+                          <p class="circle-btn" @click="lClick"><span class="center-btn">L</span></p>
+                          <span v-show="l == true">
+                            <p class="magenta-link">ISTEN</p>
+                            <p>to the other side</p>
+                          </span>
+                        </div>
+                        <div class="click-lists">
+                          <p class="circle-btn" @click="mClick"><span class="center-btn">M</span></p>
+                          <span v-show="m == true">
+                            <p class="magenta-link">ANAGE</p>
+                            <p>your way to resolution</p>
+                          </span>
+                        </div>
+
+
+
+                        <p class="blue-text text-center">Tap a letter to see the CALM method</p>
+
+                      </div>
+                  </div>
+              </div>
+              <div class="bot-squiggle"><img src="/images/course-assets/squiggle/white-bottom.svg" alt=""></div>
+          </div>
+      </div>
+  </div>
+    <!-- end  content -->
+    <!-- =========================== -->
+    <!-- footer start -->
+    <div class="row progressWrap">
+        <div class="col-xs-12 col-pad0">
+            <!-- S:Progress Bar -->
+            <div class="progress-row">
+                <div class="hand-arrow">
+                    <div class="percentageTxt hidden">
+                        <p>60%</p>
+                    </div>
+                    <img class="percentageArrow hidden" src="../img/progressBar/hand_arrow.png" alt="" />
+                </div>
+                <div class="container progressContainer">
+                    <div class="row">
+                      <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
+                          <a href="#083" class="course-button prev-button"></a>
+                      </div>
+                        <!-- leftArrow -->
+                        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 align">
+                            <div class="course-progress-bar-wrap">
+                                <div class="courseProgressBar">
+                                    <p class="fixed hidden">60%</p>
+                                    <div class="percentageProgress"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
+                            <a href="#085" class="course-button next-button"></a>
+                        </div>
+                        <!-- rightArrow -->
+                    </div>
+                </div>
+            </div>
+            <!-- E:Progress Bar -->
+        </div>
+    </div>
+</div>

@@ -1,4 +1,6 @@
 /* Add any Course specific CSS here */
+
+
 .module-btn {
     padding: 15px;
     width:80%;
@@ -23,7 +25,7 @@
 .plb {
     position: absolute;
 }
-.oneActive, .twoActive {
+.oneActive, .twoActive, .threeActive {
     background: url("/images/course-assets/buttons/rectangle-button-visited.svg");
     background-repeat: no-repeat;
   }
@@ -56,10 +58,15 @@
   pointer-events: none;
   cursor: default;
 }
-
+.row-flex-center {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
 .purple-bk-popup2 {
     width: 100%;
     height: 100%;
+    display:flex;
     -ms-flex-direction: column;
     flex-direction: column;
     -ms-flex-align: center;
@@ -71,6 +78,10 @@
     right: 0px;
     background: #6C1F5D;
     z-index: 99999;
+}
+.buttonWrapNew {
+  margin-top:30%;
+  display:flex;
 }
 .purple-bk-popup2 .popup-inner {
   margin:0 auto;
@@ -139,9 +150,14 @@ span.numbers img {
     width: 50px;
     margin-right:15px;
 }
-p.number-lists {
+.number-lists {
     display: flex !important;
     align-items: center;
+}
+.click-lists {
+    display: flex !important;
+    height:80px;
+    margin-left:3em;
 }
 .prev-button2 {
     display: inline-block;
@@ -155,6 +171,24 @@ p.number-lists {
     width: 50px;
     height: 50px;
     background-size: contain;
+}
+.circle-btn {
+    display: flex;
+    background: url(/images/course-assets/buttons/circle-button.svg);
+    width: 400px;
+    padding: 2em;
+    color: white;
+    background-repeat: no-repeat;
+    transition: .15s all;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    background-size: contain;
+    justify-content: center;
+    align-items: center;
+}
+span.center-btn {
+    font-size: 20px;
 }
 .form-cols p {
     height: 60px;
@@ -256,4 +290,31 @@ p.number-lists {
 }
 .transparent {
   opacity:0;
+}
+
+.magenta-link, .magenta-link:hover {
+  color:#E51669 !important;
+}
+
+.purple-bk-popup2 .popup-inner p.magenta-link, .purple-bk-popup2 .popup-inner p.magenta-link:hover {
+  color:#E51669 !important;
+}
+.purple-bk-popup2 .popup-inner p.white {
+  color:#FFFFFF !important;
+}
+
+.flip-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.flip-row .switch-float {
+    width: auto !important;
+    margin-right: 1.8em;
+}
+.flip-title-row {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
 }

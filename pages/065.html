@@ -8,7 +8,9 @@
                     <div class="col-md-12">
                         <div class="squiggle-container flex-center">
                           <p>Nice job!</p>
-                          <p>Jargon and other specific terminology might make you feel smart, but they’re no use if people don’t know what you’re going on about!</p>
+                          <p>Spot on! Zabby's doing her best to be encouraging and caring right now.</p>
+                          <p>Using an open question as her verbal signal shows that Zabby cares and encourages additional info.</p>
+                          <p>And speaking softly and smiling, combined with open body language is how Zabby shows (in a nonverbal way) that it's safe to talk to her.</p>
                         </div>
                     </div>
                 </div>
@@ -29,7 +31,9 @@
                     <div class="col-md-12">
                         <div class="squiggle-container flex-center">
                           <p>Not quite!</p>
-                          <p>Jargon and other specific terminology might make you feel smart, but they’re no use if people don’t know what you’re going on about!</p>
+                          <p>Take another look! Zabby's doing her best to be encouraging and caring right now.</p>
+                          <p>Using an open question as her verbal signal shows that Zabby cares and encourages additional info.</p>
+                          <p>And speaking softly and smiling, combined with open body language is how Zabby shows (in a nonverbal way) that it's safe to talk to her.</p>
                         </div>
                     </div>
                 </div>
@@ -45,7 +49,7 @@
     <div class="row header-row  ">
         <div class="col-md-12 col-md-offset-0 col-sm-8 col-sm-offset-2 pop-in">
             <div class="new-main-content">
-                <h2>Helps or hinders?</h2>
+                <h2>Using the two together</h2>
                 <!-- Change Header -->
             </div>
         </div>
@@ -60,16 +64,19 @@
               <div class="squiggle-content white-squiggle">
                   <div class="row">
                       <div class="col-md-12">
-                        <p class="text-center ">Using jargon...</p>
-                        <div class="row two-line">
-                          <div class="col-xs-12 col-md-6 text-center one-line-bot">
-                              <button type="button" class="jba-btn jba-btn-lg jba-btn-tab helpHinder-btn" @click="oneButton(answer)" v-bind:class="{'oneActive': answer == 'Jargon helps'}">Helps communication</button>
+                        <p class="text-center ">Zabby's speaking softly and offering smiles. Her body language is open and inviting.</p>
+                        <div class="row two-line two-line-bot">
+                          <div class="col-xs-12 text-center">
+                              <button type="button" class="jba-btn jba-btn-lg jba-btn-tab helpHinder-btn" @click="oneButton(answer)" v-bind:class="{'oneActive': answer == 'Uninterested and dismissive'}">Uninterested and dismissive</button>
                           </div>
-                          <div class="col-xs-12 col-md-6 text-center">
-                              <button type="button" class="jba-btn jba-btn-lg jba-btn-tab helpHinder-btn" @click="twoButton(answer)" v-bind:class="{'twoActive': answer == 'Jargon hinders'}">Hinders communication</button>
+                          <div class="col-xs-12 text-center one-line">
+                              <button type="button" class="jba-btn jba-btn-lg jba-btn-tab helpHinder-btn" @click="twoButton(answer)" v-bind:class="{'twoActive': answer == 'Distracted and unaware'}">Distracted and unaware</button>
+                          </div>
+                          <div class="col-xs-12 text-center one-line">
+                              <button type="button" class="jba-btn jba-btn-lg jba-btn-tab helpHinder-btn" @click="threeButton(answer)" v-bind:class="{'threeActive': answer == 'Encouraging and caring'}">Encouraging and caring</button>
                           </div>
                         </div>
-                        <p class="blue-text text-center">Tap to make your selection</p>
+                        <p class="blue-text text-center ">Tap the option that matches Zabby's intent.</p>
                       </div>
                   </div>
               </div>
@@ -77,7 +84,7 @@
           </div>
       </div>
       <div class="flexy-image flexy-image-mob-fix pop-in ">
-          <img src="/course-files/course-05-interpersonal-communication-2.0/images/png/interComms10@2x.png"  alt="interpersonal communication">
+          <img src="/course-files/course-05-interpersonal-communication-2.0/images/png/interComms43@2x.png"  alt="interpersonal communication">
       </div>
   </div>
     <!-- end  content -->
@@ -96,7 +103,7 @@
                 <div class="container progressContainer">
                     <div class="row">
                       <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
-                          <a href="#014" class="course-button prev-button"></a>
+                          <a href="#064" class="course-button prev-button"></a>
                       </div>
                         <!-- leftArrow -->
                         <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 align">
@@ -108,7 +115,7 @@
                             </div>
                         </div>
                         <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
-                            <a href="#016" class="course-button next-button"></a>
+                            <a href="#066" class="course-button next-button" v-bind:class="{'next-button-locked': !unlocked}"></a>
                         </div>
                         <!-- rightArrow -->
                     </div>
