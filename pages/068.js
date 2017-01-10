@@ -29,28 +29,28 @@ pageComponentry = {
     courseFeatureJBA.transitionIn();
 
     if(this.exerciseData['toggles-q1']){
-      if ((this.exerciseData['toggles-q1']) == 'true') {
-        $('#q1').prop('checked', true);
+      if (this.exerciseData['toggles-q1'] === 'true' || this.exerciseData['toggles-q1'] === true) {
+        this.toggles.q1 = true;
       }
     }
     if(this.exerciseData['toggles-q2']){
-      if ((this.exerciseData['toggles-q2']) == 'true') {
-        $('#q2').prop('checked', true);
+      if (this.exerciseData['toggles-q2'] === 'true' || this.exerciseData['toggles-q2'] === true) {
+        this.toggles.q2 = true;
       }
     }
     if(this.exerciseData['toggles-q3']){
-      if ((this.exerciseData['toggles-q3']) == 'true') {
-        $('#q3').prop('checked', true);
+      if (this.exerciseData['toggles-q3'] === 'true' || this.exerciseData['toggles-q3'] === true) {
+        this.toggles.q3 = true;
       }
     }
     if(this.exerciseData['toggles-q4']){
-      if ((this.exerciseData['toggles-q4']) == 'true') {
-        $('#q4').prop('checked', true);
+      if (this.exerciseData['toggles-q4'] === 'true' || this.exerciseData['toggles-q4'] === true) {
+        this.toggles.q4 = true;
       }
     }
     if(this.exerciseData['toggles-q5']){
-      if ((this.exerciseData['toggles-q5']) == 'true') {
-        $('#q5').prop('checked', true);
+      if (this.exerciseData['toggles-q5'] === 'true' || this.exerciseData['toggles-q5'] === true) {
+        this.toggles.q5 = true;
       }
     }
 
