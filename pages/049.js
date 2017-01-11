@@ -1,16 +1,71 @@
 pageComponentry = {
   data: function() {
     return {
-      // Any page specific data goes here.
+      // Any data goes here.
+      correct: false
+
     }
   },
   methods: {
-    // Any page specific methods go here.
+
   },
   ready: function() {
+    //call popups
+    var self = this;
     courseFeatureJBA.transitionIn();
 
-  }
+    var answersLeft = [];
+    $('.matching').find('.option').each( function(i) {
+      var $this = $(this);
+      var answerValue = $this.data('target');
+      var $target = $('.target[data-accept="'+answerValue+'"]');
+
+      $this.draggable( {
+        revert: "invalid",
+        containment: ".matching"
+      });
+
+      if ( $target.length > 0 ) {
+        $target.droppable( {
+        accept: '.option[data-target="'+answerValue+'"]',
+        drop: function( event, ui ) {
+          $this.draggable('destroy');
+          $target.droppable('destroy');
+
+          answersLeft.splice( answersLeft.indexOf( answerValue ), 1 );
+          var $optionPosition = $('.option[data-target="'+answerValue+'"]').offset();
+        }
+
+    });
+     answersLeft.push(answerValue);
+     } else { }
+
+
+
+   });
+   var self = this;
+
+   $('#submit').click(function() {
+     if (answersLeft.length == 0 ) {
+       self.correct = true;
+       self.$parent.saveData('answerMe4', 'true');
+     }
+   });
+
+   if(this.exerciseData['answerMe4']){
+     this.correct = true;
+   }
+}
+
+
+
+
+
+
+
+
+
+
 
 
 }
