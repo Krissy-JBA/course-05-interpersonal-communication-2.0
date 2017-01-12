@@ -1,3 +1,46 @@
+<div class="popupNew" v-show="popup1 == true" transition="popup">
+    <div class="popup-inner">
+        <div class="squiggle-container">
+            <div class="top-squiggle"><img src="/images/course-assets/squiggle/green-top.svg" alt=""></div>
+            <!-- put all of your content into the squiggle content div -->
+            <div class="squiggle-content green-squiggle">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="squiggle-container flex-center">
+                          <p>Correct!</p>
+                          <p>It’s pretty easy to fix facts –they’re either right or wrong! Methods can be fixed too, just by showing a better process that gets a result faster or easier</p>
+                          <p>But values and beliefs are much harder to unpick! They’re totally ingrained in us thanks to some of the experiences and influences in our lives.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bot-squiggle"><img src="/images/course-assets/squiggle/green-bottom.svg" alt=""></div>
+        </div>
+        <div class="course-button close-button popup-close-test" @click="redirectMe">
+            <i class="fa fa-times close-button-cross" aria-hidden="true"></i>
+          </div>
+    </div>
+</div>
+<div class="popupNew" v-show="popup2 == true" transition="popup">
+    <div class="popup-inner">
+        <div class="squiggle-container">
+            <div class="top-squiggle"><img src="/images/course-assets/squiggle/red-top.svg" alt=""></div>
+            <!-- put all of your content into the squiggle content div -->
+            <div class="squiggle-content red-squiggle">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="squiggle-container flex-center">
+                          <p>Not quite! Try again!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bot-squiggle"><img src="/images/course-assets/squiggle/red-bottom.svg" alt=""></div>
+        </div>
+        <div class="course-button close-button popup-close-test" @click="popup2 = false">
+            <i class="fa fa-times close-button-cross" aria-hidden="true"></i> </div>
+    </div>
+</div>
 <div class="container-fluid h100">
     <div class="row header-row  ">
         <div class="col-md-12 col-md-offset-0 col-sm-8 col-sm-offset-2 pop-in">
@@ -15,16 +58,45 @@
               <!-- put all of your content into the squiggle content div -->
               <div class="squiggle-content white-squiggle">
                   <div class="row">
-                      <div class="col-md-12">
-                        <p>PAGE NEEDSTO BE DONE - DRAG AND DROP</p>
+                     <div class="col-md-12 ">
+                        <div class="drag-list-wrap two-line-bot">
+                          <div class="drag-arrow">
+                            <p>Easiest</p>
+                            <div class="arrow-top">
+
+                            </div>
+                            <div class="arrow-body">
+
+                            </div>
+                            <div class="arrow-bottom">
+
+                            </div>
+                            <p>Hardest</p>
+                          </div>
+                          <ul id="sortable" class="sortable" v-show="pageReload == false">
+                            <li class=" jba-btn four">Beliefs</li>
+                            <li class=" jba-btn two">Methods</li>
+                            <li class=" jba-btn one">Facts</li>
+                            <li class=" jba-btn three">Values</li>
+                          </ul>
+
+                          <ul id="sortableNew" class="sortable" v-show="pageReload == true">
+                              <li class=" jba-btn one">Facts</li>
+                              <li class=" jba-btn two">Methods</li>
+                              <li class=" jba-btn three">Values</li>
+                              <li class=" jba-btn four">Beliefs</li>
+                          </ul>
+
+                        </div>
+                        <p class="blue-text text-center">Arrange the labels in order of easiest to agree on to hardest to fix.</p>
                       </div>
+
+
+
                   </div>
               </div>
               <div class="bot-squiggle"><img src="/images/course-assets/squiggle/white-bottom.svg" alt=""></div>
           </div>
-      </div>
-      <div class="flexy-image flexy-image-mob-fix pop-in ">
-          <img src="/course-files/course-05-interpersonal-communication-2.0/images/png/interComms56@2x.png"  alt="interpersonal communication">
       </div>
   </div>
     <!-- end  content -->
@@ -55,7 +127,7 @@
                             </div>
                         </div>
                         <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
-                            <a href="#083" class="course-button next-button"></a>
+                            <a @click="submitMe" class="jba-btn jba-btn-submit2">Submit</a>
                         </div>
                         <!-- rightArrow -->
                     </div>

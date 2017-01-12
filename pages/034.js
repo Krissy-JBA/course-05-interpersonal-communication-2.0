@@ -2,7 +2,8 @@ pageComponentry = {
   data: function() {
     return {
       // Any data goes here.
-      correct: false
+      correct: false,
+      pageReload : false
 
     }
   },
@@ -55,6 +56,8 @@ pageComponentry = {
 
    if(this.exerciseData['answerMe2']){
      this.correct = true;
+     this.pageReload = true;
+
    }
 }
 

@@ -280,7 +280,6 @@ span.center-btn {
 }
 .matchy2 {
   width:200px;
-  z-index:100000000000;
 }
 .matching {
   display:flex;
@@ -349,9 +348,135 @@ span.center-btn {
     justify-content: center;
     width: 50%;
 }
+.padding-less {
+  padding:1em !important;
+}
+.flexy-reload {
+  width:60% !important;
+}
+.flexy-image2 img {
+  max-height: 400px;
+      width: auto;
+}
+.piechart {
+    display: flex;
+    width: 100%;
+    flex-direction: column-reverse;
+}
+
+.piechart svg {
+    max-width: 100%;
+    width: 100%;
+    height: 300px;
+}
+.drag-buttons {
+    width:32%;
+    padding:0.5em !important;
+    max-width:150px;
+    z-index:90000;
+}
+
+.drag-wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap:wrap;
+}
+
+.pie {
+    position: relative;
+    margin: 0 auto;
+}
+
+.verbal {
+    position: absolute;
+    top: 0;
+    left: 20%;
+    height: 50%;
+    width: 30%;
+}
+
+
+.tone {
+    position: absolute;
+    left: 0;
+    top: 20%;
+    height: 70%;
+    width: 50%;
+}
+
+.body {
+    top: 0;
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 50%;
+}
+
+.pie-img img {
+    max-width: 100%;
+    width: auto;
+    height: 50vh;
+    max-height: 300px;
+}
+.arrow-body {
+    width: 10px;
+    background: #f79838;
+    height: 75%;
+    margin: 0 auto;
+}
+.drag-list-wrap {
+  display:flex;
+  height:250px;
+}
+.drag-arrow {
+    width: 50%;
+}
+
+.sortable {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.sortable li {
+  width:150px;
+}
+.drag-arrow p {
+    text-align: center;
+}
+
+.jba-btn-submit2 {
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.3333333;
+}
+.arrow-top{
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #f79838;
+  margin:0 auto;
+}
+.arrow-bottom {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #f79838;
+  margin: 0 auto;
+}
 
 @media screen and (max-width:500px) {
   .width50 {
     width:30%;
+  }
+  .flexy-image2 img {
+    max-height: 340px;
+  }
+  .jba-btn-submit2 {
+      padding: 10px 10px;
+      font-size: 12px;
+      margin-top: 5px;
+      line-height: 1.5;
   }
 }

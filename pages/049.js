@@ -19,7 +19,7 @@ pageComponentry = {
       var $this = $(this);
       var answerValue = $this.data('target');
       var $target = $('.target[data-accept="'+answerValue+'"]');
-
+      var labelText = $target.text();
       $this.draggable( {
         revert: "invalid",
         containment: ".matching"
@@ -31,14 +31,18 @@ pageComponentry = {
         drop: function( event, ui ) {
           $this.draggable('destroy');
           $target.droppable('destroy');
-
+          $this.html(answerValue+':' + '<br>' + labelText );
+          $this.addClass('padding-less');
+          $target.hide();
+          $target.html(labelText);
           answersLeft.splice( answersLeft.indexOf( answerValue ), 1 );
-          var $optionPosition = $('.option[data-target="'+answerValue+'"]').offset();
         }
 
     });
      answersLeft.push(answerValue);
      } else { }
+
+
 
 
 
@@ -54,8 +58,21 @@ pageComponentry = {
 
    if(this.exerciseData['answerMe4']){
      this.correct = true;
+     $('.target').parent().prop('outerHTML', '');
+
+     $('.magenta-blob-box').addClass('padding-less purple-blob-box');
+     $('.magenta-blob-box').removeClass('magenta-blob-box');
+     $('.flexy-match2').addClass('flexy-reload');
+     $('#clarify').html('Clarifying: <br> Could you go over that again? ');
+     $('#open').html('Open: <br> How did that make you feel? ');
+     $('#reflect').html("Reflective: <br> So you're saying you didn't see it? ");
+     $('#closed').html("Closed: <br> Were you there yesterday?");
+
    }
-}
+ }
+
+
+
 
 
 

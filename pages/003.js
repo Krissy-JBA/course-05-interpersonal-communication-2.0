@@ -13,6 +13,9 @@ pageComponentry = {
   methods: {
     // Any page specific methods go here.
     backButton: function() {
+      if ((this.module2 == false) && (this.module3 == false) && (this.module4 == false) && (this.module5 == false) && (this.modulesComplete == false) ){
+        window.location.hash = '002';
+      }
       if ((this.module2 == true) && (this.module3 == false) && (this.module4 == false) && (this.module5 == false) && (this.modulesComplete == false) ){
         window.location.hash = '020';
       }
