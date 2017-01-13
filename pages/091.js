@@ -25,7 +25,7 @@ pageComponentry = {
     }
   },
   ready: function() {
-    courseFeatureJBA.transitionIn();
+    courseFeatureJBA.transitionIn(); courseFeatureJBA.flexySpeckCheck();
     if(this.exerciseData['describe-a-conflict-assertive']){
       this.inputfield1 = this.exerciseData['describe-a-conflict-assertive'];
       this.content = true;

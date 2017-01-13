@@ -84,7 +84,7 @@ pageComponentry = {
     }
   },
   ready: function() {
-    courseFeatureJBA.transitionIn();
+    courseFeatureJBA.transitionIn(); courseFeatureJBA.flexySpeckCheck();
     if(this.exerciseData['whatisVerbalComm']){
     var data1 = this.exerciseData['whatisVerbalComm'];
     var expr1= "lang";
@@ -94,7 +94,7 @@ pageComponentry = {
     var expr5= "Words";
     var expr6= "Tone";
     var expr7= "space";
-    var expr8= "pres";
+    var expr8= "present";
     var expr9= "Gestures";
     var expr10= "Volume";
     var expr11= "Eye";

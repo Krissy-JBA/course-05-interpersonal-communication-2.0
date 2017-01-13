@@ -12,15 +12,16 @@ pageComponentry = {
   ready: function() {
     //call popups
     var self = this;
-    courseFeatureJBA.transitionIn();
+    courseFeatureJBA.transitionIn(); courseFeatureJBA.flexySpeckCheck();
 
     var answersLeft = [];
     $('.matching').find('.option').each( function(i) {
       var $this = $(this);
       var answerValue = $this.data('target');
       var $target = $('.target[data-accept="'+answerValue+'"]');
+      var $option = $('.option[data-accept="'+answerValue+'"]');
       var labelText = $target.text();
-      $this.draggable( {
+      $this.draggable({
         revert: "invalid",
         containment: ".matching"
       });
@@ -31,10 +32,10 @@ pageComponentry = {
         drop: function( event, ui ) {
           $this.draggable('destroy');
           $target.droppable('destroy');
-          $this.html(answerValue+':' + '<br>' + labelText );
+          $target.html(answerValue+':' + '<br>' + labelText );
           $this.addClass('padding-less');
-          $target.hide();
-          $target.html(labelText);
+          $this.parent().prop('outerHTML', '');
+          $option.html(labelText);
           answersLeft.splice( answersLeft.indexOf( answerValue ), 1 );
         }
 

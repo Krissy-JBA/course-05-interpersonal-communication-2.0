@@ -11,7 +11,7 @@ pageComponentry = {
     // Any page specific methods go here.
   },
   ready: function() {
-    courseFeatureJBA.transitionIn();
+    courseFeatureJBA.transitionIn(); courseFeatureJBA.flexySpeckCheck();
 
     if(this.exerciseData['percentage']){
       this.percentage1 = parseInt(this.exerciseData['percentage']);
@@ -25,10 +25,10 @@ pageComponentry = {
 
     console.log(percentageTrue);
 
-    if (percentageTrue > 80) {
+    if (percentageTrue > 79) {
       this.correct = true;
     }
-    else if (percentageTrue < 79 ) {
+    else if (percentageTrue < 78 ) {
       this.correct = false;
     }
 

@@ -21,7 +21,7 @@ pageComponentry = {
     }
   },
   ready: function() {
-    courseFeatureJBA.transitionIn();
+    courseFeatureJBA.transitionIn(); courseFeatureJBA.flexySpeckCheck();
     if(this.exerciseData['message-to-get-across']){
       this.inputfield1 = this.exerciseData['message-to-get-across'];
       this.content = true;

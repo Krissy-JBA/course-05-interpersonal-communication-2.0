@@ -21,7 +21,7 @@ pageComponentry = {
     }
   },
   ready: function() {
-    courseFeatureJBA.transitionIn();
+    courseFeatureJBA.transitionIn(); courseFeatureJBA.flexySpeckCheck();
     if(this.exerciseData['what-is-communication']){
       this.inputfield1 = this.exerciseData['what-is-communication'];
       this.content = true;

@@ -25,7 +25,7 @@ pageComponentry = {
     }
   },
   ready: function() {
-    courseFeatureJBA.transitionIn();
+    courseFeatureJBA.transitionIn(); courseFeatureJBA.flexySpeckCheck();
     if(this.exerciseData['Cutting-in-line']){
       this.answer = this.exerciseData['Cutting-in-line'];
       this.unlocked = true;

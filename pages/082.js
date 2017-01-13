@@ -35,7 +35,7 @@ pageComponentry = {
   },
   ready: function() {
       var self = this;
-      courseFeatureJBA.transitionIn();
+      courseFeatureJBA.transitionIn(); courseFeatureJBA.flexySpeckCheck();
 
       $("#sortable" ).sortable();
       $("#sortable" ).disableSelection();

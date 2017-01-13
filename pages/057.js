@@ -25,7 +25,7 @@ pageComponentry = {
     }
   },
   ready: function() {
-    courseFeatureJBA.transitionIn();
+    courseFeatureJBA.transitionIn(); courseFeatureJBA.flexySpeckCheck();
     if(this.exerciseData['what-types-of-questions-asked']){
       this.inputfield1 = this.exerciseData['what-types-of-questions-asked'];
     }

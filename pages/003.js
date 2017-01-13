@@ -34,7 +34,7 @@ pageComponentry = {
     }
   },
   ready: function() {
-    courseFeatureJBA.transitionIn();
+    courseFeatureJBA.transitionIn(); courseFeatureJBA.flexySpeckCheck();
     var currentPage = this.exerciseData['page.max']
     if (currentPage >= 20) {
       this.module2 = true;

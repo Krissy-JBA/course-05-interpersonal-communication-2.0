@@ -13,7 +13,7 @@ pageComponentry = {
   ready: function() {
     //call popups
     var self = this;
-    courseFeatureJBA.transitionIn();
+    courseFeatureJBA.transitionIn(); courseFeatureJBA.flexySpeckCheck();
 
     var answersLeft = [];
     $('.matching').find('.option').each( function(i) {

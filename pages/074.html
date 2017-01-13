@@ -9,11 +9,11 @@
                         <div class="squiggle-container flex-center">
                             <div v-show="tie == true">
                               <p>Assuming similarities</p>
-                              <p>Sure, as humans we all share the same fundamental needs, but we've also got heaps of things that create different views based on our values, beliefs and attitudes.</p>
+                              <p>Sure, as humans we all share the same fundamental needs, but we also have different views based on our values, beliefs and attitudes.</p>
                             </div>
                             <div v-show="aleks == true">
                               <p>Ethnocentrism</p>
-                              <p>This is when you only use the values and standards of your own culture, to judge someone else's (which doesn't really make any sense, eh?!).</p>
+                              <p>This is when you only use the values and standards of your own culture, to judge someone else's.</p>
                             </div>
                             <div v-show="pink == true">
                               <p>Discrimination</p>
@@ -25,7 +25,7 @@
                             </div>
                             <div v-show="suit == true">
                               <p>Nonverbal behaviour</p>
-                              <p>Your culture totally influences where you look while talking, how you hold your body, your gestures and even your postures.</p>
+                              <p>Your culture greatly influences where you look while talking, how you hold your body, your gestures and even your postures.</p>
                             </div>
                             <div v-show="tshirt == true">
                               <p>Cultural shock</p>
@@ -42,6 +42,27 @@
             <div class="bot-squiggle"><img src="/images/course-assets/squiggle/orange-bottom.svg" alt=""></div>
         </div>
         <div class="course-button close-button popup-close-test" @click="popup = false">
+            <i class="fa fa-times close-button-cross" aria-hidden="true"></i> </div>
+    </div>
+</div>
+<div class="popupNew" v-show="popup2 == true" transition="popup">
+    <div class="popup-inner">
+        <div class="squiggle-container">
+            <div class="top-squiggle"><img src="/images/course-assets/squiggle/orange-top.svg" alt=""></div>
+            <!-- put all of your content into the squiggle content div -->
+            <div class="squiggle-content orange-squiggle">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="squiggle-container flex-center">
+                          <p>Best course of action: </p>
+                          <p>if you’re unsure of the cultural rules that apply – just ask! </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bot-squiggle"><img src="/images/course-assets/squiggle/orange-bottom.svg" alt=""></div>
+        </div>
+        <div class="course-button close-button popup-close-test" @click="redirectMe">
             <i class="fa fa-times close-button-cross" aria-hidden="true"></i> </div>
     </div>
 </div>
@@ -953,7 +974,7 @@
                             </div>
                         </div>
                         <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
-                            <a href="#075" class="course-button next-button"></a>
+                            <a @click="newPopup" class="course-button" v-bind:class="{'next-button-locked': !done, 'next-button2': done}"></a>
                         </div>
                         <!-- rightArrow -->
                     </div>

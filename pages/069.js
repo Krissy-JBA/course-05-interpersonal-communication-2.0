@@ -26,7 +26,7 @@ pageComponentry = {
     }
   },
   ready: function() {
-    courseFeatureJBA.transitionIn();
+    courseFeatureJBA.transitionIn(); courseFeatureJBA.flexySpeckCheck();
 
     if(this.exerciseData['toggles-q6']){
       if (this.exerciseData['toggles-q6'] === 'true' || this.exerciseData['toggles-q6'] === true) {

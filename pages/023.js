@@ -12,7 +12,7 @@ pageComponentry = {
     // Any page specific methods go here.
   },
   ready: function() {
-    courseFeatureJBA.transitionIn();
+    courseFeatureJBA.transitionIn(); courseFeatureJBA.flexySpeckCheck();
     var currentPage = this.exerciseData['page.max']
     if (currentPage >= 24) {
       this.module1 = true;

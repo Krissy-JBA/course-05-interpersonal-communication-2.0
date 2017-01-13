@@ -23,14 +23,17 @@
                                 </div>
                                 <div class="piechart">
                                   <div class="drag-wrap one-line">
-                                    <div v-show="pageReload == false" id="tone" data-target="tone" class="drag-buttons magenta-blob-box option">Tone of voice</div>
-                                    <div v-show="pageReload == false" id="verbal" data-target="verbal" class="drag-buttons magenta-blob-box option">Verbal</div>
-                                    <div v-show="pageReload == false" id="body" data-target="body" class="drag-buttons magenta-blob-box option">Body Language</div>
+                                    <div v-show="pageReload == false" id="tone" data-target="tone" class="drag-buttons magenta-blob-box no-transition option">Tone of voice</div>
+                                    <div v-show="pageReload == false" id="verbal" data-target="verbal" class="drag-buttons magenta-blob-box no-transition option">Verbal</div>
+                                    <div v-show="pageReload == false" id="body" data-target="body" class="drag-buttons magenta-blob-box no-transition option">Body Language</div>
                                   </div>
                                   <div class="pie">
-                                    <div class="pie-img">
-                                      <img v-show="pageReload == false" src="/course-files/course-05-interpersonal-communication-2.0/images/png/interComms39@2x.png" alt="">
-                                      <img v-show="pageReload == true" src="/course-files/course-05-interpersonal-communication-2.0/images/png/interComms66@2x.png" alt="">
+                                    <div class="pie-img" v-show="pageReload == false">
+                                      <img  src="/course-files/course-05-interpersonal-communication-2.0/images/png/interComms39@2x.png" alt="">
+
+                                    </div>
+                                    <div v-show="pageReload == true" class="pie-img-reload">
+                                      <img  src="/course-files/course-05-interpersonal-communication-2.0/images/png/interComms66@2x.png" alt="">
                                     </div>
                                     <div data-accept="tone" class="tone target">
 

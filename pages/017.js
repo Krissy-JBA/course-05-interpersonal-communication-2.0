@@ -8,7 +8,7 @@ pageComponentry = {
     // Any page specific methods go here.
   },
   ready: function() {
-    courseFeatureJBA.transitionIn();
+    courseFeatureJBA.transitionIn(); courseFeatureJBA.flexySpeckCheck();
 
   }
 

@@ -22,7 +22,7 @@ pageComponentry = {
     }
   },
   ready: function() {
-    courseFeatureJBA.transitionIn();
+    courseFeatureJBA.transitionIn(); courseFeatureJBA.flexySpeckCheck();
     console.log(this.exerciseData['page.max']);
     var currentPage = this.exerciseData['page.max']
     if (currentPage >= 48) {

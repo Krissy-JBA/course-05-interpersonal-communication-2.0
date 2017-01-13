@@ -33,7 +33,7 @@ pageComponentry = {
     }
   },
   ready: function() {
-    courseFeatureJBA.transitionIn();
+    courseFeatureJBA.transitionIn(); courseFeatureJBA.flexySpeckCheck();
     if(this.exerciseData['Zabbys-intent2']){
       this.answer = this.exerciseData['Zabbys-intent2'];
       this.unlocked = true;

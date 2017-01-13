@@ -23,7 +23,7 @@ pageComponentry = {
     }
   },
   ready: function() {
-    courseFeatureJBA.transitionIn();
+    courseFeatureJBA.transitionIn(); courseFeatureJBA.flexySpeckCheck();
     if(this.exerciseData['helpsHinders3']){
       this.answer = this.exerciseData['helpsHinders3'];
       this.whatThink = true;

@@ -22,7 +22,7 @@ pageComponentry = {
     }
   },
   ready: function() {
-    courseFeatureJBA.transitionIn();
+    courseFeatureJBA.transitionIn(); courseFeatureJBA.flexySpeckCheck();
     if(this.exerciseData['use-CALM-explode']){
       this.inputfield1 = this.exerciseData['use-CALM-explode'];
       this.content = true;
