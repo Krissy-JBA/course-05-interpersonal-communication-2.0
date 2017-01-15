@@ -10,6 +10,20 @@ pageComponentry = {
   },
   methods: {
     // Any page specific methods go here.
+    prevButton: function() {
+      if ((this.module1 == false) && (this.module2 == false) && (this.module3 == false)) {
+        window.location.hash = '022'
+      }
+      else if ((this.module1 == true) && (this.module2 == false) && (this.module3 == false)) {
+        window.location.hash = '027'
+      }
+      else if ((this.module1 == true) && (this.module2 == true) && (this.module3 == false)) {
+        window.location.hash = '038'
+      }
+      else if ((this.module1 == true) && (this.module2 == true) && (this.module3 == true)) {
+        window.location.hash = '040'
+      }
+    }
   },
   ready: function() {
     courseFeatureJBA.transitionIn(); courseFeatureJBA.flexySpeckCheck();

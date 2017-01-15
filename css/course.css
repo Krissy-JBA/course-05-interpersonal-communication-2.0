@@ -359,52 +359,11 @@ span.center-btn {
             transform: scale(1);
     border-width: 0px;
 }
-@media screen and (max-width:500px) {
-  .module-btn i.arrowLock.fa.fa-lock {
-      right: 7%;
-  }
-  .magenta-blob-box.module-btn {
-      width:100%;
-      padding:5px !important;
-  }
-  .heading {
-    font-size:12px;
-  }
-  .module-btn p br {
-    display:none;
-  }
-  .squiggle-container .squiggle-content .module-btn p {
-    padding:0 !important;
-  }
-  .helpHinder-btn {
-    width:250px;
-  }
-  .numbers-images img {
-    width: 30px !important;
-    margin-top: -5px;
-  }
+.img-md-plus-resize2 {
+  max-width:40%;
+}
 
-}
-@media screen and (max-width:1400px) {
-  .bulbOff {
-    height:75px;
-    width:60px;
-    margin-left:25px;
-    margin-top:20px;
-  }
-  .bulbOn {
-    height:100px;
-    width:100px;
-  }
-  .bulbhideshow {
-    height:100px;
-  }
-}
-@media screen and (min-width:600px) {
-  .heading {
-    font-size: 18px;
- }
-}
+
 /*Mix and match list*/
 
 .matchingimg {
@@ -421,6 +380,13 @@ span.center-btn {
 }
 .matchy2 {
   width:200px;
+  width: 200px;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 40px;
+padding: 0;
+
 }
 .matching {
   display:-webkit-box;
@@ -476,10 +442,7 @@ span.center-btn {
         -ms-flex-align:center;
             align-items:center;
 }
-.flip-row .switch-float {
-    width: auto !important;
-    margin-right: 1.8em;
-}
+
 .flip-title-row {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -684,6 +647,32 @@ span.center-btn {
   flex-direction:column;
   flex-flow:column wrap;
 }
+.switch-float {
+  width: 55% !important;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+@media screen and (max-width:1400px) {
+  .bulbOff {
+    height:75px;
+    width:60px;
+    margin-left:25px;
+    margin-top:20px;
+  }
+  .bulbOn {
+    height:100px;
+    width:100px;
+  }
+  .bulbhideshow {
+    height:100px;
+  }
+}
+@media screen and (min-width:600px) {
+  .heading {
+    font-size: 18px;
+ }
+}
 @media screen and (min-width:500px ) {
   .matching.matching-words {
     flex-flow: column wrap;
@@ -784,6 +773,32 @@ span.center-btn {
     justify-content:center;
     align-items:center;
   }
+  .click-lists {
+    height:70px;
+  }
+  .module-btn i.arrowLock.fa.fa-lock {
+      right: 7%;
+  }
+  .magenta-blob-box.module-btn {
+      width:100%;
+      padding:5px !important;
+  }
+  .heading {
+    font-size:12px;
+  }
+  .module-btn p br {
+    display:none;
+  }
+  .squiggle-container .squiggle-content .module-btn p {
+    padding:0 !important;
+  }
+  .helpHinder-btn {
+    width:250px;
+  }
+  .numbers-images img {
+    width: 30px !important;
+    margin-top: -5px;
+  }
 
 }
 @media screen and (max-width:350px) {
@@ -821,6 +836,7 @@ span.center-btn {
     font-size:12px;
     margin-top: 2px;
     height:auto;
+    width:100px;
   }
   .width50 {
     order:1;
@@ -855,6 +871,23 @@ span.center-btn {
   }
   span.numbers-images img {
     width:30px !important;
+  }
+  #form-checks {
+    height:170px;
+  }
+  #form-checks p input[type="checkbox"]:not(:checked) + label:after,   #form-checks p input[type="checkbox"]:checked + label:after {
+    top: -5px;
+    left: 7px;
+    height:20px ;
+    width:20px ;
+  }
+  #form-checks p input[type="checkbox"]:not(:checked) + label:before,  #form-checks p input[type="checkbox"]:checked + label:before {
+    top: 10px;
+    width: 20px ;
+    height: 20px ;
+  }
+  #form-checks p {
+    padding: 4px !important;
   }
 
 }

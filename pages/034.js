@@ -3,7 +3,10 @@ pageComponentry = {
     return {
       // Any data goes here.
       correct: false,
-      pageReload : false
+      pageReload : false,
+      mobsmall: false,
+      mobmed: false,
+      desktop: false
 
     }
   },
@@ -57,6 +60,17 @@ pageComponentry = {
    if(this.exerciseData['answerMe2']){
      this.correct = true;
      this.pageReload = true;
+     var widthWindow = $(window).width();
+     console.log(widthWindow);
+     if (widthWindow < 375) {
+       this.mobsmall = true;
+     }
+     else if ( widthWindow < 750 && window.matchMedia("(orientation: landscape)").matches ) {
+       this.mobmed = true;
+     }
+     else  {
+       this.desktop = true;
+     }
 
    }
 }

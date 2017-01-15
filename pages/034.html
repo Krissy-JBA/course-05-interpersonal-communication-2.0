@@ -23,7 +23,9 @@
                                     </div>
                                 </div>
                                 <div v-show="pageReload == true" class="flexy-image2 flexy-image-mob-fix pop-in">
-                                  <img class="img-responsive center-block" src="/course-files/course-05-interpersonal-communication-2.0/images/png/birds2@2x.png">
+                                  <img v-show="desktop == true" class="img-responsive center-block" src="/course-files/course-05-interpersonal-communication-2.0/images/png/birds2@2x.png">
+                                  <img v-show="mobsmall == true" class="img-responsive center-block" src="/course-files/course-05-interpersonal-communication-2.0/images/png/birds-2-2@2x.png">
+                                  <img v-show="mobmed == true" class="img-responsive center-block" src="/course-files/course-05-interpersonal-communication-2.0/images/png/birds-2-3@2x.png">
                                 </div>
                                 <div class="matching" v-show="pageReload == false">
 
