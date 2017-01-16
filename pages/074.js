@@ -133,7 +133,9 @@ pageComponentry = {
       window.location.hash = '075';
     },
     newPopup: function() {
-      this.popup2 = true;
+      if(this.done == true) {
+        this.popup2 = true;
+      }
     }
   },
   ready: function() {

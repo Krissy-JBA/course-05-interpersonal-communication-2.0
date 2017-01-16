@@ -34,7 +34,8 @@
 
 .flexy-image img {
    /*position: static!important;*/
-   transform: none!important;
+   -webkit-transform: none!important;
+           transform: none!important;
    /*left: auto!important;*/
    margin:auto;
    top: 0;
@@ -50,10 +51,20 @@
 .prev-button {
    background-size: auto!important;
 }
+.prev-button2 {
+   background-size: auto!important;
+}
 
-.jba-btn {
+.prev-button2 {
+   background-size: auto!important;
+}
+
+.jba-btn, .jba-btn-submit2, .jba-btn2 {
    background-size: 100% 100%!important;
+   -webkit-transition: -webkit-transform 0.15s!important;
+   transition: -webkit-transform 0.15s!important;
    transition: transform 0.15s!important;
+   transition: transform 0.15s, -webkit-transform 0.15s!important;
 }
 
 .jba-btn:hover {
@@ -65,6 +76,7 @@
 }
 
 .course-button {
+   -webkit-transition: .15s transform;
    transition: .15s transform;
 }
 
@@ -131,9 +143,9 @@
 .popupNew .popup-inner {
   margin:0 auto;
 }
-.jba-btn-locked, .rectangle-locked, .correct {
-  pointer-events: none;
-  cursor: default;
+.jba-btn-locked, .rectangle-locked, .correct, .next-button-locked, .course-button .next-button-locked {
+  pointer-events: none !important;
+  cursor: default !important;
 }
 .row-flex-center {
   display:-webkit-box;
@@ -251,8 +263,8 @@
   position: relative;
   margin-top:10%;
 }
-span.numbers-images img {
-    width: 50px;
+.numbers img {
+    max-width: 40px !important;
     margin-right:15px;
 }
 .number-lists {
@@ -262,7 +274,8 @@ span.numbers-images img {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    justify-content:center;
+    max-width: 500px;
+    margin:0 auto !important;
 }
 .number-text {
   width:80%;
@@ -381,9 +394,15 @@ span.center-btn {
 .matchy2 {
   width:200px;
   width: 200px;
+display: -webkit-box;
+display: -ms-flexbox;
 display: flex;
-justify-content: center;
-align-items: center;
+-webkit-box-pack: center;
+    -ms-flex-pack: center;
+        justify-content: center;
+-webkit-box-align: center;
+    -ms-flex-align: center;
+        align-items: center;
 height: 40px;
 padding: 0;
 
@@ -398,7 +417,9 @@ padding: 0;
   width:100%;
   -ms-flex-wrap:wrap;
       flex-wrap:wrap;
-  align-items:center;
+  -webkit-box-align:center;
+      -ms-flex-align:center;
+          align-items:center;
 }
 .matching svg {
   position:absolute;
@@ -494,6 +515,11 @@ padding: 0;
   max-height: 400px;
       width: auto;
 }
+.matching-words .flexy-match2 div {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
 .piechart {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -563,12 +589,8 @@ padding: 0;
     width: auto;
     height: 50vh;
     max-height: 300px;
-}
-.pie-img {
-  max-width:300px;
-  margin:0 auto;
-  display:flex;
-  justify-content:center;
+    margin:0 auto;
+    display:block;
 }
 .pie-img-reload {
   max-width:400px;
@@ -631,27 +653,46 @@ padding: 0;
   margin: 0 auto;
 }
 .no-transition {
+  -webkit-transition: none !important;
   transition:none !important;
 }
 .magenta-blob-box.matchy2 {
   padding: 5px;
   height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-left: 2px;
   margin-right: 2px;
 }
 #form-checks {
+  display:-webkit-box;
+  display:-ms-flexbox;
   display:flex;
-  flex-direction:column;
-  flex-flow:column wrap;
+  -webkit-box-orient:vertical;
+  -webkit-box-direction:normal;
+      -ms-flex-direction:column;
+          flex-direction:column;
+  -ms-flex-flow:column wrap;
+      flex-flow:column wrap;
 }
 .switch-float {
   width: 55% !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 @media screen and (max-width:1400px) {
   .bulbOff {
@@ -675,17 +716,23 @@ padding: 0;
 }
 @media screen and (min-width:500px ) {
   .matching.matching-words {
-    flex-flow: column wrap;
-    -webkit-align-content: stretch;
-    align-content: stretch;
+    -ms-flex-flow: column wrap;
+        flex-flow: column wrap;
+    -ms-flex-line-pack: stretch;
+        align-content: stretch;
     height: 300px;
-    flex-direction:column;
+    -webkit-box-orient:vertical;
+    -webkit-box-direction:normal;
+        -ms-flex-direction:column;
+            flex-direction:column;
   }
   .matching-words .flexy-match2 {
     height:25%;
   }
   .matching-words .flexy-match2.bottom {
-    order:2;
+    -webkit-box-ordinal-group:3;
+        -ms-flex-order:2;
+            order:2;
   }
   #form-checks {
     height:350px;
@@ -697,6 +744,13 @@ padding: 0;
 }
 
 @media screen and (max-width:500px) {
+  .prev-button2, .next-button2 {
+    padding-top: 1.5em;
+    padding-right: 1.5em;
+    padding-bottom: 1.5em;
+    padding-left: 1.5em;
+    margin-top: 8px;
+  }
   .width50 {
     width:30%;
   }
@@ -726,7 +780,9 @@ padding: 0;
     margin-top:14px;
   }
   .flexy-match2.bottom {
-    order:2;
+    -webkit-box-ordinal-group:3;
+        -ms-flex-order:2;
+            order:2;
   }
   .flexy-match2 div {
     padding:5px;
@@ -736,7 +792,8 @@ padding: 0;
     width:45%;
   }
   .matching.matching-words {
-    justify-content: space-around;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
   .flexy-reload {
     width:45% !important;
@@ -751,6 +808,7 @@ padding: 0;
   .pie-img img {
     width:200px;
     height:auto;
+
   }
   #form-checks p input[type="checkbox"]:not(:checked) + label:after,   #form-checks p input[type="checkbox"]:checked + label:after {
     top: -5px;
@@ -769,9 +827,15 @@ padding: 0;
 
   .drag-wrap .drag-buttons {
     font-size:13px !important;
+    display:-webkit-box;
+    display:-ms-flexbox;
     display:flex;
-    justify-content:center;
-    align-items:center;
+    -webkit-box-pack:center;
+        -ms-flex-pack:center;
+            justify-content:center;
+    -webkit-box-align:center;
+        -ms-flex-align:center;
+            align-items:center;
   }
   .click-lists {
     height:70px;
@@ -811,12 +875,16 @@ padding: 0;
     height:auto;
   }
   .width50 {
-    order:1;
+    -webkit-box-ordinal-group:2;
+        -ms-flex-order:1;
+            order:1;
     width:50%;
     margin-bottom:10px;
   }
   .flexy-match {
-    order:2;
+    -webkit-box-ordinal-group:3;
+        -ms-flex-order:2;
+            order:2;
   }
   .module-btn i.fa.fa-check {
       right: -10px;
@@ -839,15 +907,21 @@ padding: 0;
     width:100px;
   }
   .width50 {
-    order:1;
+    -webkit-box-ordinal-group:2;
+        -ms-flex-order:1;
+            order:1;
     width:25%;
     margin-bottom:10px;
   }
   .flexy-match {
-    order:2;
+    -webkit-box-ordinal-group:3;
+        -ms-flex-order:2;
+            order:2;
   }
   .flexy-match2.bottom {
-    order:2;
+    -webkit-box-ordinal-group:3;
+        -ms-flex-order:2;
+            order:2;
   }
   .flexy-match2 {
     width:45%;
@@ -861,7 +935,10 @@ padding: 0;
   }
   .matching.matching-words {
     height: auto;
-    flex-direction:row;
+    -webkit-box-orient:horizontal;
+    -webkit-box-direction:normal;
+        -ms-flex-direction:row;
+            flex-direction:row;
   }
   .matching-words .flexy-match2 {
     height:auto;
@@ -890,4 +967,42 @@ padding: 0;
     padding: 4px !important;
   }
 
+}
+@media screen and (max-width:320px) {
+  .prev-button2, .next-button2 {
+    padding-top: 1.5em;
+    padding-right: 1.5em;
+    padding-bottom: 1.5em;
+    padding-left: 1.5em;
+    margin-top: 5px;
+  }
+}
+
+/* Firefox3-specific CSS property for overflow */
+@-moz-document url-prefix() {
+  .content-row, x:-moz-any-link, x:default {
+    overflow:visible !important;
+  }
+  .purple-blob-box {
+    background-size: 100% 100%;
+  }
+
+}
+@media screen and (max-width:500px) {
+  @supports (overflow:-webkit-marquee) and (justify-content:inherit)
+     {
+      .safari-only {
+        display:block !important;
+        position:relative;
+      }
+      .safari-only i {
+        position: absolute;
+        top:2px;
+        right:-15px;
+      }
+      .safari-only2 {
+        width: 58.33333333% !important;
+        padding-right: 0;
+      }
+    }
 }
