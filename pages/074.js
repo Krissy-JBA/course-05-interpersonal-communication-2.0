@@ -18,7 +18,8 @@ pageComponentry = {
       five: false,
       six: false,
       seven: false,
-      done: false
+      done: false,
+      reload: false
     }
   },
   methods: {
@@ -36,6 +37,7 @@ pageComponentry = {
       console.log(this.one);
       if((this.one == true) && (this.two == true) && (this.three == true) && (this.four == true) && (this.five == true) && (this.six == true) && (this.seven == true)) {
         this.done = true;
+        this.$parent.saveData('ticked-people', this.done);
       }
     },
     pinkClick: function(){
@@ -51,6 +53,7 @@ pageComponentry = {
       console.log(this.two);
       if((this.one == true) && (this.two == true) && (this.three == true) && (this.four == true) && (this.five == true) && (this.six == true) && (this.seven == true)) {
         this.done = true;
+        this.$parent.saveData('ticked-people', this.done);
       }
     },
     orangeClick: function(){
@@ -66,6 +69,7 @@ pageComponentry = {
       console.log(this.three);
       if((this.one == true) && (this.two == true) && (this.three == true) && (this.four == true) && (this.five == true) && (this.six == true) && (this.seven == true)) {
         this.done = true;
+        this.$parent.saveData('ticked-people', this.done);
       }
     },
     tieClick: function(){
@@ -81,6 +85,7 @@ pageComponentry = {
       console.log(this.four);
       if((this.one == true) && (this.two == true) && (this.three == true) && (this.four == true) && (this.five == true) && (this.six == true) && (this.seven == true)) {
         this.done = true;
+        this.$parent.saveData('ticked-people', this.done);
       }
     },
     suitClick: function(){
@@ -96,6 +101,7 @@ pageComponentry = {
       console.log(this.five);
       if((this.one == true) && (this.two == true) && (this.three == true) && (this.four == true) && (this.five == true) && (this.six == true) && (this.seven == true)) {
         this.done = true;
+        this.$parent.saveData('ticked-people', this.done);
       }
     },
     aleksClick: function(){
@@ -111,6 +117,7 @@ pageComponentry = {
       console.log(this.six);
       if((this.one == true) && (this.two == true) && (this.three == true) && (this.four == true) && (this.five == true) && (this.six == true) && (this.seven == true)) {
         this.done = true;
+        this.$parent.saveData('ticked-people', this.done);
       }
     },
     tshirtClick: function(){
@@ -127,14 +134,18 @@ pageComponentry = {
       console.log(this.done, 'alex');
       if((this.one == true) && (this.two == true) && (this.three == true) && (this.four == true) && (this.five == true) && (this.six == true) && (this.seven == true)) {
         this.done = true;
+        this.$parent.saveData('ticked-people', this.done);
       }
     },
     redirectMe: function() {
       window.location.hash = '075';
     },
     newPopup: function() {
-      if(this.done == true) {
+      if(this.done == true && this.reload == false) {
         this.popup2 = true;
+      }
+      else if (this.reload == true) {
+        window.location.hash = '075';
       }
     }
   },
@@ -143,7 +154,14 @@ pageComponentry = {
 
     if((this.one == true) && (this.two == true) && (this.three == true) && (this.four == true) && (this.five == true) && (this.six == true) && (this.seven == true)) {
       this.done = true;
+      this.$parent.saveData('ticked-people', this.done);
     }
+    if(this.exerciseData['ticked-people']){
+      this.done = this.exerciseData['ticked-people'];
+      this.reload = true;
+      console.log(this.reload);
+    }
+
 
 
   }
