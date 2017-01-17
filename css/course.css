@@ -7,12 +7,6 @@
    overflow-y:auto;
 }
 
-@media only screen and (max-device-width: 680px) and (min-device-width: 300px) and (orientation: landscape) {
-   .flexy-image {
-       width: 50%;
-   }
-}
-
 .magenta-blob-box{
  background-size:100% 100%;
 }
@@ -106,9 +100,6 @@
 
 .tapme-wrapper p {
     float: right;
-}
-.plb {
-    position: absolute;
 }
 .oneActive, .twoActive, .threeActive {
     background: url("/images/course-assets/buttons/rectangle-button-visited.svg");
@@ -863,6 +854,22 @@ padding: 0;
     width: 30px !important;
     margin-top: -5px;
   }
+  .img-md-plus-resize2 {
+    max-width:20%;
+  }
+  .safari-only {
+    display:block !important;
+    position:relative;
+  }
+  .safari-only i {
+    position: absolute;
+    top:2px;
+    right:-15px;
+  }
+  .safari-only2 {
+    width: 58.33333333% !important;
+    padding-right: 0;
+  }
 
 }
 @media screen and (max-width:350px) {
@@ -988,21 +995,8 @@ padding: 0;
   }
 
 }
-@media screen and (max-width:500px) {
-  @supports (overflow:-webkit-marquee) and (justify-content:inherit)
-     {
-      .safari-only {
-        display:block !important;
-        position:relative;
-      }
-      .safari-only i {
-        position: absolute;
-        top:2px;
-        right:-15px;
-      }
-      .safari-only2 {
-        width: 58.33333333% !important;
-        padding-right: 0;
-      }
-    }
+@media only screen and (max-device-width: 680px) and (min-device-width: 300px) and (orientation: landscape) {
+   .flexy-image {
+       width: 50%;
+   }
 }

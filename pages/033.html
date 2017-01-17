@@ -1,149 +1,128 @@
-<div class="popup-bk popup" id="notQuite" data-popup="popup-1">
-        <div class="popup-inner">
-            <div class="squiggle-container">
-                <div class="top-squiggle"><img src="/images/course-assets/squiggle/magenta-top.svg" alt=""></div>
-                <!-- put all of your content into the squiggle content div -->
-                <div class="squiggle-content magenta-squiggle">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="squiggle-container flex-center">
-                                <p>Not quite, it’s actually the other way around. Close this pop-up and have another read through the descriptions.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bot-squiggle"><img src="/images/course-assets/squiggle/magenta-bottom.svg" alt=""></div>
-            </div>
-            <div class="course-button close-button popup-close-test" data-popup-close="popup-1">
-                <i class="fa fa-times close-button-cross" aria-hidden="true"></i>
+<div class="container-fluid h100 branding12">
+    <div class="row header-row  ">
+        <div class="col-md-12 col-xs-8 col-xs-offset-2 col-md-offset-0">
+            <div class="new-main-content pop-in">
+                <h2>Perspective in practice</h2>
+                <!-- Change Header -->
             </div>
         </div>
     </div>
-    <div class="popup-bk popup" data-popup="popup-2">
-        <div class="popup-inner">
-            <div class="squiggle-container">
-                <div class="top-squiggle"><img src="/images/course-assets/squiggle/green-top.svg" alt=""></div>
-                <!-- put all of your content into the squiggle content div -->
-                <div class="squiggle-content green-squiggle">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="squiggle-container flex-center">
-                                <p>Nice, it looks like you know your stuff (…or know how to make a pretty good guess)!</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bot-squiggle"><img src="/images/course-assets/squiggle/green-bottom.svg" alt=""></div>
-            </div>
-            <div class="course-button close-button popup-close-test" data-popup-close="popup-2">
-                <i class="fa fa-times close-button-cross" aria-hidden="true"></i>
-            </div>
-        </div>
-    </div>
-           <div class="container-fluid h100 branding12">
-            <div class="row header-row  ">
-                <div class="col-md-12 col-xs-8 col-xs-offset-2 col-md-offset-0">
-                    <div class="new-main-content pop-in">
-                        <h2>Perspective in practice</h2>
-                        <!-- Change Header -->
-                    </div>
-                </div>
-            </div>
-            <div class="row content-row">
-                <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3  col-xs-12
+    <div class="row content-row">
+        <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3  col-xs-12
     ">
-                    <div class="squiggle-container pop-in">
-                        <div class="top-squiggle"><img src="/images/course-assets/squiggle/white-top.svg" alt=""></div>
-                        <div class="squiggle-content white-squiggle">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="squiggle-container flex-center brandingBoxWrap">
-                                        <!-- put all of your content into here div -->
-                                        <div class="row">
-                                            <div class="col-md-12 col-pad0">
-                                                <p>What do you think is the bird's default state? Match the pairs.</p>
-                                            </div>
-                                        </div>
-
-                                                <div class="matching">
-
-                                                  <div id="eagleLeft" class="matching-button" >
-                                                      <img @click="clicker" class="matchingimg" src="/course-files/course-05-interpersonal-communication-2.0/images/png/interComms22@2x.png">
-                                                  </div>
-                                                  <svg v-show="selected == true"><line class="line" style="stroke:rgb(255,0,0);stroke-width:2"/></svg>
-
-                                                  <p id="eagle" class="jba-btn matchy"  >Driven</p>
-
-                                                  <div id="owlLeft" class="matching-button">
-                                                      <img @click="clicker2" class="matchingimg" src="/course-files/course-05-interpersonal-communication-2.0/images/png/interComms23@2x.png">
-                                                  </div>
-
-
-                                                  <svg v-show="selected2 == true" ><line class="line2" style="stroke:rgb(255,0,0);stroke-width:2"/></svg>
-                                                  <p id="owl" class="jba-btn matchy" >Anxious</p>
-
-                                                  <div id="doveLeft" class="matching-button">
-                                                      <img @click="clicker3" class="matchingimg" src="/course-files/course-05-interpersonal-communication-2.0/images/png/interComms24@2x.png">
-                                                  </div>
-                                                  <svg v-show="selected3 == true"><line class="line3" style="stroke:rgb(255,0,0);stroke-width:2"/></svg>
-
-                                                  <p id="dove" class="jba-btn matchy" >Calm</p>
-
-
-                                                 <div id="peacockLeft" class="matching-button">
-                                                     <img  @click="clicker4" class="matchingimg" src="/course-files/course-05-interpersonal-communication-2.0/images/png/interComms25@2x.png">
-                                                 </div>
-
-                                                  <svg v-show="selected4 == true"><line  class="line4" style="stroke:rgb(255,0,0);stroke-width:2"/></svg>
-
-                                                 <p id="peacock" class="jba-btn matchy" >Optimistic</p>
-
-                                                </div>
-                                    <!-- End Content -->
-                                </div>
-                            </div>
-                        </div>
-                      </div>
-                        <div class="bot-squiggle"><img src="/images/course-assets/squiggle/white-bottom.svg" alt=""></div>
-                    </div>
-                </div>
-            </div>
-            <!-- footer start -->
-            <div class="row progressWrap">
-                <div class="col-xs-12 col-pad0">
-                    <!-- S:Progress Bar -->
-                    <div class="progress-row">
-                        <div class="hand-arrow">
-                            <div class="percentageTxt hidden">
-                                <p>60%</p>
-                            </div>
-                            <img class="percentageArrow hidden" src="/images/course-assets/progressBar/hand_arrow.png" alt="" />
-                        </div>
-                        <div class="container progressContainer">
-                            <div class="row">
-                                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
-                                    <div class="course-button prev-button"></div>
-                                </div>
-                                <!-- leftArrow -->
-                                <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 align">
-                                    <div class="course-progress-bar-wrap">
-                                        <div class="courseProgressBar">
-                                            <p class="fixed hidden">60%</p>
-                                            <div class="percentageProgress"></div>
-                                        </div>
+            <div class="squiggle-container pop-in">
+                <div class="top-squiggle"><img src="/images/course-assets/squiggle/white-top.svg" alt=""></div>
+                <div class="squiggle-content white-squiggle">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="squiggle-container flex-center brandingBoxWrap">
+                                <!-- put all of your content into here div -->
+                                <div class="row">
+                                    <div class="col-md-12 col-pad0">
+                                        <p>What do you think is the bird's default state? Match the pairs.</p>
                                     </div>
                                 </div>
-                                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
-
-                                    <div class="course-button next-button" v-bind:class="{'next-button-locked' : disableInput}"></div>
+                                <div v-show="pageReload == true" class="flexy-image2 flexy-image-mob-fix pop-in">
+                                   <img v-show="desktop == true" class="img-responsive center-block" src="/course-files/course-05-interpersonal-communication-2.0/images/png/birds3@2x.png">
+                                   <img v-show="mobsmall == true" class="img-responsive center-block" src="/course-files/course-05-interpersonal-communication-2.0/images/png/birds-3-2@2x.png">
+                                   <img v-show="mobmed == true" class="img-responsive center-block" src="/course-files/course-05-interpersonal-communication-2.0/images/png/birds-3-3@2x.png">
 
                                 </div>
-                                <!-- rightArrow -->
+                                <div class="matching" v-show="pageReload == false">
+
+                                          <div class="width50">
+                                            <img id="eagleLeft" data-accept="eagle" class="matchingimg img-responsive center-block target" src="/course-files/course-05-interpersonal-communication-2.0/images/png/interComms22@2x.png">
+                                         </div>
+
+                                         <div class="flexy-match" id="dove">
+                                             <div  class="magenta-blob-box matchy2 no-transition center-block  option" data-target="dove">Calm</div>
+                                         </div>
+
+
+
+
+                                          <div class="width50">
+                                              <img id="owlLeft" data-accept="owl" class="matchingimg img-responsive center-block target" src="/course-files/course-05-interpersonal-communication-2.0/images/png/interComms23@2x.png">
+                                          </div>
+
+                                          <div class="flexy-match" id="peacock">
+                                              <div  data-target="peacock" class="magenta-blob-box matchy2 no-transition center-block  option">Optimistic</div>
+                                          </div>
+
+
+
+                                          <div class="width50">
+                                              <img id="doveLeft" data-accept="dove" class="matchingimg img-responsive center-block target" src="/course-files/course-05-interpersonal-communication-2.0/images/png/interComms24@2x.png">
+                                          </div>
+
+                                          <div class="flexy-match" id="eagle">
+                                             <div  class="magenta-blob-box matchy2 no-transition center-block option" data-target="eagle">Driven</div>
+                                          </div>
+
+
+
+
+
+
+                                          <div class="width50">
+                                              <img id="peacockLeft" data-accept="peacock" class="matchingimg img-responsive center-block target" src="/course-files/course-05-interpersonal-communication-2.0/images/png/interComms25@2x.png">
+                                          </div>
+
+                                          <div class="flexy-match" id="owl">
+                                              <div class="magenta-blob-box matchy2 no-transition center-block  option" data-target="owl">Anxious</div>
+                                          </div>
+
+
+
+
+                                </div>
+                                <!-- End Content -->
+                                <p class="blue-text text-center">Drag the answer button to its matching bird</p>
+
                             </div>
                         </div>
                     </div>
-                    <!-- E:Progress Bar -->
                 </div>
-                <!-- end  content -->
+                <div class="bot-squiggle"><img src="/images/course-assets/squiggle/white-bottom.svg" alt=""></div>
             </div>
         </div>
+    </div>
+    <!-- footer start -->
+    <div class="row progressWrap">
+        <div class="col-xs-12 col-pad0">
+            <!-- S:Progress Bar -->
+            <div class="progress-row">
+                <div class="hand-arrow">
+                    <div class="percentageTxt hidden">
+                        <p>60%</p>
+                    </div>
+                    <img class="percentageArrow hidden" src="/images/course-assets/progressBar/hand_arrow.png" alt="" />
+                </div>
+                <div class="container progressContainer">
+                    <div class="row">
+                        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
+                            <a href="#032" class="course-button prev-button"></a>
+                        </div>
+                        <!-- leftArrow -->
+                        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 align safari-only2">
+                            <div class="course-progress-bar-wrap">
+                                <div class="courseProgressBar">
+                                    <p class="fixed hidden">60%</p>
+                                    <div class="percentageProgress"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center safari-only">
+
+                          <a id="submit" href="#034" class="jba-btn jba-btn-submit">Submit</a>
+
+                        </div>
+                        <!-- rightArrow -->
+                    </div>
+                </div>
+            </div>
+            <!-- E:Progress Bar -->
+        </div>
+        <!-- end  content -->
+    </div>
+</div>
