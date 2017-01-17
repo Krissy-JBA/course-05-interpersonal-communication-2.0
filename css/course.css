@@ -82,13 +82,18 @@
   padding: 8px;
   width: 80%;
   position:relative;
-  margin-top:3px
+  margin-top:3px;
+  max-width:500px;
 }
 
 .module-btn p {
     text-align:center;
 }
-
+.mini-modules .module-btn {
+  max-width:350px;
+  width:80% !important;
+  padding:8px !important;
+}
 .module-btn i.arrowLock.fa.fa-lock {
     right: 15%;
 }
@@ -175,10 +180,13 @@
     z-index: 99999;
 }
 .buttonWrapNew {
-  margin-top:30%;
+  margin-top:10%;
   display:-webkit-box;
   display:-ms-flexbox;
   display:flex;
+}
+.buttonWrapNew a {
+  padding:1em !important;
 }
 .purple-bk-popup2 .popup-inner {
   margin:0 auto;
@@ -867,6 +875,8 @@ padding: 0;
   }
   .squiggle-container .squiggle-content .module-btn p {
     padding:0 !important;
+    width:95%;
+    margin:0 auto;
   }
   .helpHinder-btn {
     width:250px;
@@ -916,6 +926,12 @@ padding: 0;
 
     .click-lists{
         height: 50px;
+    }
+    .mini-modules .module-btn {
+      padding:8px !important;
+    }
+    .buttonWrapNew a {
+      padding:8px !important;
     }
 
 }
@@ -1081,4 +1097,15 @@ padding: 0;
    .flexy-image {
        width: 50%;
    }
+}
+
+@media screen and (min-width: 800px) {
+  .first-number .number-lists {
+    max-width:90%;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .first-number .number-lists {
+    max-width:600px;
+  }
 }
