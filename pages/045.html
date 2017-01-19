@@ -24,7 +24,7 @@
                                   <div class="squiggle-container">
                                       <!-- put all of your content into here div -->
                                       <div id="courseFormWrapperDiv1" class="course-form-padding courseFormWrapDiv textarea-mobile large-textarea">
-                                          <textarea v-on:keydown="checkContent" v-on:change="saveInputField1(inputfield1)" v-model="inputfield1" placeholder="Enter text here..." class="form-control form-control-1 course-input-field-black"></textarea>
+                                          <textarea id="textarea" v-on:keyup="checkContent" v-on:change="saveInputField1(inputfield1)" v-model="inputfield1" placeholder="Enter text here..." class="form-control form-control-1 course-input-field-black"></textarea>
                                       </div>
                                       <!-- End Content -->
                                   </div>

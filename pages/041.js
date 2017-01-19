@@ -12,7 +12,7 @@ pageComponentry = {
       this.$parent.saveData('message-to-get-across', value);
     },
     checkContent: function() {
-      if (this.inputfield1.length > 1)  {
+      if (this.inputfield1.length >= 1)  {
         this.content = true;
       }
       else {
@@ -25,6 +25,11 @@ pageComponentry = {
     if(this.exerciseData['message-to-get-across']){
       this.inputfield1 = this.exerciseData['message-to-get-across'];
       this.content = true;
+    }
+    document.getElementById("textarea").addEventListener("paste", myFunction);
+    var self = this;
+    function myFunction() {
+     self.content = true;
     }
 
   }

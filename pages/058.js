@@ -12,7 +12,7 @@ pageComponentry = {
       this.$parent.saveData('how-could-improve', value);
     },
     checkContent: function() {
-      if (this.inputfield1.length > 1)  {
+      if (this.inputfield1.length >= 1)  {
         this.content = true;
       }
       else {
@@ -25,6 +25,11 @@ pageComponentry = {
     if(this.exerciseData['how-could-improve']){
       this.inputfield1 = this.exerciseData['how-could-improve'];
       this.content = true;
+    }
+    var self = this;
+    document.getElementById("textarea").addEventListener("paste", myFunction);    
+    function myFunction() {
+     self.content = true;
     }
 
   }

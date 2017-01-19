@@ -12,7 +12,7 @@ pageComponentry = {
       this.$parent.saveData('what-key-things-poor-communication', value);
     },
     checkContent: function() {
-      if (this.inputfield1.length > 1) {
+      if (this.inputfield1.length >= 1) {
         this.content = true;
       }
       else {
@@ -25,6 +25,11 @@ pageComponentry = {
     if(this.exerciseData['what-key-things-poor-communication']){
       this.inputfield1 = this.exerciseData['what-key-things-poor-communication'];
       this.content = true;
+    }
+    document.getElementById("textarea").addEventListener("paste", myFunction);
+    var self = this;
+    function myFunction() {
+     self.content = true;
     }
 
   }

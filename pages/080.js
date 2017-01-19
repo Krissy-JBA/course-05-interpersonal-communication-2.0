@@ -16,7 +16,7 @@ pageComponentry = {
       this.$parent.saveData('three-hints-for-future', value);
     },
     checkContent: function() {
-      if ((this.inputfield1.length > 1) && (this.inputfield2.length > 1) )  {
+      if ((this.inputfield1.length >= 1) && (this.inputfield2.length >= 1) )  {
         this.content = true;
       }
       else {

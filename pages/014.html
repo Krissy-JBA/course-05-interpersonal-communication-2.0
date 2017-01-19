@@ -1,4 +1,4 @@
-<div class="popupNew" v-show="popup1 == true" transition="popup">
+<div class="popup" v-show="popup1 == true" transition="popup">
     <div class="popup-inner">
         <div class="squiggle-container">
             <div class="top-squiggle"><img src="/images/course-assets/squiggle/green-top.svg" alt=""></div>
@@ -19,7 +19,7 @@
             <i class="fa fa-times close-button-cross" aria-hidden="true"></i> </div>
     </div>
 </div>
-<div class="popupNew" v-show="popup2 == true" transition="popup">
+<div class="popup" v-show="popup2 == true" transition="popup">
     <div class="popup-inner">
         <div class="squiggle-container">
             <div class="top-squiggle"><img src="/images/course-assets/squiggle/red-top.svg" alt=""></div>
@@ -62,14 +62,12 @@
                       <div class="col-md-12">
                         <p class="text-center ">Cultural differences... </p>
                         <div class="row two-line">
-                          <div class="col-xs-12 col-md-6 text-center one-line-bot">
-                              <button type="button" class="jba-btn jba-btn-lg jba-btn-tab helpHinder-btn" @click="oneButton(answer)" v-bind:class="{'oneActive': answer == 'Cultural Differences help'}">Helps communication</button>
-                          </div>
-                          <div class="col-xs-12 col-md-6 text-center">
-                              <button type="button" class="jba-btn jba-btn-lg jba-btn-tab helpHinder-btn" @click="twoButton(answer)" v-bind:class="{'twoActive': answer == 'Cultural Differences hinder'}">Hinders communication</button>
+                          <div class="col-xs-12  text-center one-line-bot flex-buttons">
+                              <button type="button" class="magenta-blob-box helpHinder-btn" @click="oneButton(answer)" v-bind:class="{'oneActive': answer == 'Cultural Differences help'}">Helps communication</button>
+                              <button type="button" class="magenta-blob-box helpHinder-btn" @click="twoButton(answer)" v-bind:class="{'twoActive': answer == 'Cultural Differences hinder'}">Hinders communication</button>
                           </div>
                         </div>
-                        <p class="blue-text text-center">Tap to make your selection</p>
+                        <p class="blue-text text-center">Tap to make your selection.</p>
                       </div>
                   </div>
               </div>

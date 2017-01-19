@@ -1,3 +1,23 @@
+<div class="popup" v-show="popup == true" transition="popup">
+    <div class="popup-inner">
+        <div class="squiggle-container">
+            <div class="top-squiggle"><img src="/images/course-assets/squiggle/green-top.svg" alt=""></div>
+            <!-- put all of your content into the squiggle content div -->
+            <div class="squiggle-content green-squiggle">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="squiggle-container flex-center">
+                          <p>Congratulations, you got them all right!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bot-squiggle"><img src="/images/course-assets/squiggle/green-bottom.svg" alt=""></div>
+        </div>
+        <div class="course-button close-button popup-close-test" @click="redirectMe">
+            <i class="fa fa-times close-button-cross" aria-hidden="true"></i> </div>
+    </div>
+</div>
 <div class="container-fluid h100 branding12">
     <div class="row header-row  ">
         <div class="col-md-12 col-xs-8 col-xs-offset-2 col-md-offset-0">
@@ -28,36 +48,37 @@
                                   <img v-show="mobmed == true" class="img-responsive center-block" src="/course-files/course-05-interpersonal-communication-2.0/images/png/birds-2-3@2x.png">
                                 </div>
                                 <div class="matching" v-show="pageReload == false">
-                                          <div class="width50 one-line-bot">
-                                            <img id="eagleLeft" data-accept="eagle" class="matchingimg img-responsive center-block target" src="/course-files/course-05-interpersonal-communication-2.0/images/png/interComms22@2x.png">
-                                         </div>
+
                                          <div class="flexy-match" id="owl">
                                              <div  class="magenta-blob-box matchy2 no-transition  center-block  option" data-target="owl">Getting it right</div>
                                          </div>
-                                          <div class="width50 one-line-bot">
-                                              <img id="owlLeft" data-accept="owl" class="matchingimg img-responsive center-block target" src="/course-files/course-05-interpersonal-communication-2.0/images/png/interComms23@2x.png">
-                                          </div>
+                                         <div class="width50 one-line-bot">
+                                           <img id="eagleLeft" data-accept="eagle" class="matchingimg img-responsive center-block target" src="/course-files/course-05-interpersonal-communication-2.0/images/png/interComms22@2x.png">
+                                        </div>
 
                                           <div class="flexy-match" id="dove">
                                               <div  data-target="dove" class="magenta-blob-box matchy2 no-transition  center-block option">Getting along</div>
                                           </div>
                                           <div class="width50 one-line-bot">
-                                              <img id="doveLeft" data-accept="dove" class="matchingimg img-responsive center-block target" src="/course-files/course-05-interpersonal-communication-2.0/images/png/interComms24@2x.png">
+                                              <img id="owlLeft" data-accept="owl" class="matchingimg img-responsive center-block target" src="/course-files/course-05-interpersonal-communication-2.0/images/png/interComms23@2x.png">
                                           </div>
 
                                           <div class="flexy-match" id="eagle">
                                              <div  class="magenta-blob-box matchy2 no-transition  center-block option" data-target="eagle">Getting it done</div>
                                           </div>
                                           <div class="width50 one-line-bot">
-                                              <img id="peacockLeft" data-accept="peacock" class="matchingimg img-responsive center-block target" src="/course-files/course-05-interpersonal-communication-2.0/images/png/interComms25@2x.png">
+                                              <img id="doveLeft" data-accept="dove" class="matchingimg img-responsive center-block target" src="/course-files/course-05-interpersonal-communication-2.0/images/png/interComms24@2x.png">
                                           </div>
 
                                           <div class="flexy-match" id="peacock">
                                               <div class="magenta-blob-box matchy2 no-transition  center-block  option" data-target="peacock">Getting appreciation</div>
                                           </div>
+                                          <div class="width50 one-line-bot">
+                                              <img id="peacockLeft" data-accept="peacock" class="matchingimg img-responsive center-block target" src="/course-files/course-05-interpersonal-communication-2.0/images/png/interComms25@2x.png">
+                                          </div>
                                 </div>
                                 <!-- End Content -->
-                                <p class="blue-text text-center">Drag the answer button to its matching bird</p>
+                                <p class="blue-text text-center">Drag the answer button to its matching bird.</p>
 
                             </div>
                         </div>
@@ -94,7 +115,7 @@
                         </div>
                         <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center safari-only">
 
-                          <a id="submit" href="#035" class="jba-btn jba-btn-submit">Submit</a>
+                        <a @click="nextButton" class="course-button" v-bind:class="{'next-button2': correct, 'next-button-locked': !correct}"></a>
 
                         </div>
                         <!-- rightArrow -->

@@ -12,7 +12,7 @@ pageComponentry = {
       this.$parent.saveData('how-did-it-make-you-feel-assertive', value);
     },
     checkContent: function() {
-      if (this.inputfield1.length > 1)  {
+      if (this.inputfield1.length >= 1)  {
         this.content = true;
       }
       else {
@@ -26,6 +26,12 @@ pageComponentry = {
       this.inputfield1 = this.exerciseData['how-did-it-make-you-feel-assertive'];
       this.content = true;
     }
+    var self = this;
+    document.getElementById("textarea").addEventListener("paste", myFunction);
+    function myFunction() {
+     self.content = true;
+    }
+
 
   }
 
