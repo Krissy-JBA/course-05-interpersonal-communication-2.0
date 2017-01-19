@@ -1,3 +1,23 @@
+<div class="popup" v-show="popup == true" transition="popup">
+    <div class="popup-inner">
+        <div class="squiggle-container">
+            <div class="top-squiggle"><img src="/images/course-assets/squiggle/green-top.svg" alt=""></div>
+            <!-- put all of your content into the squiggle content div -->
+            <div class="squiggle-content green-squiggle">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="squiggle-container flex-center">
+                          <p>Congratulations, you got them all right!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bot-squiggle"><img src="/images/course-assets/squiggle/green-bottom.svg" alt=""></div>
+        </div>
+        <div class="course-button close-button popup-close-test" @click="redirectMe">
+            <i class="fa fa-times close-button-cross" aria-hidden="true"></i> </div>
+    </div>
+</div>
 <div class="container-fluid h100 branding12">
     <div class="row header-row  ">
         <div class="col-md-12 col-xs-8 col-xs-offset-2 col-md-offset-0">
@@ -21,38 +41,42 @@
                                     <div class="col-md-12 col-pad0">
                                     </div>
                                 </div>
-                                <div class="matching matching-words two-line-bot">
-                                          <div class="flexy-match2">
-                                              <div class="purple-blob-box padding-less  center-block target" data-accept="Clarifying">Could you go over that again?</div>
+                                <div class="matching one-line-bot" v-show="pageReload == false">
+                                          <div class="answer-wrapper" v-show="pageReload == false">
+                                            <p class="option" data-target="Open">Open</p>
+                                            <p class="option" data-target="Closed">Closed</p>
+                                            <p class="option" data-target="Clarifying">Clarifying</p>
+                                            <p class="option" data-target="Reflective">Reflective</p>
                                           </div>
-
-                                          <div class="flexy-match2 bottom">
-                                              <div class="magenta-blob-box no-transition padding-less  center-block  option" id="open" data-target="Open">Open</div>
+                                          <div class="word-wrapper">
+                                            <div class="target" data-accept="Clarifying"></div><p>Could you go over that again?</p>
                                           </div>
-                                          <div class="flexy-match2">
-                                              <div class="purple-blob-box padding-less  center-block target" data-accept="Closed">Were you there yesterday?</div>
+                                          <div class="word-wrapper">
+                                            <div class="target" data-accept="Closed"></div><p>Were you there yesterday?</p>
                                           </div>
-
-                                          <div class="flexy-match2 bottom">
-                                              <div class="magenta-blob-box no-transition padding-less  center-block  option" id="closed" data-target="Closed">Closed</div>
+                                          <div class="word-wrapper">
+                                            <div class="target" data-accept="Reflective"></div><p>So you're saying you didn't see it?</p>
                                           </div>
-                                          <div class="flexy-match2">
-                                              <div class="purple-blob-box padding-less  center-block target"  data-accept="Reflective">So you're saying you didn't see it?</div>
+                                          <div class="word-wrapper">
+                                            <div class="target" data-accept="Open"></div><p>How did that make you feel?</p>
                                           </div>
-
-                                          <div class="flexy-match2 bottom">
-                                              <div class="magenta-blob-box no-transition padding-less  center-block  option" id="clarify" data-target="Clarifying">Clarifying</div>
+                                </div>
+                                <div class="matching one-line-bot" v-show="pageReload == true">
+                                          <div class="word-wrapper">
+                                            <div class="target">Clarifying</div><p>Could you go over that again?</p>
                                           </div>
-                                          <div class="flexy-match2">
-                                              <div class="purple-blob-box padding-less  center-block target"  data-accept="Open">How did that make you feel?</div>
+                                          <div class="word-wrapper">
+                                            <div class="target">Closed</div><p>Were you there yesterday?</p>
                                           </div>
-                                          <div class="flexy-match2 bottom">
-                                              <div class="magenta-blob-box no-transition padding-less  center-block  option" id="reflect" data-target="Reflective">Reflective</div>
+                                          <div class="word-wrapper">
+                                            <div class="target">Reflective</div><p>So you're saying you didn't see it?</p>
+                                          </div>
+                                          <div class="word-wrapper">
+                                            <div class="target">Open</div><p>How did that make you feel?</p>
                                           </div>
                                 </div>
                                 <!-- End Content -->
-                                <p class="blue-text text-center">Drag the magenta button to it's correct answer.</p>
-
+                                <p v-show="pageReload == false" class="blue-text text-center">Drag the question type to it's correct example.</p>
                             </div>
                         </div>
                     </div>
@@ -78,7 +102,7 @@
                                      <a href="#048" class="course-button prev-button"></a>
                                  </div>
                                  <!-- leftArrow -->
-                                 <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 align safari-only2">
+                                 <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 align">
                                      <div class="course-progress-bar-wrap">
                                          <div class="courseProgressBar">
                                              <p class="fixed hidden">60%</p>
@@ -86,8 +110,8 @@
                                          </div>
                                      </div>
                                  </div>
-                                 <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center safari-only">
-                                   <a href="#047" id="submit" class="jba-btn-submit jba-btn">Submit</a>
+                                 <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
+                                   <a @click="nextButton" class="course-button" v-bind:class="{'next-button2': correct, 'next-button-locked': !correct}"></a>
                                  </div>
                                  <!-- rightArrow -->
                              </div>

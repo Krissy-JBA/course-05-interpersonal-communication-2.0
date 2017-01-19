@@ -2,12 +2,24 @@ pageComponentry = {
   data: function() {
     return {
       // Any data goes here.
-      correct: false
+      correct: false,
+      pageReload: false,
+      popup: false
 
     }
   },
   methods: {
-
+    redirectMe: function() {
+      window.location.hash = '047';
+    },
+    nextButton: function() {
+      if(this.pageReload == true) {
+        window.location.hash = '047';
+      }
+      else {
+        this.popup = true;
+      }
+    }
   },
   ready: function() {
     //call popups
@@ -32,11 +44,11 @@ pageComponentry = {
         drop: function( event, ui ) {
           $this.draggable('destroy');
           $target.droppable('destroy');
-          $target.html(answerValue+':' + '<br>' + labelText );
-          $this.addClass('padding-less');
-          $this.parent().prop('outerHTML', '');
-          $option.html(labelText);
           answersLeft.splice( answersLeft.indexOf( answerValue ), 1 );
+          if (answersLeft.length == 0) {
+            self.correct = true;
+            self.$parent.saveData('answerMe4', 'true');
+          }
         }
 
     });
@@ -50,24 +62,10 @@ pageComponentry = {
    });
    var self = this;
 
-   $('#submit').click(function() {
-     if (answersLeft.length == 0 ) {
-       self.correct = true;
-       self.$parent.saveData('answerMe4', 'true');
-     }
-   });
-
    if(this.exerciseData['answerMe4']){
      this.correct = true;
-     $('.target').parent().prop('outerHTML', '');
+     this.pageReload = true;
 
-     $('.magenta-blob-box').addClass('padding-less purple-blob-box');
-     $('.magenta-blob-box').removeClass('magenta-blob-box');
-     $('.flexy-match2').addClass('flexy-reload');
-     $('#clarify').html('Clarifying: <br> Could you go over that again? ');
-     $('#open').html('Open: <br> How did that make you feel? ');
-     $('#reflect').html("Reflective: <br> So you're saying you didn't see it? ");
-     $('#closed').html("Closed: <br> Were you there yesterday?");
 
    }
  }

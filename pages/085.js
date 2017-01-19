@@ -30,11 +30,18 @@ pageComponentry = {
     courseFeatureJBA.transitionIn(); courseFeatureJBA.flexySpeckCheck();
     if(this.exerciseData['describe-a-conflict-stored-feelings']){
       this.inputfield1 = this.exerciseData['describe-a-conflict-stored-feelings'];
-      this.content = true;
+      this.content1 = true;
+      if (this.content1 == true && this.content2 == true) {
+       this.content = true;
+      }
     }
     if(this.exerciseData['why-did-you-act-this-way-stored']){
       this.inputfield2 = this.exerciseData['why-did-you-act-this-way-stored'];
-      this.content = true;
+      this.content2 = true;
+      this.content2 = true;
+      if (this.content1 == true && this.content2 == true) {
+        this.content = true;
+      }
     }
     var self = this;
     document.getElementById("textarea").addEventListener("paste", myFunction);

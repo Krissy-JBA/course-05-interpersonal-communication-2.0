@@ -3,11 +3,23 @@ pageComponentry = {
     return {
       // Any data goes here.
       correct: false,
-      pageReload: false
+      pageReload: false,
+      popup:false
 
     }
   },
   methods: {
+    redirectMe: function() {
+      window.location.hash = '061';
+    },
+    nextButton: function() {
+      if(this.pageReload == true) {
+        window.location.hash = '061';
+      }
+      else {
+        this.popup = true;
+      }
+    }
 
   },
   ready: function() {
@@ -35,6 +47,10 @@ pageComponentry = {
           $target.hide();
           $target.html(labelText);
           answersLeft.splice( answersLeft.indexOf( answerValue ), 1 );
+          if (answersLeft.length == 0) {
+            self.correct = true;
+            self.$parent.saveData('answerMe1', 'true');
+          }
         }
 
     });

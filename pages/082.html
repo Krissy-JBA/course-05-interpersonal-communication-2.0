@@ -30,7 +30,8 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="squiggle-container flex-center">
-                          <p>Not quite! Try again!</p>
+                          <p>Not quite!</p>
+                          <p>Close this popup to see the correct answer.</p>
                         </div>
                     </div>
                 </div>
@@ -41,9 +42,29 @@
             <i class="fa fa-times close-button-cross" aria-hidden="true"></i> </div>
     </div>
 </div>
+<div class="popup" v-show="popup3 == true" transition="popup">
+    <div class="popup-inner">
+        <div class="squiggle-container">
+            <div class="top-squiggle"><img src="/images/course-assets/squiggle/red-top.svg" alt=""></div>
+            <!-- put all of your content into the squiggle content div -->
+            <div class="squiggle-content red-squiggle">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="squiggle-container flex-center">
+                          <p>Not quite! Try again!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bot-squiggle"><img src="/images/course-assets/squiggle/red-bottom.svg" alt=""></div>
+        </div>
+        <div class="course-button close-button popup-close-test" @click="popup3 = false">
+            <i class="fa fa-times close-button-cross" aria-hidden="true"></i> </div>
+    </div>
+</div>
 <div class="container-fluid h100">
     <div class="row header-row  ">
-        <div class="col-md-12 col-md-offset-0 col-sm-8 col-sm-offset-2 pop-in">
+        <div class="col-md-12 col-xs-8 col-xs-offset-2 pop-in col-md-offset-0">
             <div class="new-main-content">
                 <h2>Conflict</h2>
                 <!-- Change Header -->

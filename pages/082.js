@@ -5,7 +5,9 @@ pageComponentry = {
       pageReload: false,
       correct: false,
       popup1: false,
-      popup2: false
+      popup2: false,
+      popup3: false,
+      count: 0
     }
   },
   methods: {
@@ -16,14 +18,24 @@ pageComponentry = {
         window.location.hash = '083';
       }
       else {
+        this.count ++;
+        console.log(this.count);
+
         if($(sorts[0]).hasClass('one') && $(sorts[1]).hasClass('two') && $(sorts[2]).hasClass('three') && $(sorts[3]).hasClass('four') ) {
           this.correct = true;
           this.popup1 = true;
           this.pageReload = true;
         }
         else {
-          this.popup2 = true;
-          this.correct = false;
+          if (this.count >= 3) {
+            this.popup2 = true;
+            this.correct = true;
+            this.pageReload = true;
+          }
+          else if (this.count < 3) {
+            this.popup3 = true;
+            this.correct = false;
+          }
         }
         this.$parent.saveData('answerMe6', this.correct);
       }

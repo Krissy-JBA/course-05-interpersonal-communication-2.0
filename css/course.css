@@ -729,6 +729,34 @@ padding: 0;
   margin-left: 10px;
   margin-right: 10px;
 }
+.replacements img {
+  max-height:50vh;
+  width:auto;
+}
+.word-wrapper .target {
+    background: orange;
+    height: 35px;
+    width: 120px;
+    margin-right:20px;
+    text-align: center;
+    padding-top: 6px;
+}
+.word-wrapper {
+  display: flex;
+  width: 100%;
+  max-width: 400px;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 13px;
+}
+.answer-wrapper {
+  display:flex;
+  width:100%;
+  justify-content: space-around;
+}
+.option {
+  cursor: pointer !important;
+}
 @media screen and (max-width:1400px) {
   .bulbOff {
     height:75px;
@@ -975,10 +1003,15 @@ padding: 0;
   .module-btn i.fa.fa-check {
       top:-10px;
   }
-  .new-main-content {
+  .safari-only i {
+    position: absolute;
+    top:2px;
+    right:-15px;
+  }
+  /*.new-main-content {
     width: 70% !important;
     margin: 0 auto !important;
-  }
+  }*/
 
 }
 
@@ -1075,17 +1108,15 @@ padding: 0;
   .landscape-column {
     flex-direction:column !important;
   }
-  .next-button2 {
-    padding: 1em;
-    width: 40px;
-    height: 40px;
-    margin-top: 5px;
-  }
+
   .col-pad0 {
     padding:1em !important;
   }
   .buttonWrapNew {
     margin-top:0;
+  }
+  .replacements img {
+    max-height:100%;
   }
 
 
@@ -1113,6 +1144,9 @@ padding: 0;
 @media only screen and (max-device-width: 680px) and (min-device-width: 300px) and (orientation: landscape) {
    .flexy-image, .flexy-image2 {
        width: 50%;
+   }
+   .replacements {
+     width:80%;
    }
 }
 

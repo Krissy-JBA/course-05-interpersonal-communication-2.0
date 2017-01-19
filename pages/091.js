@@ -30,16 +30,22 @@ pageComponentry = {
     courseFeatureJBA.transitionIn(); courseFeatureJBA.flexySpeckCheck();
     if(this.exerciseData['describe-a-conflict-assertive']){
       this.inputfield1 = this.exerciseData['describe-a-conflict-assertive'];
-      this.content = true;
+      this.content1 = true;
+      if (this.content1 == true && this.content2 == true) {
+        this.content = true;
+      }
     }
-    if(this.exerciseData['why-did-you-act-this-way-exploded']){
+    if(this.exerciseData['why-did-you-act-this-way-assertive']){
       this.inputfield2 = this.exerciseData['why-did-you-act-this-way-assertive'];
+      this.content2 = true;
+      if (this.content1 == true && this.content2 == true) {
       this.content = true;
+      }
     }
     var self = this;
     document.getElementById("textarea").addEventListener("paste", myFunction);
     function myFunction() {
-     self.content1 = true;
+     this.content1 = true;
      if (self.content1 == true && self.content2 == true) {
        self.content = true;
      }
