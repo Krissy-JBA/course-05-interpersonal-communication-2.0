@@ -21,8 +21,9 @@
                           <i v-show="module1 == true"  class="fa fa-check" aria-hidden="true"></i>
                           <p>Asking effective questions</p>
                         </a>
-                         <a href="#050" class="magenta-blob-box module-btn one-line one-line-bot" v-bind:class="{'purple-blob-box': module2}">
+                         <a href="#050" class="magenta-blob-box module-btn one-line one-line-bot" v-bind:class="{'jba-btn-locked': !module1, 'purple-blob-box': module2}">
                           <i v-show="module2 == true"  class="fa fa-check" aria-hidden="true"></i>
+                          <i v-show="module1 == false" class="arrowLock fa fa-lock"  aria-hidden="true"></i>
                           <p>Actively 'listening to understand'</p>
                         </a>
                         <p class="blue-text two-line">Tap a button to learn more.</p>

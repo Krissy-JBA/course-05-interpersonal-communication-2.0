@@ -49,7 +49,7 @@ pageComponentry = {
           answersLeft.splice( answersLeft.indexOf( answerValue ), 1 );
           if (answersLeft.length == 0) {
             self.correct = true;
-            self.$parent.saveData('answerMe1', 'true');
+            self.$parent.saveData('answerMe5', 'true');
           }
         }
 

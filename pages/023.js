@@ -15,7 +15,7 @@ pageComponentry = {
         window.location.hash = '022'
       }
       else if ((this.module1 == true) && (this.module2 == false) && (this.module3 == false)) {
-        window.location.hash = '027'
+        window.location.hash = '026'
       }
       else if ((this.module1 == true) && (this.module2 == true) && (this.module3 == false)) {
         window.location.hash = '038'
@@ -28,7 +28,7 @@ pageComponentry = {
   ready: function() {
     courseFeatureJBA.transitionIn(); courseFeatureJBA.flexySpeckCheck();
     var currentPage = this.exerciseData['page.max']
-    if (currentPage >= 24) {
+    if (currentPage >= 26) {
       this.module1 = true;
     }
     if (currentPage >= 37) {

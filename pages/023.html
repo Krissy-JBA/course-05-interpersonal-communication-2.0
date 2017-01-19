@@ -22,13 +22,15 @@
                         </a>
                       </div>
                       <div class="col-md-12 flex-center mini-modules">
-                         <a href="#027" class="magenta-blob-box module-btn" v-bind:class="{'purple-blob-box': module2}">
+                         <a href="#027" class="magenta-blob-box module-btn" v-bind:class="{'jba-btn-locked': !module1, 'purple-blob-box': module2}">
+                          <i v-show="module1 == false" class="arrowLock fa fa-lock"  aria-hidden="true"></i>
                           <i v-show="module2 == true"  class="fa fa-check" aria-hidden="true"></i>
                           <p class="heading">Perspective</p>
                         </a>
                       </div>
                       <div class="col-md-12 flex-center mini-modules">
-                         <a href="#039" class="magenta-blob-box module-btn" v-bind:class="{'purple-blob-box': module3}">
+                         <a href="#039" class="magenta-blob-box module-btn" v-bind:class="{'jba-btn-locked': !module2,'purple-blob-box': module3}">
+                           <i v-show="module2 == false" class="arrowLock fa fa-lock"  aria-hidden="true"></i>
                           <i v-show="module3 == true"  class="fa fa-check" aria-hidden="true"></i>
                           <p class="heading">Medium</p>
                         </a>
