@@ -975,6 +975,7 @@
                         </div>
                         <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
                             <a @click="newPopup" class="course-button" v-bind:class="{'next-button-locked': !done, 'next-button2': done}"></a>
+                            <i v-show="done == false" class="arrowLock-13 arrowLock fa fa-lock"  aria-hidden="true"></i>
                         </div>
                         <!-- rightArrow -->
                     </div>
