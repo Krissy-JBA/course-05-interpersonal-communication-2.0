@@ -13,11 +13,13 @@ pageComponentry = {
   },
   methods: {
     redirectMe: function() {
-      window.location.hash = '034';
+      $('.pop-in').addClass('popOut');
+setTimeout(function(){window.location.hash = '034';;},400);
     },
     nextButton: function() {
       if(this.pageReload == true) {
-        window.location.hash = '034';
+        $('.pop-in').addClass('popOut');
+setTimeout(function(){window.location.hash = '034';;},400);
       }
       else {
         this.popup = true;
@@ -32,15 +34,14 @@ pageComponentry = {
     courseFeatureJBA.transitionIn(); courseFeatureJBA.flexySpeckCheck();
 
     var answersLeft = [];
-    $('.matching').find('.option').each( function(i) {
+    $('.matching-game').find('.option').each( function(i) {
       var $this = $(this);
       var answerValue = $this.data('target');
       var $target = $('.target[data-accept="'+answerValue+'"]');
       var labelText = $this.html();
-
       $this.draggable( {
         revert: "invalid",
-        containment: ".matching"
+        containment: ".matching-game"
       });
 
       if ( $target.length > 0 ) {
@@ -69,17 +70,7 @@ pageComponentry = {
    if(this.exerciseData['answerMe1']){
      this.correct = true;
      this.pageReload = true;
-     var widthWindow = $(window).width();
-     console.log(widthWindow);
-     if (widthWindow < 375) {
-       this.mobsmall = true;
-     }
-     else if ( widthWindow < 750 && window.matchMedia("(orientation: landscape)").matches ) {
-       this.mobmed = true;
-     }
-     else  {
-       this.desktop = true;
-     }
+
    }
 }
 

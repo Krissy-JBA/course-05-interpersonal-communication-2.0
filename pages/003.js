@@ -14,22 +14,28 @@ pageComponentry = {
     // Any page specific methods go here.
     backButton: function() {
       if ((this.module2 == false) && (this.module3 == false) && (this.module4 == false) && (this.module5 == false) && (this.modulesComplete == false) ){
-        window.location.hash = '002';
+        $('.pop-in').addClass('popOut');
+setTimeout(function(){window.location.hash = '002';},400);
       }
       if ((this.module2 == true) && (this.module3 == false) && (this.module4 == false) && (this.module5 == false) && (this.modulesComplete == false) ){
-        window.location.hash = '020';
+        $('.pop-in').addClass('popOut');
+setTimeout(function(){window.location.hash = '020';},400);
       }
       else if ((this.module2 == true) && (this.module3 == true) && (this.module4 == false) && (this.module5 == false) && (this.modulesComplete == false) ) {
-        window.location.hash = '045';
+        $('.pop-in').addClass('popOut');
+setTimeout(function(){window.location.hash = '045';},400);
       }
       else if ((this.module2 == true) && (this.module3 == true) && (this.module4 == true) && (this.module5 == false) && (this.modulesComplete == false) ) {
-        window.location.hash = '058';
+        $('.pop-in').addClass('popOut');
+setTimeout(function(){window.location.hash = '058';},400);
       }
       else if ((this.module2 == true) && (this.module3 == true) && (this.module4 == true) && (this.module5 == true) && (this.modulesComplete == false)) {
-        window.location.hash = '071';
+        $('.pop-in').addClass('popOut');
+setTimeout(function(){window.location.hash = '071';},400);
       }
       else if ((this.module2 == true) && (this.module3 == true) && (this.module4 == true) && (this.module5 == true) && (this.modulesComplete == true)) {
-        window.location.hash = '097';
+        $('.pop-in').addClass('popOut');
+setTimeout(function(){window.location.hash = '097';},400);
       }
     }
   },

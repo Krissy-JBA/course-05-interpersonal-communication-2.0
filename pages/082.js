@@ -15,7 +15,8 @@ pageComponentry = {
     submitMe: function() {
       var sorts = $('#sortable li');
       if (this.pageReload == true) {
-        window.location.hash = '083';
+        $('.pop-in').addClass('popOut');
+setTimeout(function(){window.location.hash = '083';},400);
       }
       else {
         this.count ++;
@@ -42,7 +43,8 @@ pageComponentry = {
 
     },
     redirectMe: function(){
-      window.location.hash = '083';
+      $('.pop-in').addClass('popOut');
+setTimeout(function(){window.location.hash = '083';},400);
     }
   },
   ready: function() {

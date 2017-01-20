@@ -34,7 +34,6 @@ pageComponentry = {
       this.orange = false;
       this.pink = false;
       this.one = true;
-      console.log(this.one);
       if((this.one == true) && (this.two == true) && (this.three == true) && (this.four == true) && (this.five == true) && (this.six == true) && (this.seven == true)) {
         this.done = true;
         this.$parent.saveData('ticked-people', this.done);
@@ -50,7 +49,6 @@ pageComponentry = {
       this.orange = false;
       this.pink = true;
       this.two = true;
-      console.log(this.two);
       if((this.one == true) && (this.two == true) && (this.three == true) && (this.four == true) && (this.five == true) && (this.six == true) && (this.seven == true)) {
         this.done = true;
         this.$parent.saveData('ticked-people', this.done);
@@ -66,7 +64,6 @@ pageComponentry = {
       this.orange = true;
       this.pink = false;
       this.three = true;
-      console.log(this.three);
       if((this.one == true) && (this.two == true) && (this.three == true) && (this.four == true) && (this.five == true) && (this.six == true) && (this.seven == true)) {
         this.done = true;
         this.$parent.saveData('ticked-people', this.done);
@@ -82,7 +79,6 @@ pageComponentry = {
       this.orange = false;
       this.pink = false;
       this.four = true;
-      console.log(this.four);
       if((this.one == true) && (this.two == true) && (this.three == true) && (this.four == true) && (this.five == true) && (this.six == true) && (this.seven == true)) {
         this.done = true;
         this.$parent.saveData('ticked-people', this.done);
@@ -98,7 +94,6 @@ pageComponentry = {
       this.orange = false;
       this.pink = false;
       this.five = true;
-      console.log(this.five);
       if((this.one == true) && (this.two == true) && (this.three == true) && (this.four == true) && (this.five == true) && (this.six == true) && (this.seven == true)) {
         this.done = true;
         this.$parent.saveData('ticked-people', this.done);
@@ -114,7 +109,6 @@ pageComponentry = {
       this.orange = false;
       this.pink = false;
       this.six = true;
-      console.log(this.six);
       if((this.one == true) && (this.two == true) && (this.three == true) && (this.four == true) && (this.five == true) && (this.six == true) && (this.seven == true)) {
         this.done = true;
         this.$parent.saveData('ticked-people', this.done);
@@ -130,22 +124,22 @@ pageComponentry = {
       this.orange = false;
       this.pink = false;
       this.seven = true;
-      console.log(this.seven);
-      console.log(this.done, 'alex');
       if((this.one == true) && (this.two == true) && (this.three == true) && (this.four == true) && (this.five == true) && (this.six == true) && (this.seven == true)) {
         this.done = true;
         this.$parent.saveData('ticked-people', this.done);
       }
     },
     redirectMe: function() {
-      window.location.hash = '075';
+      $('.pop-in').addClass('popOut');
+setTimeout(function(){window.location.hash = '075';},400);
     },
     newPopup: function() {
       if(this.done == true && this.reload == false) {
         this.popup2 = true;
       }
       else if (this.reload == true) {
-        window.location.hash = '075';
+        $('.pop-in').addClass('popOut');
+setTimeout(function(){window.location.hash = '075';},400);
       }
     }
   },

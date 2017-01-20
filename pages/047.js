@@ -11,13 +11,16 @@ pageComponentry = {
     // Any page specific methods go here.
     prevButton: function() {
       if ((this.module1 == false) && (this.module2 == false)) {
-        window.location.hash = '046'
+        $('.pop-in').addClass('popOut');
+setTimeout(function(){window.location.hash = '046';},400);
       }
       else if ((this.module1 == true) && (this.module2 == false)) {
-        window.location.hash = '049'
+        $('.pop-in').addClass('popOut');
+setTimeout(function(){window.location.hash = '049';},400);
       }
       else if ((this.module1 == true) && (this.module2 == true)) {
-        window.location.hash = '054'
+        $('.pop-in').addClass('popOut');
+setTimeout(function(){window.location.hash = '054';},400);
       }
     }
   },

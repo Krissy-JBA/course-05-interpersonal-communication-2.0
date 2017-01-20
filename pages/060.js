@@ -10,11 +10,13 @@ pageComponentry = {
   },
   methods: {
     redirectMe: function() {
-      window.location.hash = '061';
+      $('.pop-in').addClass('popOut');
+setTimeout(function(){window.location.hash = '061';},400);
     },
     nextButton: function() {
       if(this.pageReload == true) {
-        window.location.hash = '061';
+        $('.pop-in').addClass('popOut');
+setTimeout(function(){window.location.hash = '061';},400);
       }
       else {
         this.popup = true;

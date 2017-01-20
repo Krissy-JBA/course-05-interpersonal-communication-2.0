@@ -80,7 +80,8 @@ pageComponentry = {
       }
     },
     redirect: function() {
-      window.location.hash = '062';
+      $('.pop-in').addClass('popOut');
+setTimeout(function(){window.location.hash = '062';},400);
     }
   },
   ready: function() {

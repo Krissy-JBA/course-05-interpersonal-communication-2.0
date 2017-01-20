@@ -315,6 +315,7 @@
     width: 50px;
     height: 50px;
     background-size: contain;
+    cursor: pointer;
 }
 .circle-btn {
     display: -webkit-box;
@@ -351,6 +352,7 @@
     height: 50px;
     display: inline-block;
     background-size: contain;
+    cursor:pointer;
 }
 span.center-btn {
     font-size: 20px;
@@ -646,6 +648,7 @@ padding: 0;
     padding: 10px 16px;
     font-size: 18px;
     line-height: 1.3333333;
+    cursor:pointer;
 }
 .arrow-top{
   width: 0;
@@ -734,7 +737,7 @@ padding: 0;
   width:auto;
 }
 .word-wrapper .target {
-    background: orange;
+    border:2px solid #333;
     height: 35px;
     width: 120px;
     margin-right:20px;
@@ -756,6 +759,45 @@ padding: 0;
 }
 .option {
   cursor: pointer !important;
+}
+.drop-box.target {
+    border:2px solid #333;
+    border-radius:15px;
+    height: 110px;
+    width: 100px;
+}
+.drop-zone p {
+  text-align:center;
+}
+.drop-zone-wrap {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.matching-game, .matching-game2 {
+    width: 100%;
+}
+.matching-birds-wrap {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 2em;
+    margin-bottom: 13px;
+}
+
+.matching-birds {
+    width: 25%;
+}
+.reloaded .matching-birds {
+    width: 100%;
+    margin-top: 5px;
+}
+.drop-zone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width:25%;
 }
 @media screen and (max-width:1400px) {
   .bulbOff {
@@ -980,6 +1022,17 @@ padding: 0;
      align-items: center;
      flex-direction: column;
    }
+   .drop-zone-wrap {
+    flex-wrap: wrap;
+    }
+
+    .drop-zone {
+        width: 50%;
+    }
+
+    .drop-box.target {
+        margin: 0 auto;
+    }
 
 }
 @media screen and (max-width:350px) {
