@@ -761,10 +761,11 @@ padding: 0;
   cursor: pointer !important;
 }
 .drop-box.target {
-    border:2px solid #333;
-    border-radius:15px;
-    height: 110px;
-    width: 100px;
+    background-image: url('/course-files/course-05-interpersonal-communication-2.0/images/png/birdhouse.png');
+    background-size:contain;
+    background-repeat:no-repeat;
+    height: 120px;
+    width: 140px;
 }
 .drop-zone p {
   text-align:center;
@@ -792,6 +793,11 @@ padding: 0;
 .reloaded .matching-birds {
     width: 100%;
     margin-top: 5px;
+    position: absolute;
+    bottom: 3px;
+}
+.reloaded .drop-box {
+  position:relative;
 }
 .drop-zone {
   display: flex;
@@ -799,6 +805,10 @@ padding: 0;
   align-items: center;
   width:25%;
 }
+.reloaded .drop-box {
+    position: relative;
+}
+
 @media screen and (max-width:1400px) {
   .bulbOff {
     height:75px;
@@ -1032,6 +1042,15 @@ padding: 0;
 
     .drop-box.target {
         margin: 0 auto;
+    }
+    .drop-box.target.ui-droppable {
+    width: 100px;
+    height: 80px;
+    }
+
+    .matching-birds img {
+        height: 70px;
+        width: auto;
     }
 
 }

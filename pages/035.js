@@ -14,12 +14,14 @@ pageComponentry = {
   methods: {
     redirectMe: function() {
       $('.pop-in').addClass('popOut');
-setTimeout(function(){window.location.hash = '036';},400);
+      setTimeout(function(){window.location.hash = '036';},400);
     },
     nextButton: function() {
       if(this.pageReload == true) {
+
         $('.pop-in').addClass('popOut');
-setTimeout(function(){window.location.hash = '036';},400);
+        setTimeout(function(){window.location.hash = '036';},400);
+
       }
       else {
         this.popup = true;
@@ -31,6 +33,7 @@ setTimeout(function(){window.location.hash = '036';},400);
     //call popups
     var self = this;
     courseFeatureJBA.transitionIn(); courseFeatureJBA.flexySpeckCheck();
+
 
     var answersLeft = [];
     $('.matching-game').find('.option').each( function(i) {
@@ -53,9 +56,10 @@ setTimeout(function(){window.location.hash = '036';},400);
           $target.html(labelText);
           answersLeft.splice( answersLeft.indexOf( answerValue ), 1 );
           var $optionPosition = $('.option[data-target="'+answerValue+'"]').offset();
+          console.log(answersLeft);
           if (answersLeft.length == 0) {
             self.correct = true;
-            self.$parent.saveData('answerMe3', 'true');
+            self.$parent.saveData('answerMe2', 'true');
           }
         }
 
@@ -68,21 +72,9 @@ setTimeout(function(){window.location.hash = '036';},400);
    });
    var self = this;
 
-   if(this.exerciseData['answerMe3']){
+   if(this.exerciseData['answerMe2']){
      this.correct = true;
      this.pageReload = true;
-     var widthWindow = $(window).width();
-     console.log(widthWindow);
-     if (widthWindow < 375) {
-       this.mobsmall = true;
-     }
-     else if ( widthWindow < 750 && window.matchMedia("(orientation: landscape)").matches ) {
-       this.mobmed = true;
-     }
-     else  {
-       this.desktop = true;
-     }
-
    }
 }
 
