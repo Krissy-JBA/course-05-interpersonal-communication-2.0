@@ -2,7 +2,7 @@
     <div class="row header-row  ">
         <div class="col-md-12 col-xs-8 col-xs-offset-2 pop-in col-md-offset-0">
             <div class="new-main-content">
-                <h2>How to be a good sender</h2>
+                <h2>The three keys</h2>
                 <!-- Change Header -->
             </div>
         </div>
@@ -16,9 +16,23 @@
               <div class="squiggle-content white-squiggle">
                   <div class="row">
                       <div class="col-md-12">
-                        <p>So, you've seen how in any face-to-face communication, two people are involved: the sender and the recipient.</p>
-                        <p>Communication generally starts with the sender, who comes up with a thought and chooses the words to use to get that thought across to the recipient.</p>
-                        <p>his section of the course is all about being a good sender, and making sure your message makes it to the recipient safely, no matter of the audience or the idea!</p>
+                        <p>When you're aiming to be a good sender, you need to keep three key things in mind.</p>
+                        <div class="bulbhideshow">
+                          <div class="bulb-button" @click="bulb = true" v-bind:class="{'bulbOff': !bulb, 'bulbOn': bulb }">
+                          </div>
+                          <p v-show="bulb == true" class="text-center">Who are you talking to?</p>
+                        </div>
+                        <div class="bulbhideshow">
+                          <div class="bulb-button" @click="bulb2 = true" v-bind:class="{'bulbOff': !bulb2, 'bulbOn': bulb2 }">
+                          </div>
+                          <p v-show="bulb2 == true" class="text-center">What's their perspective?</p>
+                        </div>
+                        <div class="bulbhideshow">
+                          <div class="bulb-button" @click="bulb3 = true" v-bind:class="{'bulbOff': !bulb3, 'bulbOn': bulb3 }">
+                          </div>
+                          <p v-show="bulb3 == true" class="text-center">What's the best medium to use?</p>
+                        </div>
+                        <p class="blue-text text-center">Tap the lightbulbs for more information.</p>
                       </div>
                   </div>
               </div>
@@ -42,7 +56,7 @@
                 <div class="container progressContainer">
                     <div class="row">
                       <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
-                          <a href="#004" class="course-button prev-button"></a>
+                          <a href="#021" class="course-button prev-button"></a>
                       </div>
                         <!-- leftArrow -->
                         <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 align">

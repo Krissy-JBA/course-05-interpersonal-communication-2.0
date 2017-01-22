@@ -1,38 +1,150 @@
-<div class="container-fluid h100">
+<div class="popup" v-show="popup == true" transition="popup">
+    <div class="popup-inner">
+        <div class="squiggle-container">
+            <div class="top-squiggle"><img src="/images/course-assets/squiggle/green-top.svg" alt=""></div>
+            <!-- put all of your content into the squiggle content div -->
+            <div class="squiggle-content green-squiggle">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="squiggle-container flex-center">
+                          <p>Congratulations, you got them all right!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bot-squiggle"><img src="/images/course-assets/squiggle/green-bottom.svg" alt=""></div>
+        </div>
+        <div class="course-button close-button popup-close-test" @click="redirectMe">
+            <i class="fa fa-times close-button-cross" aria-hidden="true"></i> </div>
+    </div>
+</div>
+<div class="container-fluid h100 branding12">
     <div class="row header-row  ">
-        <div class="col-md-12 col-xs-8 col-xs-offset-2 pop-in col-md-offset-0">
-            <div class="new-main-content">
-                <h2>Perspective</h2>
+        <div class="col-md-12 col-xs-8 col-xs-offset-2 col-md-offset-0">
+            <div class="new-main-content pop-in">
+                <h2>Perspective in practice</h2>
                 <!-- Change Header -->
             </div>
         </div>
     </div>
-    <div class="row content-row flexy-parent pop-in">
-      <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-pad0  col-xs-12">
+    <div class="row content-row">
+        <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-pad0  col-xs-12
+    ">
+            <div class="squiggle-container pop-in">
+                <div class="top-squiggle"><img src="/images/course-assets/squiggle/white-top.svg" alt=""></div>
+                <div class="squiggle-content white-squiggle">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="squiggle-container flex-center brandingBoxWrap">
+                                <!-- put all of your content into here div -->
+                                <div class="row one-line-bot">
+                                    <div class="col-md-12 col-pad0">
+                                        <p>What do you think is the bird's default state? Match the pairs.</p>
+                                    </div>
+                                </div>
 
-          <!-- put all of your content into here div -->
-          <div class="squiggle-container pop-in">
-              <div class="top-squiggle"><img src="/images/course-assets/squiggle/white-top.svg" alt=""></div>
-              <!-- put all of your content into the squiggle content div -->
-              <div class="squiggle-content white-squiggle">
-                  <div class="row">
-                      <div class="col-md-12">
-                        <p>Understanding what makes these feathered friends tick, can arm you with some great insights into the perspectives and motivations that these four types of people have.</p>
-                        <p>Let's take a look at how these perspectives might work when you're dealing with the different behavioural types.</p>
-                      </div>
-                  </div>
-              </div>
-              <div class="bot-squiggle"><img src="/images/course-assets/squiggle/white-bottom.svg" alt=""></div>
-          </div>
+                                <div class="matching-game" v-show="pageReload == false" >
 
-      </div>
-      <div class="flexy-image flexy-image-mob-fix pop-in col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-pad0  col-xs-12">
-          <img src="/course-files/course-05-interpersonal-communication-2.0/images/png/interComms68.png"  alt="interpersonal communication">
-      </div>
+                                          <div class="drop-zone-wrap">
+                                            <div class="drop-zone">
+                                              <p>Calm</p>
+                                              <div class="drop-box target" data-accept="dove">
 
-  </div>
-    <!-- end  content -->
-    <!-- =========================== -->
+                                              </div>
+                                            </div>
+                                            <div class="drop-zone">
+                                              <p>Anxious</p>
+                                              <div class="drop-box target" data-accept="owl">
+
+                                              </div>
+                                            </div>
+                                            <div class="drop-zone">
+                                              <p>Optimistic</p>
+                                              <div class="drop-box target"  data-accept="peacock">
+
+                                              </div>
+                                            </div>
+                                            <div class="drop-zone">
+                                              <p>Driven</p>
+                                              <div class="drop-box target"  data-accept="eagle">
+
+                                              </div>
+                                            </div>
+
+                                          </div>
+                                          <div class="matching-birds-wrap one-line-bot">
+                                            <div class="matching-birds">
+                                              <img id="eagleLeft" data-target="eagle" class="matchingimg img-responsive center-block option" src="/course-files/course-05-interpersonal-communication-2.0/images/png/interComms22@2x.png">
+                                           </div>
+
+
+                                             <div class="matching-birds">
+                                                 <img id="owlLeft" data-target="owl" class="matchingimg img-responsive center-block option" src="/course-files/course-05-interpersonal-communication-2.0/images/png/interComms23@2x.png">
+                                             </div>
+
+
+                                             <div class="matching-birds">
+                                                 <img id="doveLeft" data-target="dove" class="matchingimg img-responsive center-block option" src="/course-files/course-05-interpersonal-communication-2.0/images/png/interComms24@2x.png">
+                                             </div>
+
+
+                                             <div class="matching-birds">
+                                                 <img id="peacockLeft" data-target="peacock" class="matchingimg img-responsive center-block option" src="/course-files/course-05-interpersonal-communication-2.0/images/png/interComms25@2x.png">
+                                             </div>
+                                          </div>
+
+                                </div>
+                                <div class="matching-game2 reloaded one-line-bot" v-show="pageReload == true">
+
+                                          <div class="drop-zone-wrap">
+                                            <div class="drop-zone">
+                                              <p>Calm</p>
+                                              <div class="drop-box target" data-accept="dove">
+                                                <div class="matching-birds">
+                                                    <img id="doveLeft" data-target="dove" class="matchingimg img-responsive center-block option" src="/course-files/course-05-interpersonal-communication-2.0/images/png/interComms24@2x.png">
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="drop-zone">
+                                              <p>Anxious</p>
+                                              <div class="drop-box target" data-accept="owl">
+                                                <div class="matching-birds">
+                                                    <img id="owlLeft" data-target="owl" class="matchingimg img-responsive center-block option" src="/course-files/course-05-interpersonal-communication-2.0/images/png/interComms23@2x.png">
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="drop-zone">
+                                              <p>Optimistic</p>
+                                              <div class="drop-box target"  data-accept="peacock">
+                                                <div class="matching-birds">
+                                                    <img id="peacockLeft" data-target="peacock" class="matchingimg img-responsive center-block option" src="/course-files/course-05-interpersonal-communication-2.0/images/png/interComms25@2x.png">
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="drop-zone">
+                                              <p>Driven</p>
+                                              <div class="drop-box target"  data-accept="eagle">
+                                                <div class="matching-birds">
+                                                  <img id="eagleLeft" data-target="eagle" class="matchingimg img-responsive center-block option" src="/course-files/course-05-interpersonal-communication-2.0/images/png/interComms22@2x.png">
+                                                </div>
+                                              </div>
+                                            </div>
+
+                                          </div>
+
+
+                                </div>
+                                <!-- End Content -->
+                                <p class="blue-text text-center">Drag the bird to its default state.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bot-squiggle"><img src="/images/course-assets/squiggle/white-bottom.svg" alt=""></div>
+            </div>
+        </div>
+    </div>
     <!-- footer start -->
     <div class="row progressWrap">
         <div class="col-xs-12 col-pad0">
@@ -42,13 +154,13 @@
                     <div class="percentageTxt hidden">
                         <p>60%</p>
                     </div>
-                    <img class="percentageArrow hidden" src="../img/progressBar/hand_arrow.png" alt="" />
+                    <img class="percentageArrow hidden" src="/images/course-assets/progressBar/hand_arrow.png" alt="" />
                 </div>
                 <div class="container progressContainer">
                     <div class="row">
-                      <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
-                          <a href="#032" class="course-button prev-button"></a>
-                      </div>
+                        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
+                            <a href="#032" class="course-button prev-button"></a>
+                        </div>
                         <!-- leftArrow -->
                         <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 align">
                             <div class="course-progress-bar-wrap">
@@ -59,7 +171,10 @@
                             </div>
                         </div>
                         <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
-                            <a href="#034" class="course-button next-button"></a>
+
+                          <a @click="nextButton" class="course-button" v-bind:class="{'next-button2': correct, 'next-button-locked': !correct}"></a>
+                          <i v-show="correct == false" class="arrowLock-13 arrowLock fa fa-lock"  aria-hidden="true"></i>
+
                         </div>
                         <!-- rightArrow -->
                     </div>
@@ -67,5 +182,6 @@
             </div>
             <!-- E:Progress Bar -->
         </div>
+        <!-- end  content -->
     </div>
 </div>

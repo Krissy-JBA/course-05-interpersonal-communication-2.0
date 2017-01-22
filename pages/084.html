@@ -1,14 +1,102 @@
+<div class="popup" v-show="popupC == true" transition="popup">
+    <div class="popup-inner">
+        <div class="squiggle-container">
+            <div class="top-squiggle"><img src="/images/course-assets/squiggle/orange-top.svg" alt=""></div>
+            <!-- put all of your content into the squiggle content div -->
+            <div class="squiggle-content orange-squiggle">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="squiggle-container flex-center">
+                          <p>Clarify the issue</p>
+                          <p>Clarify things by asking questions or offering comments related to the problem or issue – 'So what's the actual problem?', 'I think we need to talk about this sooner rather than later.', etc.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bot-squiggle"><img src="/images/course-assets/squiggle/orange-bottom.svg" alt=""></div>
+        </div>
+        <div class="course-button close-button popup-close-test" @click="popupC = false">
+            <i class="fa fa-times close-button-cross" aria-hidden="true"></i> </div>
+    </div>
+</div>
+<div class="popup" v-show="popupA == true" transition="popup">
+    <div class="popup-inner">
+        <div class="squiggle-container">
+            <div class="top-squiggle"><img src="/images/course-assets/squiggle/orange-top.svg" alt=""></div>
+            <!-- put all of your content into the squiggle content div -->
+            <div class="squiggle-content orange-squiggle">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="squiggle-container flex-center">
+                          <p>Address the problem</p>
+                          <p>Take care to focus on facts and examples when you're addressing the problem.</p>
+                          <p>When tensions arise and people are in conflict, they often take up opposing positions and the objective is to 'win'. To resolve conflict constructively, help those involved to focus on resolving issues rather than reinforcing or supporting their positions!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bot-squiggle"><img src="/images/course-assets/squiggle/orange-bottom.svg" alt=""></div>
+        </div>
+        <div class="course-button close-button popup-close-test" @click="popupA = false">
+            <i class="fa fa-times close-button-cross" aria-hidden="true"></i> </div>
+    </div>
+</div>
+<div class="popup" v-show="popupL == true" transition="popup">
+    <div class="popup-inner">
+        <div class="squiggle-container">
+            <div class="top-squiggle"><img src="/images/course-assets/squiggle/orange-top.svg" alt=""></div>
+            <!-- put all of your content into the squiggle content div -->
+            <div class="squiggle-content orange-squiggle">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="squiggle-container flex-center">
+                          <p>Listen to the other side</p>
+                          <p>Be respectful by taking responsibility for what's yours, challenging unreasonable behaviours, and addressing any emerging performance matters as necessary.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bot-squiggle"><img src="/images/course-assets/squiggle/orange-bottom.svg" alt=""></div>
+        </div>
+        <div class="course-button close-button popup-close-test" @click="popupL = false">
+            <i class="fa fa-times close-button-cross" aria-hidden="true"></i> </div>
+    </div>
+</div>
+<div class="popup" v-show="popupM == true" transition="popup">
+    <div class="popup-inner">
+        <div class="squiggle-container">
+            <div class="top-squiggle"><img src="/images/course-assets/squiggle/orange-top.svg" alt=""></div>
+            <!-- put all of your content into the squiggle content div -->
+            <div class="squiggle-content orange-squiggle">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="squiggle-container flex-center">
+                          <p>Manage your way to resolution</p>
+                          <p>Get them involved in coming up with solutions to resolve the conflict – this will help give them ownership and buy-in. What's needed is a genuine commitment to try to sort out the issue.</p>
+                          <p>Agree on possible solutions – get honest commitments, and document agreements. Be sure to follow up on progress and monitor processes and timelines to keep everyone on track.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bot-squiggle"><img src="/images/course-assets/squiggle/orange-bottom.svg" alt=""></div>
+        </div>
+        <div class="course-button close-button popup-close-test" @click="popupM = false">
+            <i class="fa fa-times close-button-cross" aria-hidden="true"></i> </div>
+    </div>
+</div>
+
+
 <div class="container-fluid h100">
     <div class="row header-row  ">
         <div class="col-md-12 col-xs-8 col-xs-offset-2 pop-in col-md-offset-0">
             <div class="new-main-content">
-                <h2>Reactions to conflict</h2>
+                <h2>Keep CALM</h2>
                 <!-- Change Header -->
             </div>
         </div>
     </div>
-    <div class="row content-row flexy-parent pop-in">
-      <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-pad0  col-xs-12 two-column">
+    <div class="row content-row  pop-in">
+      <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-pad0  col-xs-12">
           <!-- put all of your content into here div -->
           <div class="squiggle-container pop-in">
               <div class="top-squiggle"><img src="/images/course-assets/squiggle/white-top.svg" alt=""></div>
@@ -16,24 +104,41 @@
               <div class="squiggle-content white-squiggle">
                   <div class="row">
                       <div class="col-md-12">
-                        <p><strong>Store feelings (passive)</strong></p>
-                        <p>Instead of reacting, you internalise your response and store it inside.</p>
+                        <p>When trying to deal with conflict in assertively, be CALM (handy acronym alert!):</p>
+                        <div class="click-lists two-line">
+                          <p class="circle-btn" @click="cClick"><span class="center-btn">C</span></p>
+                          <span v-show="c == true">
+                            <p><span class="magenta-link">LARIFY</span> the issue</p>
+                          </span>
+                        </div>
+                        <div class="click-lists">
+                          <p class="circle-btn" @click="aClick"><span class="center-btn">A</span></p>
+                          <span v-show="a == true">
+                            <p><span class="magenta-link">DDRESS</span> the problem</p>
+                          </span>
+                        </div>
+                        <div class="click-lists">
+                          <p class="circle-btn" @click="lClick"><span class="center-btn">L</span></p>
+                          <span v-show="l == true">
+                            <p><span class="magenta-link">ISTEN</span> to the other side</p>
+                          </span>
+                        </div>
+                        <div class="click-lists">
+                          <p class="circle-btn" @click="mClick"><span class="center-btn">M</span></p>
+                          <span v-show="m == true">
+                            <p><span class="magenta-link">ANAGE</span> your way to resolution</p>
+                          </span>
+                        </div>
 
-                        <p><strong>Explode feelings (aggressive)</strong></p>
-                        <p>If you react by shouting, blaming or getting physical – these are all examples of an aggressive reaction to conflict.</p>
 
-                        <p><strong>Deal with feelings (assertive)</strong></p>
-                        <p>Getting things out in the open through discussion or assertive methods.</p>
 
-                        <p>The ideal way to deal with conflict is using assertive behaviours.</p>
+                        <p class="blue-text text-center">Tap a letter to see the CALM method</p>
+
                       </div>
                   </div>
               </div>
               <div class="bot-squiggle"><img src="/images/course-assets/squiggle/white-bottom.svg" alt=""></div>
           </div>
-      </div>
-      <div class="flexy-image flexy-image-mob-fix pop-in ">
-          <img src="/course-files/course-05-interpersonal-communication-2.0/images/png/interComms56@2x.png"  alt="interpersonal communication">
       </div>
   </div>
     <!-- end  content -->

@@ -1,69 +1,131 @@
 <div class="container-fluid h100">
-    <div class="row header-row  ">
-        <div class="col-md-12 col-xs-8 col-xs-offset-2 pop-in col-md-offset-0">
-            <div class="new-main-content">
-                <h2>What's your communication like?</h2>
-                <!-- Change Header -->
-            </div>
-        </div>
-    </div>
-    <div class="row content-row flexy-parent pop-in">
-      <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-pad0  col-xs-12 two-column">
-          <!-- put all of your content into here div -->
-          <div class="squiggle-container pop-in">
-              <div class="top-squiggle"><img src="/images/course-assets/squiggle/white-top.svg" alt=""></div>
-              <!-- put all of your content into the squiggle content div -->
-              <div class="squiggle-content white-squiggle">
-                  <div class="row">
-                      <div class="col-md-12">
-                          <p>Here's your chance to do a short self assessment of your verbal and nonverbal communication.</p>
-                          <p>Be open and totally honest (you’d only be lying to yourself). Now that you're more aware of how important verbal and nonverbal communication is, make the most of this great opportunity to improve!</p>
-                      </div>
-                  </div>
-              </div>
-              <div class="bot-squiggle"><img src="/images/course-assets/squiggle/white-bottom.svg" alt=""></div>
-          </div>
-
-      </div>
-      <div class="flexy-image flexy-image-mob-fix pop-in ">
-          <img src="/course-files/course-05-interpersonal-communication-2.0/images/png/interComms45@2x.png"  alt="interpersonal communication">
-      </div>
-  </div>
-    <!-- end  content -->
-    <!-- =========================== -->
-    <!-- footer start -->
-    <div class="row progressWrap">
-        <div class="col-xs-12 col-pad0">
-            <!-- S:Progress Bar -->
-            <div class="progress-row">
-                <div class="hand-arrow">
-                    <div class="percentageTxt hidden">
-                        <p>60%</p>
+            <div class="row header-row pop-in">
+                <div class="col-md-12 col-xs-8 col-xs-offset-2 col-md-offset-0">
+                    <div class="new-main-content ">
+                        <h2>Self assessment</h2>
+                        <!-- Change Header -->
                     </div>
-                    <img class="percentageArrow hidden" src="../img/progressBar/hand_arrow.png" alt="" />
                 </div>
-                <div class="container progressContainer">
-                    <div class="row">
-                      <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
-                          <a href="#067" class="course-button prev-button"></a>
-                      </div>
-                        <!-- leftArrow -->
-                        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 align">
-                            <div class="course-progress-bar-wrap">
-                                <div class="courseProgressBar">
-                                    <p class="fixed hidden">60%</p>
-                                    <div class="percentageProgress"></div>
+            </div>
+            <div class="row content-row pop-in">
+                <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-pad0  col-sm-12">
+                    <div class="squiggle-container">
+                        <div class="top-squiggle"><img src="https://joybusinessacademy.github.io/img/squiggle/white-top.svg" alt=""></div>
+                        <div class="squiggle-content white-squiggle">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="squiggle-container flex-center">
+                                        <!-- put all of your content into the squiggle content div -->
+                                            <div class="flip-title-row">
+                                              <p>Disagree/Agree</p>
+                                            </div>
+                                            <div class="flip-row one-line-bot">
+                                              <div class="">
+                                                  <p>I never fold my arms when speaking to others.</p>
+                                              </div>
+                                              <div class="switch-float ">
+                                                  <label class="switch">
+                                                      <input id="q1" v-model="toggles.q1" v-on:change="saveInputData(toggles.q1)" type="checkbox">
+                                                      <div class="slider round"></div>
+                                                  </label>
+                                              </div>
+                                            </div>
+                                            <div class="flip-row one-line-bot">
+                                              <div class="">
+                                                    <p>I always put my phone away when speaking with others.</p>
+                                                </div>
+                                                <div class="switch-float ">
+                                                    <label class="switch">
+                                                        <input id="q2" v-model="toggles.q2" v-on:change="saveInputData(toggles.q2)" type="checkbox">
+                                                        <div class="slider round"></div>
+                                                    </label>
+                                                </div>
+                                              </div>
+
+
+                                              <div class="flip-row one-line-bot">
+                                                <div class="">
+                                                    <p>I make eye contact in a natural way, I don't stare.</p>
+                                                </div>
+                                                <div class="switch-float">
+                                                    <label class="switch">
+                                                        <input id="q3" v-model="toggles.q3" v-on:change="saveInputData(toggles.q3)" type="checkbox">
+                                                        <div class="slider round"></div>
+                                                    </label>
+                                                </div>
+                                              </div>
+
+
+                                              <div class="flip-row one-line-bot">
+                                                <div class="">
+                                                    <p>I never raise my voice when others have difficulty understanding me.</p>
+                                                </div>
+                                                <div class="switch-float ">
+                                                    <label class="switch">
+                                                        <input id="q4" v-model="toggles.q4" v-on:change="saveInputData(toggles.q4)" type="checkbox">
+                                                        <div class="slider round"></div>
+                                                    </label>
+                                                </div>
+                                              </div>
+
+
+                                              <div class="flip-row one-line-bot">
+                                                <div class="">
+                                                    <p>I don't often swear.</p>
+                                                </div>
+                                                <div class="switch-float">
+                                                    <label class="switch">
+                                                        <input id="q5" v-model="toggles.q5" v-on:change="saveInputData(toggles.q5)" type="checkbox">
+                                                        <div class="slider round"></div>
+                                                    </label>
+                                                </div>
+                                              </div>
+
+                                        <!-- End Content -->
+                                        <p class="blue-text text-center">Choose the options that describe you best.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
-                            <a href="#069" class="course-button next-button"></a>
-                        </div>
-                        <!-- rightArrow -->
+                        <div class="bot-squiggle"><img src="https://joybusinessacademy.github.io/img/squiggle/white-bottom.svg" alt=""></div>
                     </div>
                 </div>
             </div>
-            <!-- E:Progress Bar -->
-        </div>
-    </div>
-</div>
+            <!-- end  content -->
+            <!-- =========================== -->
+            <!-- footer start -->
+            <div class="row progressWrap">
+                <div class="col-sm-12 col-pad0">
+                    <!-- S:Progress Bar -->
+                    <div class="progress-row">
+                        <div class="hand-arrow">
+                            <div class="percentageTxt hidden">
+                                <p>60%</p>
+                            </div>
+                            <img class="percentageArrow hidden" src="https://joybusinessacademy.github.io/img/progressBar/hand_arrow.png" alt="" />
+                        </div>
+                        <div class="container progressContainer">
+                            <div class="row">
+                                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
+                                   <a href="#067" class="course-button prev-button"></a>
+                                </div>
+                                <!-- leftArrow -->
+                                <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 align safari-only2">
+                                    <div class="course-progress-bar-wrap">
+                                        <div class="courseProgressBar">
+                                            <p class="fixed hidden">60%</p>
+                                            <div class="percentageProgress"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center safari-only">
+                                  <a href="#069" class="jba-btn jba-btn-submit">Submit</a>
+                                </div>
+
+                                <!-- rightArrow -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- E:Progress Bar -->
+                </div>
+            </div>

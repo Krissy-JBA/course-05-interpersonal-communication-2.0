@@ -1,26 +1,3 @@
-<div class="popup" v-show="popup == true" transition="popup">
-    <div class="popup-inner">
-        <div class="squiggle-container">
-            <div class="top-squiggle"><img src="/images/course-assets/squiggle/orange-top.svg" alt=""></div>
-            <!-- put all of your content into the squiggle content div -->
-            <div class="squiggle-content orange-squiggle">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="squiggle-container flex-center">
-                          <p>Hmmm!</p>
-                          <p>For many cultures, touching a child's head isn't unusual. Touching an adult's head might be a bit strange, but otherwise inoffensive!</p>
-                          <p>For Maori though, the head is tapu (sacred) and should never be touched without permission.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="bot-squiggle"><img src="/images/course-assets/squiggle/orange-bottom.svg" alt=""></div>
-        </div>
-        <div class="course-button close-button popup-close-test" @click="popup = false">
-            <i class="fa fa-times close-button-cross" aria-hidden="true"></i> </div>
-    </div>
-</div>
-
 <div class="container-fluid h100">
     <div class="row header-row  ">
         <div class="col-md-12 col-xs-8 col-xs-offset-2 pop-in col-md-offset-0">
@@ -32,7 +9,6 @@
     </div>
     <div class="row content-row flexy-parent pop-in">
       <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-pad0  col-xs-12 two-column">
-
           <!-- put all of your content into here div -->
           <div class="squiggle-container pop-in">
               <div class="top-squiggle"><img src="/images/course-assets/squiggle/white-top.svg" alt=""></div>
@@ -40,16 +16,8 @@
               <div class="squiggle-content white-squiggle">
                   <div class="row">
                       <div class="col-md-12">
-                        <p class="text-center">Touching someone's head</p>
-                        <div class="row one-line-bot two-line">
-                          <div class="col-xs-12 col-md-6 text-center one-line-bot">
-                              <button type="button" class="jba-btn jba-btn-lg jba-btn-tab helpHinder-btn" @click="oneButton(answer)" v-bind:class="{'oneActive': answer == 'It is okay'}">It's okay</button>
-                          </div>
-                          <div class="col-xs-12 col-md-6 text-center">
-                              <button type="button" class="jba-btn jba-btn-lg jba-btn-tab helpHinder-btn" @click="twoButton(answer)" v-bind:class="{'twoActive': answer == 'It is not okay'}">It's not okay</button>
-                          </div>
-                        </div>
-                        <p class="blue-text text-center ">Tap the button that applies to your culture.</p>
+                        <p>Familiar everyday gestures that wouldn't stir even the slightest interest for you could actually be really offensive to other cultures!</p>
+                        <p>We're not saying you need to second guess everything you do! But, if you get the feeling someone isn't receptive to what you're saying, you should feel comfortable asking whether you've said or done something to offend them - and give the other person a chance to speak up.</p>
                       </div>
                   </div>
               </div>
@@ -57,7 +25,7 @@
           </div>
       </div>
       <div class="flexy-image flexy-image-mob-fix pop-in ">
-          <img src="/course-files/course-05-interpersonal-communication-2.0/images/png/interComms54@2x.png"  alt="interpersonal communication">
+          <img src="/course-files/course-05-interpersonal-communication-2.0/images/png/interComms55@2x.png"  alt="interpersonal communication">
       </div>
   </div>
     <!-- end  content -->
@@ -88,8 +56,7 @@
                             </div>
                         </div>
                         <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
-                            <a href="#080" class="course-button next-button" v-bind:class="{'next-button-locked': !unlocked}"></a>
-                            <i v-show="unlocked == false" class="arrowLock-13 arrowLock fa fa-lock"  aria-hidden="true"></i>
+                            <a href="#080" class="course-button next-button"></a>
                         </div>
                         <!-- rightArrow -->
                     </div>

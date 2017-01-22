@@ -2,48 +2,29 @@
     <div class="row header-row  ">
         <div class="col-md-12 col-xs-8 col-xs-offset-2 pop-in col-md-offset-0">
             <div class="new-main-content">
-                <h2>The three keys</h2>
+                <h2>Audience</h2>
                 <!-- Change Header -->
             </div>
         </div>
     </div>
-    <div class="row content-row flexy-parent pop-in">
-      <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-pad0  col-xs-12 two-column">
+    <div class="row content-row  pop-in">
+      <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-pad0  col-xs-12">
           <!-- put all of your content into here div -->
           <div class="squiggle-container pop-in">
               <div class="top-squiggle"><img src="/images/course-assets/squiggle/white-top.svg" alt=""></div>
               <!-- put all of your content into the squiggle content div -->
               <div class="squiggle-content white-squiggle">
-                  <div class="row ">
-                      <div class="col-md-12 flex-center mini-modules">
-                         <a href="#025" class="magenta-blob-box module-btn" v-bind:class="{'purple-blob-box': module1}">
-                          <i v-show="module1 == true"  class="fa fa-check" aria-hidden="true"></i>
-                          <p class="heading">Audience</p>
-                        </a>
-                      </div>
-                      <div class="col-md-12 flex-center mini-modules">
-                         <a href="#028" class="magenta-blob-box module-btn" v-bind:class="{'jba-btn-locked': !module1, 'purple-blob-box': module2}">
-                          <i v-show="module1 == false" class="arrowLock fa fa-lock"  aria-hidden="true"></i>
-                          <i v-show="module2 == true"  class="fa fa-check" aria-hidden="true"></i>
-                          <p class="heading">Perspective</p>
-                        </a>
-                      </div>
-                      <div class="col-md-12 flex-center mini-modules">
-                         <a href="#040" class="magenta-blob-box module-btn" v-bind:class="{'jba-btn-locked': !module2,'purple-blob-box': module3}">
-                           <i v-show="module2 == false" class="arrowLock fa fa-lock"  aria-hidden="true"></i>
-                          <i v-show="module3 == true"  class="fa fa-check" aria-hidden="true"></i>
-                          <p class="heading">Medium</p>
-                        </a>
+                  <div class="row">
+                      <div class="col-md-12">
+                          <p>When you're communicating it's really important to have a good think about your audience. Who are they? What are their needs and how can you best address them? How can the information you've got make their lives better? What do you want them to do once the session is over?</p>
+                          <p>These are the sorts of questions you need if you want the content of your communication to be relevant and engaging.</p>
+                          <p>Let's take a look at some great ways to get to know your audience better.</p>
                       </div>
                   </div>
               </div>
               <div class="bot-squiggle"><img src="/images/course-assets/squiggle/white-bottom.svg" alt=""></div>
           </div>
       </div>
-      <div class="flexy-image flexy-image-mob-fix pop-in ">
-          <img src="/course-files/course-05-interpersonal-communication-2.0/images/png/interComms13@2x.png"  alt="interpersonal communication">
-      </div>
-
   </div>
     <!-- end  content -->
     <!-- =========================== -->
@@ -61,7 +42,7 @@
                 <div class="container progressContainer">
                     <div class="row">
                       <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
-                          <a @click="prevButton" class="course-button prev-button2"></a>
+                          <a href="#023" class="course-button prev-button"></a>
                       </div>
                         <!-- leftArrow -->
                         <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 align">
@@ -73,8 +54,7 @@
                             </div>
                         </div>
                         <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
-                            <a href="#042" class="course-button next-button" v-bind:class="{'next-button-locked': !modulesComplete}"></a>
-                            <i v-show="modulesComplete == false" class="arrowLock-13 arrowLock fa fa-lock"  aria-hidden="true"></i>
+                            <a href="#025" class="course-button next-button"></a>
                         </div>
                         <!-- rightArrow -->
                     </div>

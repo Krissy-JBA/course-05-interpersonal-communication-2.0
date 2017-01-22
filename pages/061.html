@@ -1,4 +1,30 @@
-<div class="popup" v-show="popup == true" transition="popup">
+<div class="popup" v-show="popup1 == true" transition="popup">
+    <div class="popup-inner">
+        <div class="squiggle-container">
+            <div class="top-squiggle"><img src="/images/course-assets/squiggle/red-top.svg" alt=""></div>
+            <!-- put all of your content into the squiggle content div -->
+            <div class="squiggle-content red-squiggle">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="squiggle-container">
+                          <p class="text-center"><strong>Not quite</strong></p>
+
+                          <p>Gotcha!</p>
+
+                          <p>Words and phrases are actually the only form of verbal communication! Everything else is an expression of nonverbal communication.</p>
+
+                          <p>So you can see how placing the emphasis of communication on what we say can lead to confusion, misunderstanding or even conflict.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bot-squiggle"><img src="/images/course-assets/squiggle/red-bottom.svg" alt=""></div>
+        </div>
+        <a class="course-button close-button popup-close-test" @click="redirect">
+            <i class="fa fa-times close-button-cross" aria-hidden="true"></i> </a>
+    </div>
+</div>
+<div class="popup" v-show="popup2 == true" transition="popup">
     <div class="popup-inner">
         <div class="squiggle-container">
             <div class="top-squiggle"><img src="/images/course-assets/squiggle/green-top.svg" alt=""></div>
@@ -6,80 +32,101 @@
             <div class="squiggle-content green-squiggle">
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="squiggle-container flex-center">
-                          <p>Congratulations, you got them all right!</p>
+                        <div class="squiggle-container">
+                          <p class="text-center"><strong>Nice job!</strong></p>
+
+                          <p>You spotted that well! Words and phrases are actually the only form of verbal communication! Everything else is an expression of nonverbal communication.</p>
+
+                          <p>So you can see how placing the emphasis of communication on what we say can lead to confusion, misunderstanding or even conflict.</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="bot-squiggle"><img src="/images/course-assets/squiggle/green-bottom.svg" alt=""></div>
         </div>
-        <div class="course-button close-button popup-close-test" @click="redirectMe">
-            <i class="fa fa-times close-button-cross" aria-hidden="true"></i> </div>
+        <a class="course-button close-button popup-close-test" @click="redirect">
+            <i class="fa fa-times close-button-cross" aria-hidden="true"></i> </a>
     </div>
 </div>
-
-<div class="container-fluid h100 branding12">
+<div class="container-fluid h100">
     <div class="row header-row  ">
-        <div class="col-md-12 col-xs-8 col-xs-offset-2 col-md-offset-0">
-            <div class="new-main-content pop-in">
+        <div class="col-md-12 col-xs-8 col-xs-offset-2 pop-in col-md-offset-0">
+            <div class="new-main-content">
                 <h2>Verbal and nonverbal communication</h2>
                 <!-- Change Header -->
             </div>
         </div>
     </div>
-    <div class="row content-row">
-        <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-pad0  col-xs-12
-    ">
-            <div class="squiggle-container pop-in">
-                <div class="top-squiggle"><img src="/images/course-assets/squiggle/white-top.svg" alt=""></div>
-                <div class="squiggle-content white-squiggle">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="squiggle-container flex-center brandingBoxWrap">
-                                <!-- put all of your content into here div -->
-                                <div class="row">
-                                    <div class="col-md-12 col-pad0">
-                                    </div>
-                                </div>
-                                <div class="piechart one-line-bot">
-                                  <div class="drag-wrap one-line">
-                                    <div v-show="pageReload == false" id="verbal" data-target="verbal" class="drag-buttons magenta-blob-box no-transition option">Verbal</div>
-                                    <div v-show="pageReload == false" id="tone" data-target="tone" class="drag-buttons magenta-blob-box no-transition option">Tone of voice</div>
-                                    <div v-show="pageReload == false" id="body" data-target="body" class="drag-buttons magenta-blob-box no-transition option">Body Language</div>
-                                  </div>
-                                  <div class="pie">
-                                    <div class="pie-img" v-show="pageReload == false">
-                                      <img  src="/course-files/course-05-interpersonal-communication-2.0/images/png/interComms39@2x.png" alt="">
+    <div class="row content-row flexy-parent pop-in">
+      <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-pad0  col-xs-12">
+          <!-- put all of your content into here div -->
+          <div class="squiggle-container pop-in">
+              <div class="top-squiggle"><img src="/images/course-assets/squiggle/white-top.svg" alt=""></div>
+              <!-- put all of your content into the squiggle content div -->
+              <div class="squiggle-content white-squiggle">
+                  <div class="row">
+                      <div class="col-md-12">
+                        <form class="jba-checkbox one-line" action="#" id="form-checks">
+                            <p>
+                                <input type="checkbox" id="test1" value="Body language," v-model="inputfield1" v-on:change="saveInputData(inputfield1)"/>
+                                <label for="test1">Body language</label>
+                            </p>
+                            <p>
+                                <input type="checkbox" id="test2" value="Touch," v-model="inputfield2" v-on:change="saveInputData(inputfield2)"/>
+                                <label for="test2">Touch</label>
+                            </p>
+                            <p>
+                                <input type="checkbox" id="test3" value="Facial expressions," v-model="inputfield3" v-on:change="saveInputData(inputfield3)"/>
+                                <label for="test3">Facial expressions</label>
+                            </p>
+                            <p>
+                                <input type="checkbox" id="test4" value="Speed of voice," v-model="inputfield4" v-on:change="saveInputData(inputfield4)"/>
+                                <label for="test4">Speed of voice</label>
+                            </p>
+                            <p>
+                                <input type="checkbox" id="test5" value="Words and phrases," v-model="inputfield5" v-on:change="saveInputData(inputfield5)"/>
+                                <label for="test5">Words and phrases</label>
+                            </p>
+                            <p>
+                                <input type="checkbox" id="test6" value="Tone of voice," v-model="inputfield6" v-on:change="saveInputData(inputfield6)"/>
+                                <label for="test6">Tone of voice</label>
+                            </p>
+                            <p>
 
-                                    </div>
-                                    <div v-show="pageReload == true" class="pie-img-reload">
-                                      <img  src="/course-files/course-05-interpersonal-communication-2.0/images/png/interComms66@2x.png" alt="">
-                                    </div>
-                                    <div data-accept="tone" class="tone target">
+                                <input type="checkbox" id="test7" value="Personal space," v-model="inputfield7" v-on:change="saveInputData(inputfield7)"/>
+                                <label for="test7">Personal space</label>
+                            </p>
+                            <p>
+                                <input type="checkbox" id="test8" value="Personal presentation," v-model="inputfield8" v-on:change="saveInputData(inputfield8)"/>
+                                <label for="test8">Personal presentation</label>
+                            </p>
+                            <p>
+                                <input type="checkbox" id="test9" value="Gestures," v-model="inputfield9" v-on:change="saveInputData(inputfield9)"/>
+                                <label for="test9">Gestures</label>
+                            </p>
+                            <p>
+                                <input type="checkbox" id="test10" value="Volume of voice," v-model="inputfield10" v-on:change="saveInputData(inputfield10)"/>
+                                <label for="test10">Volume of voice</label>
+                            </p>
+                            <p>
+                                <input type="checkbox" id="test11" value="Eye contact," v-model="inputfield11" v-on:change="saveInputData(inputfield11)"/>
+                                <label for="test11">Eye contact</label>
+                            </p>
 
-                                    </div>
-                                    <div data-accept="verbal" class="verbal target">
-
-                                    </div>
-                                    <div data-accept="body" class="body target">
-
-                                    </div>
-
-                                  </div>
-
-                                </div>
-                                <!-- End Content -->
-                                <p class="blue-text text-center">Drag and drop the labels to where you think they fit on the pie chart.</p>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bot-squiggle"><img src="/images/course-assets/squiggle/white-bottom.svg" alt=""></div>
-            </div>
-        </div>
-    </div>
+                        </form>
+                        <p class="blue-text text-center">Tap to select the options that are types of verbal communication.</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="bot-squiggle"><img src="/images/course-assets/squiggle/white-bottom.svg" alt=""></div>
+          </div>
+      </div>
+      <div class="flexy-image flexy-image-mob-fix pop-in remove-landscape">
+          <img class="spec" src="/course-files/course-05-interpersonal-communication-2.0/images/png/interComms38@2x.png"  alt="interpersonal communication">
+      </div>
+  </div>
+    <!-- end  content -->
+    <!-- =========================== -->
     <!-- footer start -->
     <div class="row progressWrap">
         <div class="col-xs-12 col-pad0">
@@ -89,15 +136,15 @@
                     <div class="percentageTxt hidden">
                         <p>60%</p>
                     </div>
-                    <img class="percentageArrow hidden" src="/images/course-assets/progressBar/hand_arrow.png" alt="" />
+                    <img class="percentageArrow hidden" src="../img/progressBar/hand_arrow.png" alt="" />
                 </div>
                 <div class="container progressContainer">
                     <div class="row">
-                        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
-                            <a href="#060" class="course-button prev-button"></a>
-                        </div>
+                      <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
+                          <a href="#060" class="course-button prev-button"></a>
+                      </div>
                         <!-- leftArrow -->
-                        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 align">
+                        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 align safari-only2">
                             <div class="course-progress-bar-wrap">
                                 <div class="courseProgressBar">
                                     <p class="fixed hidden">60%</p>
@@ -105,11 +152,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
-
-                          <a @click="nextButton" class="course-button" v-bind:class="{'next-button2': correct, 'next-button-locked': !correct}"></a>
-                          <i v-show="correct == false" class="arrowLock-13 arrowLock fa fa-lock"  aria-hidden="true"></i>
-
+                        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center safari-only">
+                            <a @click="answerPopup" class="jba-btn jba-btn-submit2">Submit</a>
                         </div>
                         <!-- rightArrow -->
                     </div>
@@ -117,6 +161,5 @@
             </div>
             <!-- E:Progress Bar -->
         </div>
-        <!-- end  content -->
     </div>
 </div>
