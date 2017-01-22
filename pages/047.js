@@ -28,10 +28,10 @@ setTimeout(function(){window.location.hash = '054';},400);
     courseFeatureJBA.transitionIn(); courseFeatureJBA.flexySpeckCheck();
     console.log(this.exerciseData['page.max']);
     var currentPage = this.exerciseData['page.max']
-    if (currentPage >= 50) {
+    if (currentPage >= 49) {
       this.module1 = true;
     }
-    if (currentPage >= 55) {
+    if (currentPage >= 54) {
       this.module2 = true;
     }
     if((this.module1 == true) && (this.module2 == true)) {

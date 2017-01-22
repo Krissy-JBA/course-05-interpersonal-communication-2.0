@@ -38,13 +38,13 @@ pageComponentry = {
         courseFeatureJBA.transitionIn();
         courseFeatureJBA.flexySpeckCheck();
         var currentPage = this.exerciseData['page.max']
-        if (currentPage >= 27) {
+        if (currentPage >= 26) {
             this.module1 = true;
         }
-        if (currentPage >= 38) {
+        if (currentPage >= 37) {
             this.module2 = true;
         }
-        if (currentPage >= 40) {
+        if (currentPage >= 41) {
             this.module3 = true;
         }
         if ((this.module1 == true) && (this.module2 == true) && (this.module3 == true)) {

@@ -42,19 +42,19 @@ setTimeout(function(){window.location.hash = '097';},400);
   ready: function() {
     courseFeatureJBA.transitionIn(); courseFeatureJBA.flexySpeckCheck();
     var currentPage = this.exerciseData['page.max']
-    if (currentPage >= 21) {
+    if (currentPage >= 20) {
       this.module2 = true;
     }
-    if (currentPage >= 45) {
+    if (currentPage >= 44) {
       this.module3 = true;
     }
-    if (currentPage >= 59) {
+    if (currentPage >= 58) {
       this.module4 = true;
     }
-    if (currentPage >= 71) {
+    if (currentPage >= 70) {
       this.module5 = true;
     }
-    if (currentPage >= 98){
+    if (currentPage >= 97){
       this.modulesComplete = true;
     }
 
