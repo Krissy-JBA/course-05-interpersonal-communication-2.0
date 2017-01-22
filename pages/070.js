@@ -2,65 +2,57 @@ pageComponentry = {
   data: function() {
     return {
       // Any page specific data goes here.
-      percentage1: '',
-      percentage2: '',
-      correct: false
+      toggles: {
+          q6: false,
+          q7: false,
+          q8: false,
+          q9: false,
+          q10: false
+      }
     }
   },
   methods: {
     // Any page specific methods go here.
+    saveInputData: function(value){
+      this.$parent.saveData('toggles-q6', this.toggles.q6);
+      this.$parent.saveData('toggles-q7', this.toggles.q7);
+      this.$parent.saveData('toggles-q8', this.toggles.q8);
+      this.$parent.saveData('toggles-q9', this.toggles.q9);
+      this.$parent.saveData('toggles-q10', this.toggles.q10);
+      //Percentage score
+      var agrees2 = $('input:checked').length;
+      var percentage2 = Math.round(agrees2 * 10);
+      this.$parent.saveData('percentage2', percentage2);
+    }
   },
   ready: function() {
     courseFeatureJBA.transitionIn(); courseFeatureJBA.flexySpeckCheck();
 
-    if(this.exerciseData['percentage']){
-      this.percentage1 = parseInt(this.exerciseData['percentage']);
+    if(this.exerciseData['toggles-q6']){
+      if (this.exerciseData['toggles-q6'] === 'true' || this.exerciseData['toggles-q6'] === true) {
+        this.toggles.q6 = true;
+      }
     }
-    if(this.exerciseData['percentage2']){
-      this.percentage2 = parseInt(this.exerciseData['percentage2']);
+    if(this.exerciseData['toggles-q7']){
+      if (this.exerciseData['toggles-q7'] === 'true' || this.exerciseData['toggles-q7'] === true) {
+        this.toggles.q7 = true;
+      }
     }
-
-    var percentageTrue= Math.round(this.percentage1 + this.percentage2);
-    var percentageFill = Math.round(100 - percentageTrue);
-
-    console.log(percentageTrue);
-
-    if (percentageTrue > 79) {
-      this.correct = true;
+    if(this.exerciseData['toggles-q8']){
+      if (this.exerciseData['toggles-q8'] === 'true' || this.exerciseData['toggles-q8'] === true) {
+        this.toggles.q8 = true;
+      }
     }
-    else if (percentageTrue < 78 ) {
-      this.correct = false;
+    if(this.exerciseData['toggles-q9']){
+      if (this.exerciseData['toggles-q9'] === 'true' || this.exerciseData['toggles-q9'] === true) {
+        this.toggles.q9 = true;
+      }
     }
-
-    createSVGElement= function(element) {
-        return $(document.createElementNS('http://www.w3.org/2000/svg', element));
+    if(this.exerciseData['toggles-q10']){
+      if (this.exerciseData['toggles-q10'] === 'true' || this.exerciseData['toggles-q10'] === true) {
+        this.toggles.q10 = true;
+      }
     }
-    var $myGradient= $('#MyGradient');
-
-    createSVGElement('stop')
-    .attr({
-        offset: percentageFill + '%',
-        "stop-color": "#E51669"
-    })
-    .appendTo($myGradient);
-    createSVGElement('stop')
-    .attr({
-        offset: percentageFill + '%',
-        "stop-color": "#74cee2"
-    })
-    .appendTo($myGradient);
-
-    createSVGElement('stop')
-        .attr({
-            offset:"100%",
-            "stop-color":"#74cee2"
-        })
-  .appendTo($myGradient);createSVGElement('stop')
-
-
-
-
-
 
 
   }

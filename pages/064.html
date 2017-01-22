@@ -1,50 +1,3 @@
-<div class="popup" v-show="popup1 == true" transition="popup">
-    <div class="popup-inner">
-        <div class="squiggle-container">
-            <div class="top-squiggle"><img src="/images/course-assets/squiggle/green-top.svg" alt=""></div>
-            <!-- put all of your content into the squiggle content div -->
-            <div class="squiggle-content green-squiggle">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="squiggle-container flex-center">
-                          <p>Nice job!</p>
-                          <p>Zabby's clearly not happy at the moment! She's coming across as aggressive and argumentative.</p>
-                          <p>She might be using perfectly friendly words, but her short sentences are actually an aggressive verbal signal.</p>
-                          <p>Speaking loudly is an aggressive nonverbal signal too, and waving her hands about isn't exactly making her look like a picture of calm either.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="bot-squiggle"><img src="/images/course-assets/squiggle/green-bottom.svg" alt=""></div>
-        </div>
-        <div class="course-button close-button popup-close-test" @click="popup1 = false">
-            <i class="fa fa-times close-button-cross" aria-hidden="true"></i> </div>
-    </div>
-</div>
-<div class="popup" v-show="popup2 == true" transition="popup">
-    <div class="popup-inner">
-        <div class="squiggle-container">
-            <div class="top-squiggle"><img src="/images/course-assets/squiggle/red-top.svg" alt=""></div>
-            <!-- put all of your content into the squiggle content div -->
-            <div class="squiggle-content red-squiggle">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="squiggle-container flex-center">
-                          <p>Not quite!</p>
-                          <p>Zabby's clearly not happy at the moment! She's coming across as aggressive and argumentative.</p>
-                          <p>She might be using perfectly friendly words, but her short sentences are actually an aggressive verbal signal.</p>
-                          <p>Speaking loudly is an aggressive nonverbal signal too, and waving her hands about isn't exactly making her look like a picture of calm either.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="bot-squiggle"><img src="/images/course-assets/squiggle/red-bottom.svg" alt=""></div>
-        </div>
-        <div class="course-button close-button popup-close-test" @click="popup2 = false">
-            <i class="fa fa-times close-button-cross" aria-hidden="true"></i> </div>
-    </div>
-</div>
-
 <div class="container-fluid h100">
     <div class="row header-row  ">
         <div class="col-md-12 col-xs-8 col-xs-offset-2 pop-in col-md-offset-0">
@@ -55,8 +8,7 @@
         </div>
     </div>
     <div class="row content-row flexy-parent pop-in">
-      <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-pad0  col-xs-12 two-column">
-
+      <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-pad0 col-pad0 col-xs-12 two-column">
           <!-- put all of your content into here div -->
           <div class="squiggle-container pop-in">
               <div class="top-squiggle"><img src="/images/course-assets/squiggle/white-top.svg" alt=""></div>
@@ -64,27 +16,15 @@
               <div class="squiggle-content white-squiggle">
                   <div class="row">
                       <div class="col-md-12">
-                        <p class="text-center ">Zabby's speaking loudly, in short sentences, and waving her hands around a lot.</p>
-                        <div class="row two-line two-line-bot">
-                          <div class="col-xs-12 text-center">
-                              <button type="button" class="jba-btn jba-btn-lg jba-btn-tab helpHinder-btn" @click="oneButton(answer)" v-bind:class="{'oneActive': answer == 'Aggressive and argumentative'}">Aggressive and argumentative</button>
-                          </div>
-                          <div class="col-xs-12 text-center one-line">
-                              <button type="button" class="jba-btn jba-btn-lg jba-btn-tab helpHinder-btn" @click="twoButton(answer)" v-bind:class="{'twoActive': answer == 'Encouraging and caring'}">Encouraging and caring</button>
-                          </div>
-                          <div class="col-xs-12 text-center one-line">
-                              <button type="button" class="jba-btn jba-btn-lg jba-btn-tab helpHinder-btn" @click="threeButton(answer)" v-bind:class="{'threeActive': answer == 'Distracted and unaware'}">Distracted and unaware</button>
-                          </div>
-                        </div>
-                        <p class="blue-text text-center ">Tap the option that matches Zabby's intent.</p>
+                        <p>Sometimes the hardest part of communication is putting together verbal and nonverbal prompts (signals), so you can understand people's intent. This sort of stuff can vary quite a bit from culture to culture, but there are some common themes. We'll take a deeper look into cross cultural communication later in the course – but for now, let's have a go with a few examples!</p>
                       </div>
                   </div>
               </div>
               <div class="bot-squiggle"><img src="/images/course-assets/squiggle/white-bottom.svg" alt=""></div>
           </div>
       </div>
-      <div class="flexy-image flexy-image-mob-fix pop-in ">
-          <img src="/course-files/course-05-interpersonal-communication-2.0/images/png/interComms42@2x.png"  alt="interpersonal communication">
+      <div class="flexy-image flexy-image-mob-fix pop-in col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-pad0 col-xs-12">
+          <img src="/course-files/course-05-interpersonal-communication-2.0/images/png/interComms41@2x.png"  alt="interpersonal communication">
       </div>
   </div>
     <!-- end  content -->
@@ -115,8 +55,7 @@
                             </div>
                         </div>
                         <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
-                            <a href="#065" class="course-button next-button" v-bind:class="{'next-button-locked': !unlocked}"></a>
-                            <i v-show="unlocked == false" class="arrowLock-13 arrowLock fa fa-lock"  aria-hidden="true"></i>
+                            <a href="#065" class="course-button next-button"></a>
                         </div>
                         <!-- rightArrow -->
                     </div>

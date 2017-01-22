@@ -9,6 +9,7 @@ pageComponentry = {
   },
   ready: function() {
     courseFeatureJBA.transitionIn(); courseFeatureJBA.flexySpeckCheck();
+  
 
   }
 

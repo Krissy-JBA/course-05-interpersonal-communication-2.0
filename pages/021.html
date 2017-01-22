@@ -2,13 +2,13 @@
     <div class="row header-row  ">
         <div class="col-md-12 col-xs-8 col-xs-offset-2 pop-in col-md-offset-0">
             <div class="new-main-content">
-                <h2>How to be a good sender</h2>
+                <h2>Things that get in the way</h2>
                 <!-- Change Header -->
             </div>
         </div>
     </div>
     <div class="row content-row  pop-in">
-      <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-pad0  col-xs-12">
+      <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-pad0  col-xs-12 two-column">
           <!-- put all of your content into here div -->
           <div class="squiggle-container pop-in">
               <div class="top-squiggle"><img src="/images/course-assets/squiggle/white-top.svg" alt=""></div>
@@ -16,9 +16,21 @@
               <div class="squiggle-content white-squiggle">
                   <div class="row">
                       <div class="col-md-12">
-                        <p>So, you've seen how in any face-to-face communication, two people are involved: the sender and the recipient.</p>
-                        <p>Communication generally starts with the sender, who comes up with a thought and chooses the words to use to get that thought across to the recipient.</p>
-                        <p>his section of the course is all about being a good sender, and making sure your message makes it to the recipient safely, no matter of the audience or the idea!</p>
+                        <p>What key things have you personally observed that drive effective communication?</p>
+                        <div class="squiggle-container one-line-bot">
+                              <div class="top-squiggle top-squiggle-change-1"><img src="/images/course-assets/forms/lightTop.svg" alt=""></div>
+                              <div class="squiggle-content textbox-colour-select-1 light-beige-textbox">
+                                  <div class="squiggle-container">
+                                      <!-- put all of your content into here div -->
+                                      <div id="courseFormWrapperDiv1" class="course-form-padding courseFormWrapDiv textarea-mobile large-textarea">
+                                          <textarea id="textarea" v-on:keyup="checkContent" v-on:change="saveInputField1(inputfield1)" v-model="inputfield1" placeholder="Enter text here..." class="form-control form-control-1 course-input-field-black"></textarea>
+                                      </div>
+                                      <!-- End Content -->
+                                  </div>
+                              </div>
+                              <div class="bot-squiggle bot-squiggle-change-1"><img src="/images/course-assets/forms/lightBott.svg" alt=""></div>
+                          </div>
+                          <p class="blue-text">Answer the question to get you thinking about your own experience of the communication process.</p>
                       </div>
                   </div>
               </div>
@@ -42,10 +54,10 @@
                 <div class="container progressContainer">
                     <div class="row">
                       <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
-                          <a href="#003" class="course-button prev-button"></a>
+                          <a href="#020" class="course-button prev-button"></a>
                       </div>
                         <!-- leftArrow -->
-                        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 align">
+                        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 align safari-only2">
                             <div class="course-progress-bar-wrap">
                                 <div class="courseProgressBar">
                                     <p class="fixed hidden">60%</p>
@@ -53,8 +65,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
-                            <a href="#022" class="course-button next-button"></a>
+                        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center safari-only">
+                          <a href="#004" class="jba-btn-submit jba-btn" v-bind:class="{'jba-btn-locked': !content}">Submit</a>
+                          <i class="arrowLock fa fa-lock" v-show="content == false" aria-hidden="true"></i>
                         </div>
                         <!-- rightArrow -->
                     </div>

@@ -1,46 +1,3 @@
-<div class="popup" v-show="popup1 == true" transition="popup">
-    <div class="popup-inner">
-        <div class="squiggle-container">
-            <div class="top-squiggle"><img src="/images/course-assets/squiggle/green-top.svg" alt=""></div>
-            <!-- put all of your content into the squiggle content div -->
-            <div class="squiggle-content green-squiggle">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="squiggle-container flex-center">
-                          <p>Nice job!</p>
-                          <p>Asking questions and gathering info is a 'must have' for effective communication.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="bot-squiggle"><img src="/images/course-assets/squiggle/green-bottom.svg" alt=""></div>
-        </div>
-        <div class="course-button close-button popup-close-test" @click="popup1 = false">
-            <i class="fa fa-times close-button-cross" aria-hidden="true"></i> </div>
-    </div>
-</div>
-<div class="popup" v-show="popup2 == true" transition="popup">
-    <div class="popup-inner">
-        <div class="squiggle-container">
-            <div class="top-squiggle"><img src="/images/course-assets/squiggle/red-top.svg" alt=""></div>
-            <!-- put all of your content into the squiggle content div -->
-            <div class="squiggle-content red-squiggle">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="squiggle-container flex-center">
-                          <p>Not quite!</p>
-                          <p>Asking questions and gathering info is a 'must have' for effective communication.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="bot-squiggle"><img src="/images/course-assets/squiggle/red-bottom.svg" alt=""></div>
-        </div>
-        <div class="course-button close-button popup-close-test" @click="popup2 = false">
-            <i class="fa fa-times close-button-cross" aria-hidden="true"></i> </div>
-    </div>
-</div>
-
 <div class="container-fluid h100">
     <div class="row header-row  ">
         <div class="col-md-12 col-xs-8 col-xs-offset-2 pop-in col-md-offset-0">
@@ -60,14 +17,8 @@
               <div class="squiggle-content white-squiggle">
                   <div class="row">
                       <div class="col-md-12">
-                        <p class="text-center ">Asking questions...</p>
-                        <div class="row two-line">
-                          <div class="col-xs-12 text-center one-line-bot flex-buttons">
-                              <button type="button" class="magenta-blob-box helpHinder-btn" @click="oneButton(answer)" v-bind:class="{'oneActive': answer == 'Questions help'}">Helps communication</button>
-                              <button type="button" class="magenta-blob-box helpHinder-btn" @click="twoButton(answer)" v-bind:class="{'twoActive': answer == 'Questions hinder'}">Hinders communication</button>
-                          </div>
-                        </div>
-                        <p class="blue-text text-center">Tap to make your selection.</p>
+                        <p>Quiz time! We’re going to give you a few different aspects of  communication – and it’s your job to decide whether each one ‘helps or hinders’ the process.</p>
+                        <p>Click next to get started!</p>
                       </div>
                   </div>
               </div>
@@ -75,7 +26,7 @@
           </div>
       </div>
       <div class="flexy-image flexy-image-mob-fix pop-in ">
-          <img src="/course-files/course-05-interpersonal-communication-2.0/images/png/interComms11@2x.png"  alt="interpersonal communication">
+          <img src="/course-files/course-05-interpersonal-communication-2.0/images/png/interComms9@2x.png"  alt="interpersonal communication">
       </div>
   </div>
     <!-- end  content -->

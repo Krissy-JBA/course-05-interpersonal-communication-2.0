@@ -1,85 +1,39 @@
-<div class="popup" v-show="popup == true" transition="popup">
-    <div class="popup-inner">
-        <div class="squiggle-container">
-            <div class="top-squiggle"><img src="/images/course-assets/squiggle/green-top.svg" alt=""></div>
-            <!-- put all of your content into the squiggle content div -->
-            <div class="squiggle-content green-squiggle">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="squiggle-container flex-center">
-                          <p>Congratulations, you got them all right!</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="bot-squiggle"><img src="/images/course-assets/squiggle/green-bottom.svg" alt=""></div>
-        </div>
-        <div class="course-button close-button popup-close-test" @click="redirectMe">
-            <i class="fa fa-times close-button-cross" aria-hidden="true"></i> </div>
-    </div>
-</div>
-
-<div class="container-fluid h100 branding12">
+<div class="container-fluid h100">
     <div class="row header-row  ">
-        <div class="col-md-12 col-xs-8 col-xs-offset-2 col-md-offset-0">
-            <div class="new-main-content pop-in">
-                <h2>Verbal and nonverbal communication</h2>
+        <div class="col-md-12 col-xs-8 col-xs-offset-2 pop-in col-md-offset-0">
+            <div class="new-main-content">
+                <h2>When we don't listen</h2>
                 <!-- Change Header -->
             </div>
         </div>
     </div>
-    <div class="row content-row">
-        <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-pad0  col-xs-12
-    ">
-            <div class="squiggle-container pop-in">
-                <div class="top-squiggle"><img src="/images/course-assets/squiggle/white-top.svg" alt=""></div>
-                <div class="squiggle-content white-squiggle">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="squiggle-container flex-center brandingBoxWrap">
-                                <!-- put all of your content into here div -->
-                                <div class="row">
-                                    <div class="col-md-12 col-pad0">
-                                    </div>
-                                </div>
-                                <div class="piechart one-line-bot">
-                                  <div class="drag-wrap one-line">
-                                    <div v-show="pageReload == false" id="verbal" data-target="verbal" class="drag-buttons magenta-blob-box no-transition option">Verbal</div>
-                                    <div v-show="pageReload == false" id="tone" data-target="tone" class="drag-buttons magenta-blob-box no-transition option">Tone of voice</div>
-                                    <div v-show="pageReload == false" id="body" data-target="body" class="drag-buttons magenta-blob-box no-transition option">Body Language</div>
-                                  </div>
-                                  <div class="pie">
-                                    <div class="pie-img" v-show="pageReload == false">
-                                      <img  src="/course-files/course-05-interpersonal-communication-2.0/images/png/interComms39@2x.png" alt="">
-
-                                    </div>
-                                    <div v-show="pageReload == true" class="pie-img-reload">
-                                      <img  src="/course-files/course-05-interpersonal-communication-2.0/images/png/interComms66@2x.png" alt="">
-                                    </div>
-                                    <div data-accept="tone" class="tone target">
-
-                                    </div>
-                                    <div data-accept="verbal" class="verbal target">
-
-                                    </div>
-                                    <div data-accept="body" class="body target">
-
-                                    </div>
-
-                                  </div>
-
-                                </div>
-                                <!-- End Content -->
-                                <p class="blue-text text-center">Drag and drop the labels to where you think they fit on the pie chart.</p>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bot-squiggle"><img src="/images/course-assets/squiggle/white-bottom.svg" alt=""></div>
-            </div>
-        </div>
-    </div>
+    <div class="row content-row flexy-parent pop-in">
+      <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-pad0  col-xs-12 two-column">
+          <!-- put all of your content into here div -->
+          <div class="squiggle-container pop-in">
+              <div class="top-squiggle"><img src="/images/course-assets/squiggle/white-top.svg" alt=""></div>
+              <!-- put all of your content into the squiggle content div -->
+              <div class="squiggle-content white-squiggle">
+                  <div class="row">
+                      <div class="col-md-12">
+                        <p>Communication comes in loads of different forms, but they all fall under one of two categories:</p>
+                        <ul class="arrow-list">
+                            <li>Verbal communication</li>
+                            <li>Nonverbal communication</li>
+                        </ul>
+                        <p>Between these two categories (and everything that falls under them), it turns out that there's a whole lot of communication going on!</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="bot-squiggle"><img src="/images/course-assets/squiggle/white-bottom.svg" alt=""></div>
+          </div>
+      </div>
+      <div class="flexy-image flexy-image-mob-fix pop-in ">
+          <img src="/course-files/course-05-interpersonal-communication-2.0/images/png/interComms38@2x.png"  alt="interpersonal communication">
+      </div>
+  </div>
+    <!-- end  content -->
+    <!-- =========================== -->
     <!-- footer start -->
     <div class="row progressWrap">
         <div class="col-xs-12 col-pad0">
@@ -89,13 +43,13 @@
                     <div class="percentageTxt hidden">
                         <p>60%</p>
                     </div>
-                    <img class="percentageArrow hidden" src="/images/course-assets/progressBar/hand_arrow.png" alt="" />
+                    <img class="percentageArrow hidden" src="../img/progressBar/hand_arrow.png" alt="" />
                 </div>
                 <div class="container progressContainer">
                     <div class="row">
-                        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
-                            <a href="#059" class="course-button prev-button"></a>
-                        </div>
+                      <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
+                          <a href="#004" class="course-button prev-button"></a>
+                      </div>
                         <!-- leftArrow -->
                         <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 align">
                             <div class="course-progress-bar-wrap">
@@ -106,10 +60,7 @@
                             </div>
                         </div>
                         <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
-
-                          <a @click="nextButton" class="course-button" v-bind:class="{'next-button2': correct, 'next-button-locked': !correct}"></a>
-                          <i v-show="correct == false" class="arrowLock-13 arrowLock fa fa-lock"  aria-hidden="true"></i>
-
+                            <a href="#061" class="course-button next-button"></a>
                         </div>
                         <!-- rightArrow -->
                     </div>
@@ -117,6 +68,5 @@
             </div>
             <!-- E:Progress Bar -->
         </div>
-        <!-- end  content -->
     </div>
 </div>

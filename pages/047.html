@@ -8,35 +8,26 @@
         </div>
     </div>
     <div class="row content-row flexy-parent pop-in">
-      <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-pad0  col-xs-12 two-column">
+      <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-pad0  col-xs-12">
           <!-- put all of your content into here div -->
           <div class="squiggle-container pop-in">
               <div class="top-squiggle"><img src="/images/course-assets/squiggle/white-top.svg" alt=""></div>
               <!-- put all of your content into the squiggle content div -->
               <div class="squiggle-content white-squiggle">
-                  <div class="row ">
-                      <div class="col-md-12 flex-center mini-modules">
-                        <p>When you're the recipient, there are two key things you can do that make for great communication.</p>
-                         <a href="#048" class="magenta-blob-box module-btn one-line" v-bind:class="{'purple-blob-box': module1}">
-                          <i v-show="module1 == true"  class="fa fa-check" aria-hidden="true"></i>
-                          <p>Asking effective questions</p>
-                        </a>
-                         <a href="#050" class="magenta-blob-box module-btn one-line one-line-bot" v-bind:class="{'jba-btn-locked': !module1, 'purple-blob-box': module2}">
-                          <i v-show="module2 == true"  class="fa fa-check" aria-hidden="true"></i>
-                          <i v-show="module1 == false" class="arrowLock fa fa-lock"  aria-hidden="true"></i>
-                          <p>Actively 'listening to understand'</p>
-                        </a>
-                        <p class="blue-text two-line">Tap a button to learn more.</p>
+                  <div class="row">
+                      <div class="col-md-12">
+                        <p>Communication is much more than just talking and listening, and as we saw earlier there's always two perspectives – the sender's and the recipient's.</p>
+                        <p>But don't fall into the trap of thinking that all the hard communicating work is done by the sender!</p>
+                        <p>Yes, they're the ones trying to get their points across, but it turns out that being a recipient requires effort too – at least it does if you really want to understand the info that's being sent your way.</p>
                       </div>
                   </div>
               </div>
               <div class="bot-squiggle"><img src="/images/course-assets/squiggle/white-bottom.svg" alt=""></div>
           </div>
       </div>
-      <div class="flexy-image flexy-image-mob-fix pop-in ">
-          <img src="/course-files/course-05-interpersonal-communication-2.0/images/png/interComms13@2x.png"  alt="interpersonal communication">
+      <div class="flexy-image flexy-image-mob-fix pop-in remove-landscape ">
+          <img class="spec" src="/course-files/course-05-interpersonal-communication-2.0/images/png/interComms31@2x.png"  alt="interpersonal communication">
       </div>
-
   </div>
     <!-- end  content -->
     <!-- =========================== -->
@@ -54,7 +45,7 @@
                 <div class="container progressContainer">
                     <div class="row">
                       <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
-                          <a @click.stop="prevButton" class="course-button prev-button2"></a>
+                          <a href="#004" class="course-button prev-button"></a>
                       </div>
                         <!-- leftArrow -->
                         <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 align">
@@ -66,8 +57,7 @@
                             </div>
                         </div>
                         <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
-                            <a href="#055" class="course-button next-button" v-bind:class="{'next-button-locked': !modulesComplete}"></a>
-                            <i v-show="modulesComplete == false" class="arrowLock-13 arrowLock fa fa-lock"  aria-hidden="true"></i>
+                            <a href="#048" class="course-button next-button"></a>
                         </div>
                         <!-- rightArrow -->
                     </div>

@@ -9,7 +9,7 @@ pageComponentry = {
   methods: {
     // Any page specific methods go here.
     saveInputField1: function(value){
-      this.$parent.saveData('what-is-their-perspective', value);
+      this.$parent.saveData('what-is-your-medium', value);
     },
     checkContent: function() {
       if (this.inputfield1.length >= 1)  {
@@ -22,8 +22,8 @@ pageComponentry = {
   },
   ready: function() {
     courseFeatureJBA.transitionIn(); courseFeatureJBA.flexySpeckCheck();
-    if(this.exerciseData['what-is-their-perspective']){
-      this.inputfield1 = this.exerciseData['what-is-their-perspective'];
+    if(this.exerciseData['what-is-your-medium']){
+      this.inputfield1 = this.exerciseData['what-is-your-medium'];
       this.content = true;
     }
     document.getElementById("textarea").addEventListener("paste", myFunction);

@@ -1,14 +1,62 @@
+<div class="popup" v-show="popup1 == true" transition="popup">
+    <div class="popup-inner">
+        <div class="squiggle-container">
+            <div class="top-squiggle"><img src="/images/course-assets/squiggle/green-top.svg" alt=""></div>
+            <!-- put all of your content into the squiggle content div -->
+            <div class="squiggle-content green-squiggle">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="squiggle-container flex-center">
+                          <p>Nice job!</p>
+                          <p>Zabby's clearly distracted and not engaged right now!</p>
+                          <p>Sure, she offers a verbal signal by talking… but she's so vague she's not really saying anything!</p>
+                          <p>Her body language is 100% not engaged, either. She's not making eye contact; in fact she's not even bothering to turn her body to face the person she's communicating with!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bot-squiggle"><img src="/images/course-assets/squiggle/green-bottom.svg" alt=""></div>
+        </div>
+        <div class="course-button close-button popup-close-test" @click="popup1 = false">
+            <i class="fa fa-times close-button-cross" aria-hidden="true"></i> </div>
+    </div>
+</div>
+<div class="popup" v-show="popup2 == true" transition="popup">
+    <div class="popup-inner">
+        <div class="squiggle-container">
+            <div class="top-squiggle"><img src="/images/course-assets/squiggle/red-top.svg" alt=""></div>
+            <!-- put all of your content into the squiggle content div -->
+            <div class="squiggle-content red-squiggle">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="squiggle-container flex-center">
+                          <p>Not quite!</p>
+                          <p>Zabby's clearly distracted and not engaged right now!.</p>
+                          <p>Sure, she offers a verbal signal by talking… but she's so vague she's not really saying anything!</p>
+                          <p>Her body language is 100% not engaged, either. She's not making eye contact; in fact she's not even bothering to turn her body to face the person she's communicating with!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bot-squiggle"><img src="/images/course-assets/squiggle/red-bottom.svg" alt=""></div>
+        </div>
+        <div class="course-button close-button popup-close-test" @click="popup2 = false">
+            <i class="fa fa-times close-button-cross" aria-hidden="true"></i> </div>
+    </div>
+</div>
+
 <div class="container-fluid h100">
     <div class="row header-row  ">
         <div class="col-md-12 col-xs-8 col-xs-offset-2 pop-in col-md-offset-0">
             <div class="new-main-content">
-                <h2>What's your communication like?</h2>
+                <h2>Using the two together</h2>
                 <!-- Change Header -->
             </div>
         </div>
     </div>
     <div class="row content-row flexy-parent pop-in">
       <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-pad0  col-xs-12 two-column">
+
           <!-- put all of your content into here div -->
           <div class="squiggle-container pop-in">
               <div class="top-squiggle"><img src="/images/course-assets/squiggle/white-top.svg" alt=""></div>
@@ -16,17 +64,27 @@
               <div class="squiggle-content white-squiggle">
                   <div class="row">
                       <div class="col-md-12">
-                          <p>Here's your chance to do a short self assessment of your verbal and nonverbal communication.</p>
-                          <p>Be open and totally honest (you’d only be lying to yourself). Now that you're more aware of how important verbal and nonverbal communication is, make the most of this great opportunity to improve!</p>
+                        <p class="text-center ">Zabby's on her phone and responding vaguely to everything she hears, without eye contact or facing who she's listening to.</p>
+                        <div class="row two-line two-line-bot">
+                          <div class="col-xs-12 text-center">
+                              <button type="button" class="jba-btn jba-btn-lg jba-btn-tab helpHinder-btn" @click="oneButton(answer)" v-bind:class="{'oneActive': answer == 'Amused and participating'}">Amused and participating</button>
+                          </div>
+                          <div class="col-xs-12 text-center one-line">
+                              <button type="button" class="jba-btn jba-btn-lg jba-btn-tab helpHinder-btn" @click="twoButton(answer)" v-bind:class="{'twoActive': answer == 'Distracted and not engaged'}">Distracted and not engaged</button>
+                          </div>
+                          <div class="col-xs-12 text-center one-line">
+                              <button type="button" class="jba-btn jba-btn-lg jba-btn-tab helpHinder-btn" @click="threeButton(answer)" v-bind:class="{'threeActive': answer == 'Engaged and interested'}">Engaged and interested</button>
+                          </div>
+                        </div>
+                        <p class="blue-text text-center ">Tap the option that matches Zabby's intent.</p>
                       </div>
                   </div>
               </div>
               <div class="bot-squiggle"><img src="/images/course-assets/squiggle/white-bottom.svg" alt=""></div>
           </div>
-
       </div>
       <div class="flexy-image flexy-image-mob-fix pop-in ">
-          <img src="/course-files/course-05-interpersonal-communication-2.0/images/png/interComms45@2x.png"  alt="interpersonal communication">
+          <img src="/course-files/course-05-interpersonal-communication-2.0/images/png/interComms44@2x.png"  alt="interpersonal communication">
       </div>
   </div>
     <!-- end  content -->
@@ -45,7 +103,7 @@
                 <div class="container progressContainer">
                     <div class="row">
                       <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
-                          <a href="#066 " class="course-button prev-button"></a>
+                          <a href="#066" class="course-button prev-button"></a>
                       </div>
                         <!-- leftArrow -->
                         <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 align">
@@ -57,7 +115,8 @@
                             </div>
                         </div>
                         <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
-                            <a href="#068" class="course-button next-button"></a>
+                            <a href="#068" class="course-button next-button" v-bind:class="{'next-button-locked': !unlocked}"></a>
+                            <i v-show="unlocked == false" class="arrowLock-13 arrowLock fa fa-lock"  aria-hidden="true"></i>
                         </div>
                         <!-- rightArrow -->
                     </div>

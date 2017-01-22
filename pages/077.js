@@ -12,22 +12,22 @@ pageComponentry = {
     oneButton: function() {
       this.whatThink = true;
       this.answer = 'It is okay';
-      this.$parent.saveData('Cutting-in-line', this.answer);
+      this.$parent.saveData('Eye-contact', this.answer);
       this.popup = true;
       this.unlocked = true;
     },
     twoButton: function() {
       this.whatThink = true;
       this.answer = 'It is not okay';
-      this.$parent.saveData('Cutting-in-line', this.answer);
+      this.$parent.saveData('Eye-contact', this.answer);
       this.popup = true;
       this.unlocked = true;
     }
   },
   ready: function() {
     courseFeatureJBA.transitionIn(); courseFeatureJBA.flexySpeckCheck();
-    if(this.exerciseData['Cutting-in-line']){
-      this.answer = this.exerciseData['Cutting-in-line'];
+    if(this.exerciseData['Eye-contact']){
+      this.answer = this.exerciseData['Eye-contact'];
       this.unlocked = true;
     }
 
