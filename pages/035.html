@@ -7,7 +7,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="squiggle-container flex-center">
-                          <p>Congratulations, you got them all right!</p>
+                            <p>Congratulations, you got them all right!</p>
                         </div>
                     </div>
                 </div>
@@ -42,103 +42,83 @@
                                         <p>What do you think is the bird's default state? Match the pairs.</p>
                                     </div>
                                 </div>
-                                <div class="matching-game" v-show="pageReload == false" >
-                                  <div class="drop-zone-wrap">
-                                          <div class="drop-zone">
-                                            <p>Getting appreciation</p>
-                                            <div class="drop-box target"  data-accept="peacock">
-
+                                <div class="matching-game" v-show="pageReload == false">
+                                    <div class="drop-zone-wrap">
+                                        <div class="drop-zone">
+                                            <p>Agrees</p>
+                                            <div class="drop-box target" data-accept="dove">
                                             </div>
-                                          </div>
-
-                                            <div class="drop-zone">
-                                              <p>Getting along</p>
-                                              <div class="drop-box target" data-accept="dove">
-
-                                              </div>
+                                        </div>
+                                        <div class="drop-zone">
+                                            <p>Attacks</p>
+                                            <div class="drop-box target" data-accept="peacock">
                                             </div>
-                                            <div class="drop-zone">
-                                              <p>Getting it done</p>
-                                              <div class="drop-box target"  data-accept="eagle">
-
-                                              </div>
+                                        </div>
+                                        <div class="drop-zone">
+                                            <p>Avoids</p>
+                                            <div class="drop-box target" data-accept="owl">
                                             </div>
-                                            <div class="drop-zone">
-                                              <p>Getting it right</p>
-                                              <div class="drop-box target" data-accept="owl">
-
-                                              </div>
+                                        </div>
+                                        <div class="drop-zone">
+                                            <p>Controls</p>
+                                            <div class="drop-box target" data-accept="eagle">
                                             </div>
+                                        </div>
 
-                                          </div>
-                                          <div class="matching-birds-wrap one-line-bot">
-                                            <div class="matching-birds">
-                                              <img id="eagleLeft" data-target="eagle" class="matchingimg img-responsive center-block option" src="/course-files/course-05-interpersonal-communication-2.0/images/png/interComms22@2x.png">
-                                           </div>
-
-
-                                             <div class="matching-birds">
-                                                 <img id="owlLeft" data-target="owl" class="matchingimg img-responsive center-block option" src="/course-files/course-05-interpersonal-communication-2.0/images/png/interComms23@2x.png">
-                                             </div>
-
-
-                                             <div class="matching-birds">
-                                                 <img id="doveLeft" data-target="dove" class="matchingimg img-responsive center-block option" src="/course-files/course-05-interpersonal-communication-2.0/images/png/interComms24@2x.png">
-                                             </div>
-
-
-                                             <div class="matching-birds">
-                                                 <img id="peacockLeft" data-target="peacock" class="matchingimg img-responsive center-block option" src="/course-files/course-05-interpersonal-communication-2.0/images/png/interComms25@2x.png">
-                                             </div>
-                                          </div>
-
+                                    </div>
+                                    <div class="matching-birds-wrap one-line-bot">
+                                        <div class="matching-birds">
+                                            <img id="eagleLeft" data-target="eagle" class="matchingimg img-responsive center-block option" src="/course-files/course-05-interpersonal-communication-2.0/images/png/interComms22@2x.png">
+                                        </div>
+                                        <div class="matching-birds">
+                                            <img id="owlLeft" data-target="owl" class="matchingimg img-responsive center-block option" src="/course-files/course-05-interpersonal-communication-2.0/images/png/interComms23@2x.png">
+                                        </div>
+                                        <div class="matching-birds">
+                                            <img id="doveLeft" data-target="dove" class="matchingimg img-responsive center-block option" src="/course-files/course-05-interpersonal-communication-2.0/images/png/interComms24@2x.png">
+                                        </div>
+                                        <div class="matching-birds">
+                                            <img id="peacockLeft" data-target="peacock" class="matchingimg img-responsive center-block option" src="/course-files/course-05-interpersonal-communication-2.0/images/png/interComms25@2x.png">
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="matching-game2 reloaded one-line-bot" v-show="pageReload == true">
-                                  <div class="drop-zone-wrap">
+                                    <div class="drop-zone-wrap">
                                         <div class="drop-zone">
-                                          <p>Getting appreciation</p>
-                                          <div class="drop-box target"  data-accept="peacock">
-                                            <div class="matching-birds">
-                                                <img id="peacockLeft" data-target="peacock" class="matchingimg img-responsive center-block option" src="/course-files/course-05-interpersonal-communication-2.0/images/png/interComms25@2x.png">
-                                            </div>
-                                          </div>
-                                         </div>
-
-
-                                            <div class="drop-zone">
-                                              <p>Getting along</p>
-                                              <div class="drop-box target" data-accept="dove">
+                                            <p>Agrees</p>
+                                            <div class="drop-box target" data-accept="dove">
                                                 <div class="matching-birds">
                                                     <img id="doveLeft" data-target="dove" class="matchingimg img-responsive center-block option" src="/course-files/course-05-interpersonal-communication-2.0/images/png/interComms24@2x.png">
                                                 </div>
-                                              </div>
                                             </div>
-                                            <div class="drop-zone">
-                                              <p>Getting it done</p>
-                                              <div class="drop-box target"  data-accept="eagle">
+                                        </div>
+                                        <div class="drop-zone">
+                                            <p>Attacks</p>
+                                            <div class="drop-box target" data-accept="peacock">
                                                 <div class="matching-birds">
-                                                  <img id="eagleLeft" data-target="eagle" class="matchingimg img-responsive center-block option" src="/course-files/course-05-interpersonal-communication-2.0/images/png/interComms22@2x.png">
+                                                    <img id="peacockLeft" data-target="peacock" class="matchingimg img-responsive center-block option" src="/course-files/course-05-interpersonal-communication-2.0/images/png/interComms25@2x.png">
                                                 </div>
-                                              </div>
                                             </div>
-                                            <div class="drop-zone">
-                                              <p>Getting it right</p>
-                                              <div class="drop-box target" data-accept="owl">
+                                        </div>
+                                        <div class="drop-zone">
+                                            <p>Avoids</p>
+                                            <div class="drop-box target" data-accept="owl">
                                                 <div class="matching-birds">
                                                     <img id="owlLeft" data-target="owl" class="matchingimg img-responsive center-block option" src="/course-files/course-05-interpersonal-communication-2.0/images/png/interComms23@2x.png">
                                                 </div>
-                                              </div>
                                             </div>
-
-
-
-                                          </div>
-
-
+                                        </div>
+                                        <div class="drop-zone">
+                                            <p>Controls</p>
+                                            <div class="drop-box target" data-accept="eagle">
+                                                <div class="matching-birds">
+                                                    <img id="eagleLeft" data-target="eagle" class="matchingimg img-responsive center-block option" src="/course-files/course-05-interpersonal-communication-2.0/images/png/interComms22@2x.png">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <!-- End Content -->
                                 <p class="blue-text text-center">Drag the answer button to its matching bird.</p>
-
                             </div>
                         </div>
                     </div>
@@ -174,8 +154,8 @@
                         </div>
                         <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
 
-                        <a @click="nextButton" class="course-button" v-bind:class="{'next-button2': correct, 'next-button-locked': !correct}"></a>
-                        <i v-show="correct == false" class="arrowLock-13 arrowLock fa fa-lock"  aria-hidden="true"></i>
+                            <a @click="nextButton" class="course-button" v-bind:class="{'next-button2': correct, 'next-button-locked': !correct}"></a>
+                            <i v-show="correct == false" class="arrowLock-13 arrowLock fa fa-lock" aria-hidden="true"></i>
 
                         </div>
                         <!-- rightArrow -->

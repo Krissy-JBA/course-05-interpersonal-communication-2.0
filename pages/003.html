@@ -2,33 +2,57 @@
     <div class="row header-row  ">
         <div class="col-md-12 col-xs-8 col-xs-offset-2 pop-in col-md-offset-0">
             <div class="new-main-content">
-                <h2>How this course is structured</h2>
+                <h2>Interpersonal Communication</h2>
                 <!-- Change Header -->
             </div>
         </div>
     </div>
     <div class="row content-row  pop-in">
       <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-pad0  col-xs-12">
-          <!-- put all of your content into here div -->
-          <div class="squiggle-container pop-in">
-              <div class="top-squiggle"><img src="/images/course-assets/squiggle/white-top.svg" alt=""></div>
-              <!-- put all of your content into the squiggle content div -->
-              <div class="squiggle-content white-squiggle">
+        <div class="squiggle-container pop-in">
+            <div class="top-squiggle"><img src="/images/course-assets/squiggle/white-top.svg" alt=""></div>
+            <div class="squiggle-content white-squiggle">
                   <div class="row">
-                      <div class="col-md-12 first-number">
-                        <p>This course is split into five specific parts of communication:</p>
-                        <p class="number-lists"><span class="numbers"><img src="/course-files/course-05-interpersonal-communication-2.0/images/png/numbers1@2x.png" alt=""></span><span class="number-text">The basics of communication (5 minutes).</span></p>
-                        <p class="number-lists"><span class="numbers"><img src="/course-files/course-05-interpersonal-communication-2.0/images/png/numbers2@2x.png" alt=""></span><span class="number-text">How to be a good sender (10 minutes).</span></p>
-                        <p class="number-lists"><span class="numbers"><img src="/course-files/course-05-interpersonal-communication-2.0/images/png/numbers3@2x.png" alt=""></span><span class="number-text">How to be a good receiver (10 minutes).</span></p>
-                        <p class="number-lists"><span class="numbers"><img src="/course-files/course-05-interpersonal-communication-2.0/images/png/numbers4@2x.png" alt=""></span><span class="number-text">Verbal and nonverbal communication (5 minutes).</span></p>
-                        <p class="number-lists"><span class="numbers"><img src="/course-files/course-05-interpersonal-communication-2.0/images/png/numbers5@2x.png" alt=""></span><span class="number-text">The communication context (10 minutes).</span></p>
+
+                      <div class="col-md-12 flex-center main-modules">
+                        <a href="#004" class="magenta-blob-box module-btn" v-bind:class="{'purple-blob-box': module2}">
+                          <i v-show="module2 == true"  class="fa fa-check" aria-hidden="true"></i>
+                          <h4 class="text-center">The basics of communications</h4>
+                          <p>What it is and where it goes wrong</p>
+                        </a>
+                        <a href="#021" class="magenta-blob-box module-btn" v-bind:class="{'jba-btn-locked': !module2, 'purple-blob-box': module3}">
+                          <i v-show="module2 == false" class="arrowLock fa fa-lock"  aria-hidden="true"></i>
+                          <i v-show="module3 == true"  class="fa fa-check" aria-hidden="true"></i>
+                          <h4 class="text-center">How to be a good sender</h4>
+                          <p>What do you want to say and how are you<br> going to say it?</p>
+                        </a>
+                        <a href="#046" class="magenta-blob-box module-btn" v-bind:class="{'jba-btn-locked': !module3, 'purple-blob-box': module4}">
+                          <i v-show="module3 == false" class="arrowLock fa fa-lock"  aria-hidden="true"></i>
+                          <i v-show="module4 == true"  class="fa fa-check" aria-hidden="true"></i>
+                          <h4 class="text-center">How to be a good receiver</h4>
+                          <p>Have a plan and be open to opportunities that you <br>encounter along the way.</p>
+                        </a>
+                        <a href="#059" class="magenta-blob-box module-btn" v-bind:class="{'jba-btn-locked': !module4, 'purple-blob-box': module5}">
+                          <i v-show="module4 == false" class="arrowLock fa fa-lock"  aria-hidden="true"></i>
+                          <i v-show="module5 == true"  class="fa fa-check" aria-hidden="true"></i>
+                          <h4 class="text-center">Verbal and nonverbal communication</h4>
+                          <p>Words and much, much more.</p>
+                        </a>
+                        <a href="#072" class="magenta-blob-box module-btn" v-bind:class="{'jba-btn-locked': !module5, 'purple-blob-box': modulesComplete}">
+                          <i v-show="module5 == false" class="arrowLock fa fa-lock"  aria-hidden="true"></i>
+                          <i v-show="modulesComplete == true"  class="fa fa-check" aria-hidden="true"></i>
+                          <h4 class="text-center">The communication context</h4>
+                          <p>Adjusting your communication to fit different<br> cultures and backgrounds.</p>
+                        </a>
                       </div>
                   </div>
               </div>
               <div class="bot-squiggle"><img src="/images/course-assets/squiggle/white-bottom.svg" alt=""></div>
-          </div>
+            </div>
+
+        </div>
+
       </div>
-  </div>
     <!-- end  content -->
     <!-- =========================== -->
     <!-- footer start -->
@@ -44,9 +68,9 @@
                 </div>
                 <div class="container progressContainer">
                     <div class="row">
-                        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
-                            <a href="#002" class="course-button prev-button"></a>
-                        </div>
+                      <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
+                          <div @click="backButton" class="course-button prev-button2"></div>
+                      </div>
                         <!-- leftArrow -->
                         <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 align">
                             <div class="course-progress-bar-wrap">
@@ -57,7 +81,8 @@
                             </div>
                         </div>
                         <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
-                            <a href="#004" class="course-button next-button"></a>
+                            <a href="#096" class="course-button next-button" v-bind:class="{'next-button-locked': !modulesComplete}"></a>
+                            <i v-show="modulesComplete == false" class="arrowLock-13 arrowLock fa fa-lock"  aria-hidden="true"></i>
                         </div>
                         <!-- rightArrow -->
                     </div>

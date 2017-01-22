@@ -11,21 +11,21 @@ pageComponentry = {
     // Any page specific methods go here.
     oneButton: function() {
       this.whatThink = true;
-      this.answer = 'Cultural Differences help';
-      this.$parent.saveData('helpsHinders2', this.answer);
-      this.popup2 = true;
+      this.answer = 'Jargon helps';
+      this.$parent.saveData('helpsHinders3', this.answer);
+      this.popup2= true;
     },
     twoButton: function() {
       this.whatThink = true;
-      this.answer = 'Cultural Differences hinder';
-      this.$parent.saveData('helpsHinders2', this.answer);
+      this.answer = 'Jargon hinders';
+      this.$parent.saveData('helpsHinders3', this.answer);
       this.popup1 = true;
     }
   },
   ready: function() {
     courseFeatureJBA.transitionIn(); courseFeatureJBA.flexySpeckCheck();
-    if(this.exerciseData['helpsHinders2']){
-      this.answer = this.exerciseData['helpsHinders2'];
+    if(this.exerciseData['helpsHinders3']){
+      this.answer = this.exerciseData['helpsHinders3'];
       this.whatThink = true;
     }
 

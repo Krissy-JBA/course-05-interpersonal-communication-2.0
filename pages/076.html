@@ -1,3 +1,27 @@
+<div class="popup" v-show="popup == true" transition="popup">
+    <div class="popup-inner">
+        <div class="squiggle-container">
+            <div class="top-squiggle"><img src="/images/course-assets/squiggle/orange-top.svg" alt=""></div>
+            <!-- put all of your content into the squiggle content div -->
+            <div class="squiggle-content orange-squiggle">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="squiggle-container flex-center">
+                          <p>Good to know</p>
+                          <p>Most western cultures view eye contact  as a sign of trust or confidence.</p>
+                          <p>But, for many Hispanic, Asian, Middle Eastern, and Pacific cultures, eye contact can be considered disrespectful or rude.</p>
+                          <p>If someone won't look you in the eye, don't assume they're trying to hide something - they might actually be trying to show you some respect!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bot-squiggle"><img src="/images/course-assets/squiggle/orange-bottom.svg" alt=""></div>
+        </div>
+        <div class="course-button close-button popup-close-test" @click="popup = false">
+            <i class="fa fa-times close-button-cross" aria-hidden="true"></i> </div>
+    </div>
+</div>
+
 <div class="container-fluid h100">
     <div class="row header-row  ">
         <div class="col-md-12 col-xs-8 col-xs-offset-2 pop-in col-md-offset-0">
@@ -7,8 +31,9 @@
             </div>
         </div>
     </div>
-    <div class="row content-row  pop-in">
+    <div class="row content-row flexy-parent pop-in">
       <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-pad0  col-xs-12 two-column">
+
           <!-- put all of your content into here div -->
           <div class="squiggle-container pop-in">
               <div class="top-squiggle"><img src="/images/course-assets/squiggle/white-top.svg" alt=""></div>
@@ -16,8 +41,16 @@
               <div class="squiggle-content white-squiggle">
                   <div class="row">
                       <div class="col-md-12">
-                        <p>What's okay and normal for one culture may be far from OK for another!</p>
-                        <p>Take a look at these common forms of nonverbal communication and see how your culture might differ from others. There's no wrong answers here, just be honest!</p>
+                        <p class="text-center ">Making eye contact</p>
+                        <div class="row one-line-bot two-line ">
+                          <div class="col-xs-12 col-md-6 text-center one-line-bot">
+                              <button type="button" class="jba-btn jba-btn-lg jba-btn-tab helpHinder-btn" @click="oneButton(answer)" v-bind:class="{'oneActive': answer == 'It is okay'}">It's okay</button>
+                          </div>
+                          <div class="col-xs-12 col-md-6 text-center">
+                              <button type="button" class="jba-btn jba-btn-lg jba-btn-tab helpHinder-btn" @click="twoButton(answer)" v-bind:class="{'twoActive': answer == 'It is not okay'}">It's not okay</button>
+                          </div>
+                        </div>
+                        <p class="blue-text text-center ">Tap the button that applies to your culture.</p>
                       </div>
                   </div>
               </div>
@@ -25,7 +58,7 @@
           </div>
       </div>
       <div class="flexy-image flexy-image-mob-fix pop-in ">
-          <img src="/course-files/course-05-interpersonal-communication-2.0/images/png/interComms51@2x.png"  alt="interpersonal communication">
+          <img src="/course-files/course-05-interpersonal-communication-2.0/images/png/interComms52@2x.png"  alt="interpersonal communication">
       </div>
   </div>
     <!-- end  content -->
@@ -56,7 +89,8 @@
                             </div>
                         </div>
                         <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
-                            <a href="#077" class="course-button next-button"></a>
+                            <a href="#077" class="course-button next-button" v-bind:class="{'next-button-locked': !unlocked}"></a>
+                            <i v-show="unlocked == false" class="arrowLock-13 arrowLock fa fa-lock"  aria-hidden="true"></i>
                         </div>
                         <!-- rightArrow -->
                     </div>

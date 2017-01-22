@@ -3,54 +3,54 @@ pageComponentry = {
     return {
       // Any page specific data goes here.
       toggles: {
-          q1: false,
-          q2: false,
-          q3: false,
-          q4: false,
-          q5: false
+          q6: false,
+          q7: false,
+          q8: false,
+          q9: false,
+          q10: false
       }
     }
   },
   methods: {
     // Any page specific methods go here.
     saveInputData: function(value){
-      this.$parent.saveData('toggles-q1', this.toggles.q1);
-      this.$parent.saveData('toggles-q2', this.toggles.q2);
-      this.$parent.saveData('toggles-q3', this.toggles.q3);
-      this.$parent.saveData('toggles-q4', this.toggles.q4);
-      this.$parent.saveData('toggles-q5', this.toggles.q5);
+      this.$parent.saveData('toggles-q6', this.toggles.q6);
+      this.$parent.saveData('toggles-q7', this.toggles.q7);
+      this.$parent.saveData('toggles-q8', this.toggles.q8);
+      this.$parent.saveData('toggles-q9', this.toggles.q9);
+      this.$parent.saveData('toggles-q10', this.toggles.q10);
       //Percentage score
-      var agrees = $('input:checked').length;
-      var percentage = Math.round(agrees * 10);
-      this.$parent.saveData('percentage', percentage);
+      var agrees2 = $('input:checked').length;
+      var percentage2 = Math.round(agrees2 * 10);
+      this.$parent.saveData('percentage2', percentage2);
     }
   },
   ready: function() {
     courseFeatureJBA.transitionIn(); courseFeatureJBA.flexySpeckCheck();
 
-    if(this.exerciseData['toggles-q1']){
-      if (this.exerciseData['toggles-q1'] === 'true' || this.exerciseData['toggles-q1'] === true) {
-        this.toggles.q1 = true;
+    if(this.exerciseData['toggles-q6']){
+      if (this.exerciseData['toggles-q6'] === 'true' || this.exerciseData['toggles-q6'] === true) {
+        this.toggles.q6 = true;
       }
     }
-    if(this.exerciseData['toggles-q2']){
-      if (this.exerciseData['toggles-q2'] === 'true' || this.exerciseData['toggles-q2'] === true) {
-        this.toggles.q2 = true;
+    if(this.exerciseData['toggles-q7']){
+      if (this.exerciseData['toggles-q7'] === 'true' || this.exerciseData['toggles-q7'] === true) {
+        this.toggles.q7 = true;
       }
     }
-    if(this.exerciseData['toggles-q3']){
-      if (this.exerciseData['toggles-q3'] === 'true' || this.exerciseData['toggles-q3'] === true) {
-        this.toggles.q3 = true;
+    if(this.exerciseData['toggles-q8']){
+      if (this.exerciseData['toggles-q8'] === 'true' || this.exerciseData['toggles-q8'] === true) {
+        this.toggles.q8 = true;
       }
     }
-    if(this.exerciseData['toggles-q4']){
-      if (this.exerciseData['toggles-q4'] === 'true' || this.exerciseData['toggles-q4'] === true) {
-        this.toggles.q4 = true;
+    if(this.exerciseData['toggles-q9']){
+      if (this.exerciseData['toggles-q9'] === 'true' || this.exerciseData['toggles-q9'] === true) {
+        this.toggles.q9 = true;
       }
     }
-    if(this.exerciseData['toggles-q5']){
-      if (this.exerciseData['toggles-q5'] === 'true' || this.exerciseData['toggles-q5'] === true) {
-        this.toggles.q5 = true;
+    if(this.exerciseData['toggles-q10']){
+      if (this.exerciseData['toggles-q10'] === 'true' || this.exerciseData['toggles-q10'] === true) {
+        this.toggles.q10 = true;
       }
     }
 
