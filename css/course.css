@@ -916,6 +916,9 @@ padding: 0;
   width:auto;
   max-width:40%;
 }
+.padding-slide-img {
+  padding-top:35px;
+}
 @media screen and (max-width:1400px) {
   .bulbOff {
     height:75px;
@@ -1458,4 +1461,10 @@ padding: 0;
     display:none;
   }
 
+}
+@media (min-width: 1025px) {
+   .container-fluid {
+       height: 100vh !important;
+       padding: 0 !important;
+   }
 }

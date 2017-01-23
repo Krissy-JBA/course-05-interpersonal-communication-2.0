@@ -44,7 +44,7 @@ pageComponentry = {
         if (currentPage >= 37) {
             this.module2 = true;
         }
-        if (currentPage >= 41) {
+        if (currentPage >= 40) {
             this.module3 = true;
         }
         if ((this.module1 == true) && (this.module2 == true) && (this.module3 == true)) {
