@@ -919,6 +919,9 @@ padding: 0;
 .padding-slide-img {
   padding-top:35px;
 }
+.embed-responsive .embed-responsive-item, .embed-responsive iframe, .embed-responsive embed, .embed-responsive object, .embed-responsive video {
+  height: 99% !important;
+}
 @media screen and (max-width:1400px) {
   .bulbOff {
     height:75px;
