@@ -63,7 +63,9 @@
                         <p class="text-center ">Asking questions...</p>
                         <div class="row two-line">
                           <div class="col-xs-12 text-center one-line-bot flex-buttons">
-                              <button type="button" class="magenta-blob-box helpHinder-btn" @click="oneButton(answer)" v-bind:class="{'oneActive': answer == 'Questions help'}">Helps communication</button>
+                              <button type="button" class="magenta-blob-box helpHinder-btn" @click="oneButton(answer)" v-bind:class="{'oneActive': answer == 'Questions help'}">Helps communication
+                                <i v-show="correct == true"  class="fa fa-check" aria-hidden="true"></i>
+                              </button>
                               <button type="button" class="magenta-blob-box helpHinder-btn" @click="twoButton(answer)" v-bind:class="{'twoActive': answer == 'Questions hinder'}">Hinders communication</button>
                           </div>
                         </div>

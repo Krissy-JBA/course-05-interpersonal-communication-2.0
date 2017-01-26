@@ -73,7 +73,9 @@
                               <button type="button" class="jba-btn jba-btn-lg jba-btn-tab helpHinder-btn" @click="twoButton(answer)" v-bind:class="{'twoActive': answer == 'Distracted and unaware'}">Distracted and unaware</button>
                           </div>
                           <div class="col-xs-12 text-center one-line">
-                              <button type="button" class="jba-btn jba-btn-lg jba-btn-tab helpHinder-btn" @click="threeButton(answer)" v-bind:class="{'threeActive': answer == 'Encouraging and caring'}">Encouraging and caring</button>
+                              <button type="button" class="jba-btn jba-btn-lg jba-btn-tab helpHinder-btn" @click="threeButton(answer)" v-bind:class="{'threeActive': answer == 'Encouraging and caring'}">Encouraging and caring
+                                <i v-show="correct == true"  class="fa fa-check" aria-hidden="true"></i>
+                              </button>
                           </div>
                         </div>
                         <p class="blue-text text-center ">Tap the option that matches Zabby's intent.</p>

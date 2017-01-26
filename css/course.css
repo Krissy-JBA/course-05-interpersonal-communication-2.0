@@ -929,6 +929,16 @@ padding: 0;
 .click-lists span {
   margin-top:10px;
 }
+button.helpHinder-btn {
+    position: relative;
+}
+button.helpHinder-btn i.fa.fa-check {
+    position: absolute;
+    top: -5px;
+    right: 0;
+    color: green;
+    font-size: 30px;
+}
 @media screen and (max-width:1400px) {
   .bulbOff {
     height:75px;

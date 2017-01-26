@@ -64,7 +64,9 @@
                         <div class="row two-line">
                           <div class="col-xs-12 text-center one-line-bot flex-buttons">
                               <button type="button" class="magenta-blob-box helpHinder-btn" @click="oneButton(answer)" v-bind:class="{'oneActive': answer == 'Behavioural styles help'}">Help communication</button>
-                              <button type="button" class="magenta-blob-box helpHinder-btn" @click="twoButton(answer)" v-bind:class="{'twoActive': answer == 'Behavioural styles hinder'}">Hinder communication</button>
+                              <button type="button" class="magenta-blob-box helpHinder-btn" @click="twoButton(answer)" v-bind:class="{'twoActive': answer == 'Behavioural styles hinder'}">Hinder communication
+                                <i v-show="correct == true"  class="fa fa-check" aria-hidden="true"></i>  
+                              </button>
                           </div>
                         </div>
                         <p class="blue-text text-center">Tap to make your selection.</p>

@@ -4,7 +4,8 @@ pageComponentry = {
       // Any page specific data goes here.
       answer: '',
       popup1: false,
-      popup2: false
+      popup2: false,
+      correct: false
     }
   },
   methods: {
@@ -14,12 +15,14 @@ pageComponentry = {
       this.answer = 'Behavioural styles help';
       this.$parent.saveData('helpsHinders4', this.answer);
       this.popup2= true;
+      this.correct = false;
     },
     twoButton: function() {
       this.whatThink = true;
       this.answer = 'Behavioural styles hinder';
       this.$parent.saveData('helpsHinders4', this.answer);
       this.popup1 = true;
+      this.correct = true;
     }
   },
   ready: function() {
@@ -27,6 +30,7 @@ pageComponentry = {
     if(this.exerciseData['helpsHinders4']){
       this.answer = this.exerciseData['helpsHinders4'];
       this.whatThink = true;
+      this.correct = true;
     }
 
   }

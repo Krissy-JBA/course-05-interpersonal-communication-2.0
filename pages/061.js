@@ -72,68 +72,32 @@ pageComponentry = {
       }
     },
     answerPopup: function() {
-      if(this.correct == true) {
-        this.popup2 = true;
+      if(this.exerciseData['whatisVerbalComm']){
+        $('.pop-in').addClass('popOut');
+        setTimeout(function(){window.location.hash = '062';},400);
       }
       else {
-        this.popup1 = true;
-      }
+        if(this.correct == true) {
+          this.popup2 = true;
+        }
+        else {
+          this.popup1 = true;
+        }
+     }
+
     },
     redirect: function() {
       $('.pop-in').addClass('popOut');
-setTimeout(function(){window.location.hash = '062';},400);
+      setTimeout(function(){window.location.hash = '062';},400);
     }
   },
   ready: function() {
     courseFeatureJBA.transitionIn(); courseFeatureJBA.flexySpeckCheck();
     if(this.exerciseData['whatisVerbalComm']){
-    var data1 = this.exerciseData['whatisVerbalComm'];
-    var expr1= "lang";
-    var expr2= "Touch";
-    var expr3= "Facial";
-    var expr4= "Speed";
-    var expr5= "Words";
-    var expr6= "Tone";
-    var expr7= "space";
-    var expr8= "present";
-    var expr9= "Gestures";
-    var expr10= "Volume";
-    var expr11= "Eye";
-    if (data1.indexOf(expr1) !== -1) {
-      $('#test1').prop('checked', true);
-    }
-    if (data1.indexOf(expr2) !== -1) {
-      $('#test2').prop('checked', true);
-    }
-    if (data1.indexOf(expr3) !== -1) {
-      $('#test3').prop('checked', true);
-    }
-    if (data1.indexOf(expr4) !== -1) {
-      $('#test4').prop('checked', true);
-    }
-    if (data1.indexOf(expr5) !== -1) {
       $('#test5').prop('checked', true);
-    }
-    if (data1.indexOf(expr6) !== -1) {
-      $('#test6').prop('checked', true);
-    }
-    if (data1.indexOf(expr7) !== -1) {
-      $('#test7').prop('checked', true);
-    }
-    if (data1.indexOf(expr8) !== -1) {
-      $('#test8').prop('checked', true);
-    }
-    if (data1.indexOf(expr9) !== -1) {
-      $('#test9').prop('checked', true);
-    }
-    if (data1.indexOf(expr10) !== -1) {
-      $('#test10').prop('checked', true);
-    }
-    if (data1.indexOf(expr11) !== -1) {
-      $('#test11').prop('checked', true);
-    }
+      this.correct = true;
 
-  }
+    }
 
 
   }

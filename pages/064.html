@@ -67,7 +67,9 @@
                         <p class="text-center ">Zabby's speaking loudly, in short sentences, and waving her hands around a lot.</p>
                         <div class="row two-line two-line-bot">
                           <div class="col-xs-12 text-center">
-                              <button type="button" class="jba-btn jba-btn-lg jba-btn-tab helpHinder-btn" @click="oneButton(answer)" v-bind:class="{'oneActive': answer == 'Aggressive and argumentative'}">Aggressive and argumentative</button>
+                              <button type="button" class="jba-btn jba-btn-lg jba-btn-tab helpHinder-btn" @click="oneButton(answer)" v-bind:class="{'oneActive': answer == 'Aggressive and argumentative'}">Aggressive and argumentative
+                                <i v-show="correct == true"  class="fa fa-check" aria-hidden="true"></i>
+                              </button>
                           </div>
                           <div class="col-xs-12 text-center one-line">
                               <button type="button" class="jba-btn jba-btn-lg jba-btn-tab helpHinder-btn" @click="twoButton(answer)" v-bind:class="{'twoActive': answer == 'Encouraging and caring'}">Encouraging and caring</button>

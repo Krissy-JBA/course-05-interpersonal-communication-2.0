@@ -5,7 +5,8 @@ pageComponentry = {
       answer: '',
       popup1: false,
       popup2: false,
-      unlocked: false
+      unlocked: false,
+      correct:false
     }
   },
   methods: {
@@ -16,6 +17,7 @@ pageComponentry = {
       this.$parent.saveData('Zabbys-intent', this.answer);
       this.popup1 = true;
       this.unlocked = true;
+      this.correct = true;
     },
     twoButton: function() {
       this.whatThink = true;
@@ -23,6 +25,7 @@ pageComponentry = {
       this.$parent.saveData('Zabbys-intent', this.answer);
       this.popup2 = true;
       this.unlocked = true;
+      this.correct = false;
     },
     threeButton: function() {
       this.whatThink = true;
@@ -30,6 +33,7 @@ pageComponentry = {
       this.$parent.saveData('Zabbys-intent', this.answer);
       this.popup2 = true;
       this.unlocked = true;
+      this.correct = false;
     }
   },
   ready: function() {
@@ -37,6 +41,7 @@ pageComponentry = {
     if(this.exerciseData['Zabbys-intent']){
       this.answer = this.exerciseData['Zabbys-intent'];
       this.unlocked = true;
+      this.correct = true;
     }
 
   }
