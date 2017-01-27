@@ -1488,3 +1488,8 @@ button.helpHinder-btn i.fa.fa-check {
        padding: 0 !important;
    }
 }
+@media only screen and (max-device-width: 680px) and (min-device-width: 300px) and (orientation: landscape) {
+   .header-row {
+       height: 60px !important;
+   }
+}
